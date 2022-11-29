@@ -1,20 +1,18 @@
-<h1>Welcome <%= @user.nickname %>!</h1>
-<h4>Here, you can manage all your projects</h4>
+<div class="container m-3">
+  <div class="page_profil">
+    <div class="grid">
+      <%= render "shared/banner" %>
+      <%= render "shared/card_grid" %>
+    </div>
 
-<h2>My projects</h2>
-
-<div class="cards">
-
+    <div class="infos">
+      <%= render "shared/profil_info" %>
+    </div>
+  </div>
 </div>
 
-<div class="profil">
-  <div class="avatar">
 
-  </div>
 
-  <p><%= @user.first_name %></p>
+  <%# <p><%= @user.first_name %>
 
   <%# <%= link_to "contact", "TODO" %>
-</div>
-
-<% console %>

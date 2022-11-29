@@ -1,0 +1,45 @@
+
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+                  url("https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  border-radius: 15px;
+  border-top: 1px solid rgb(125, 125, 125);
+  border-left: 1px solid rgb(125, 125, 125);
+  padding-left: 15px;
+
+  h1 {
+      margin: 0;
+      color: white;
+      text-shadow: 1px 1px 3px $rose;
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+  p {
+    font-size: 20px;
+    color: white;
+    opacity: .7;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  .btn {
+    color: white;
+    font-family: $headers-font;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: linear-gradient(317deg, #6e0000 30%, #F13B7C 100%);
+    width: 200px;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 40px;
+    box-shadow: 0 2px 16px -24px #f13b9e;
+  }
+
+
+}
