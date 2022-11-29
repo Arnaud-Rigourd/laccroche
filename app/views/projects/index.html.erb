@@ -5,7 +5,10 @@
 
       <ul>
         <% @projects.each do |p| %>
-        <li><%= p.title %></li>
+          <li>
+            <%= p.title %>
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+          </li>
         <% end %>
       </ul>
 

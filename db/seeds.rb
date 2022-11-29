@@ -1,72 +1,125 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or create!d alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create!([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create!(name: "Luke", movie: movies.first)
 
-#// ///////// user X2 /////////
-#// trame  User.new (name:"", nickname:"", first_name:"", last_name:"", description:"", email:"", password:"")
-Project.destroy_all
-User.destroy_all
+require 'open-uri'
+
+lorem_ipsum_long = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra nec metus sit amet iaculis. Ut at tincidunt orci, finibus posuere urna. Duis volutpat metus nec purus egestas aliquet. Duis sit amet magna at odio accumsan blandit. Morbi vel tellus at nunc mattis volutpat ac sed justo. Aenean gravida dapibus tellus, vel varius lectus lacinia id. Donec ac sagittis eros. Maecenas eu cursus tellus. Mauris magna risus, elementum sed odio sed, molestie suscipit dolor. Suspendisse gravida dolor metus, nec tempor lorem pulvinar ultrices."
+lorem_ipsum_medium = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis viverra nec metus sit amet iaculis. Ut at tincidunt orci, finibus posuere urna. Duis volutpat metus nec purus egestas aliquet. Duis sit amet magna at odio accumsan blandit."
+lorem_ipsum_short = "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit."
+
+puts "Launching the seed"
 puts "Destroying..."
 
-dimitry = User.create!(nickname:"The Great Cello King", first_name:"Dimitry", last_name:"D", description:"Je suis un zicos , prêt à enflammer les stades", email:"dimitry@gmail.com", password:"accroche")
-matthieu = User.create!(nickname:"Front Guru", first_name:"Mathieu", last_name:"W", description:"xxxx", email:"matthieu@gmail.com", password:"accroche")
-arnaud = User.create!(nickname:"Video Master", first_name:"Arnaud", last_name:"R", description:"Je cherche à lancer ma prod et recherche des collaborateurs", email:"arnaud@gmail.com", password:"accroche")
+User.destroy_all
+Project.destroy_all
+Like.destroy_all
 
-puts "Users created"
-##### x 10 minimum projets vidéo // /////////
-### Project.create!(title:"", description:"", category:"", collab:"", video_url:"", music_url:"", user_id: user.id)
+puts "Creating users..."
 
-# video
-Project.create!(title:"Batman", description:"action movie", category:"Artistic Video", collab:"dimitry", video_url:"https://www.youtube.com/watch?v=hGQo1axtj60", music_url:"", user_id: matthieu.id)
-Project.create!(title:"Blade Runner", description:"action movie", category:"Artistic Video", collab:"mathieu", video_url:"https://www.youtube.com/watch?v=eogpIG53Cis", music_url:"", user_id: arnaud.id)
-Project.create!(title:"The Witchher", description:"video with mights, magic and monsters", category:"Artistic Video", collab:"", video_url:"https://www.youtube.com/watch?v=ymYBUDq6wnI", music_url:"", user_id: arnaud.id)
-Project.create!(title:"Akira", description:"Big trouble in neo tokyo", category:"Artistic Video", collab:"mathieu", video_url:"https://www.youtube.com/watch?v=_aIJOdIWFd0", music_url:"", user_id: dimitry.id)
-Project.create!(title:"Gundam", description:"xxxxx", category:"Artistic Video", collab:"dimitry", video_url:"https://www.youtube.com/watch?v=vNpJfkIdaqE", music_url:"", user_id: arnaud.id)
-Project.create!(title:"Neon Genesis evangelion", description:"anime", category:"Artistic Video", collab:"dimitry", video_url:"https://www.youtube.com/watch?v=13nSISwxrY4", music_url:"", user_id: matthieu.id)
-Project.create!(title:"inception", description:"xxxx", category:"Artistic Video", collab:"", video_url:"https://www.youtube.com/watch?v=CPTIgILtna8", music_url:"", user_id: matthieu.id)
-Project.create!(title:"black panther", description:"xxx", category:"Artistic Video", collab:"dimitry", video_url:"https://www.youtube.com/watch?v=DlGIWM_e9vg", music_url:"", user_id: arnaud.id)
-Project.create!(title:"Battle Angel alita", description:"plein de castagne et de cyborgs", category:"Artistic Video", collab:"", video_url:"https://www.youtube.com/watch?v=YB5mOPWgAns", music_url:"", user_id: dimitry.id)
-Project.create!(title:"Scream", description:"un slash movie", category:"Artistic Video", collab:"", video_url:"https://www.youtube.com/watch?v=1QvVPKp3N00", music_url:"", user_id: dimitry.id)
+music_video_artist = User.create!(nickname: "Chris Shards", first_name: "Chris", last_name: "Shards", email: "chris@gmail.com", password: "123456", description: lorem_ipsum_short)
+motion_design_artist = User.create!(nickname: "Howard Wimshurst", first_name: "Howard", last_name: "Wimshurst", email: "howard@gmail.com", password: "123456", description: "Award winning filmmaker and artist who specializes in hand-drawn animation. 2D animator obsessed with the way things move.")
+artwork_artist = User.create!(nickname: "Novans Adikresna", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "I made this work for a music album or cover art, with a modern concept and a touch of futuristic and sci-fi themes. I play with lines, colors and dimensions. Hope you like it, enjoy!")
 
-# music
-Project.create!(title:"Concerto en ut mineur", description:"classical tune", category:"Music Video", collab:"", video_url:"", music_url:"", user_id: arnaud.id)
-Project.create!(title:"symphony n°9 of the new world", description:"classical", category:"Music Video", collab:"arnaud", video_url:"", music_url:"", user_id: dimitry.id)
-Project.create!(title:"enter sadman", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"", video_url:"", music_url:"", user_id: arnaud.id)
-Project.create!(title:"symphony of the new world", description:"classical tune", category:"Music Video", collab:"arnaud", video_url:"", music_url:"", user_id: matthieu.id)
-Project.create!(title:"Rhapsody in blue", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"dimitry", video_url:"", music_url:"", user_id: arnaud.id)
-Project.create!(title:"harmony corruption", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"dimitry", video_url:"", music_url:"", user_id: matthieu.id)
-Project.create!(title:"south of heaven", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"dimitry", video_url:"", music_url:"", user_id: matthieu.id)
-Project.create!(title:"shake it off", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"matthieu", video_url:"", music_url:"", user_id: dimitry.id)
-Project.create!(title:"thriller", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"dimitry", video_url:"", music_url:"", user_id: arnaud.id)
-Project.create!(title:"celebration", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Music Video", collab:"", video_url:"matthieu", music_url:"", user_id: arnaud.id)
+puts "Creating projects..."
 
-# Artwork
-Project.create!(title:"guernica", description:"industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing", category:"Artwork", collab:"pablo picasso", video_url:"https://www.behance.net/for_you/onboarding?sdid=3SH1B2HQ&mv=search", music_url:"", user_id: arnaud.id)
-Project.create!(title:"l'angelus", description:"industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing", category:"Artwork", collab:"salvador dali", video_url:"https://www.behance.net/for_you/onboarding?sdid=3SH1B2HQ&mv=search", music_url:"", user_id: dimitry.id)
-Project.create!(title:"krieg", description:"industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing", category:"Artwork", collab:"max ernst", video_url:"https://www.behance.net/for_you/onboarding?sdid=3SH1B2HQ&mv=search", music_url:"", user_id: matthieu.id)
-Project.create!(title:"colors", description:"industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing", category:"Artwork", collab:"vassili kandisnky", video_url:"https://www.behance.net/for_you/onboarding?sdid=3SH1B2HQ&mv=search", music_url:"", user_id: arnaud.id)
-Project.create!(title:"l'église d'auvers sur oise", description:"industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing", category:"Artwork", collab:"van gogh", video_url:"https://www.behance.net/for_you/onboarding?sdid=3SH1B2HQ&mv=search", music_url:"", user_id: dimitry.id)
+Project.create!(category: "Music Video", title: "Always With You", collab: "#{artwork_artist.nickname} and #{motion_design_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/track/1JBqbYJKV57GBuSLl3j3TN?si=32460687f8a84bcd", user_id: music_video_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Music Video", title: "Salt Lake Seagull", collab: "#{artwork_artist.nickname} and #{motion_design_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/track/4WvAR6CHlqVjbUupNjkmcb?si=581fa21f49db4649", user_id: music_video_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Music Video", title: "Heavy Heart", collab: "#{artwork_artist.nickname} and #{motion_design_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/track/2iqXKIikPBMKMrIISWVEEE?si=8373d914b76a43d1", user_id: music_video_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Music Video", title: "Ghetto Dreamin'", collab: artwork_artist.nickname, video_url: "", music_url: "https://open.spotify.com/track/2ETiOcuJDgUwaXLNZKnZrM?si=29873eb34b0b4ccc", user_id: music_video_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Music Video", title: "Between The Waves", collab: "", video_url: "", music_url: "https://open.spotify.com/track/5lz7FCk3apkROsI6hctQLU?si=5e2a84d453ff4acc", user_id: music_video_artist.id, description: lorem_ipsum_medium)
 
-# Motion Design
-Project.create!(title:"One Punch Man", description:"Motion Design", category:"Motion Design", collab:"", video_url:"https://www.youtube.com/watch?v=7PpacbTvUtI", music_url:"", user_id: matthieu.id)
-Project.create!(title:"les bronzés", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Motion Design", collab:"", video_url:"https://www.youtube.com/watch?v=nYBnovOWXZE", music_url:"", user_id: arnaud.id)
-Project.create!(title:"hanibal", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Motion Design", collab:"", video_url:"https://youtu.be/lOIZmoOhJik", music_url:"", user_id: dimitry.id)
-Project.create!(title:"when all is said", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Motion Design", collab:"napalm death", video_url:"https://www.youtube.com/watch?v=SIRUzqHTNh8", music_url:"", user_id: dimitry.id)
-Project.create!(title:"greed killing", description:"and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged", category:"Motion Design", collab:"", video_url:"https://www.youtube.com/watch?v=rLQvYoeqhfo", music_url:"", user_id: arnaud.id)
+Project.create!(category: "Motion Design", title: "Flying in the Sky", collab: music_video_artist.nickname, video_url: "https://youtu.be/9Z4TiA5JH_0", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Motion Design", title: "Dance of the Yōkai", collab: music_video_artist.nickname, video_url: "https://youtu.be/piQpugWN2Xw", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Motion Design", title: "Winter Hunting", collab: music_video_artist.nickname, video_url: "https://youtu.be/RDfu4iEeyro", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Motion Design", title: "Lines Animation", collab: music_video_artist.nickname, video_url: "https://youtu.be/qMtsaIiwiaA", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+Project.create!(category: "Motion Design", title: "Rough Animation", collab: "", video_url: "https://youtu.be/upzThAC2A_s", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
 
-puts"Projects Created"
+tesseract_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-tesseract_twl56v.webp")
+hyperspace_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-hyperspace_lboe8r.webp")
+planetarium_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-planetariumwebp_jrjfqd.webp")
+moon_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-moon_r1j4tj.webp")
+troglodyte_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-troglodyte_tpqcdo.webp")
 
-#m = Project.create!(title:"Batman", description:"action movie", category:"video", collab:"", video_url:"https://www.youtube.com/watch?v=hGQo1axtj60", music_url:"")
-#m.user = matthieu
-#m.save
-#// ///////// 10 projets graphiques // /////////
+tesseract = Project.new(category: "Artwork", title: "Tesseract", collab: music_video_artist.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+tesseract.photo.attach(io: tesseract_file, filename: "artwork-tesseract.webp", content_type: "image/webp")
+tesseract.save!
 
-#// ///////// 10 category graphique/artwork // /////////
+hyperspace = Project.new(category: "Artwork", title: "Hyperspace", collab: music_video_artist.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+hyperspace.photo.attach(io: hyperspace_file, filename: "artwork-hyperspace.webp", content_type: "image/webp")
+hyperspace.save!
 
-puts "seed is done"
+planetarium = Project.new(category: "Artwork", title: "Planetarium", collab: music_video_artist.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+planetarium.photo.attach(io: planetarium_file, filename: "artwork-planetarium.webp", content_type: "image/webp")
+planetarium.save!
 
-#
+moon = Project.new(category: "Artwork", title: "Planetarium", collab: music_video_artist.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+moon.photo.attach(io: moon_file, filename: "artwork-moon.webp", content_type: "image/webp")
+moon.save!
+
+troglodyte = Project.new(category: "Artwork", title: "Troglodyte", collab: "", video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+troglodyte.photo.attach(io: troglodyte_file, filename: "artwork-troglodyte.webp", content_type: "image/webp")
+troglodyte.save!
+
+puts "Creating likes..."
+
+Like.create!(user_id: 2, project_id: 1)
+Like.create!(user_id: 3, project_id: 1)
+
+Like.create!(user_id: 1, project_id: 2)
+Like.create!(user_id: 3, project_id: 2)
+
+Like.create!(user_id: 2, project_id: 3)
+
+Like.create!(user_id: 2, project_id: 4)
+Like.create!(user_id: 3, project_id: 4)
+
+Like.create!(user_id: 1, project_id: 5)
+Like.create!(user_id: 2, project_id: 5)
+Like.create!(user_id: 3, project_id: 5)
+
+Like.create!(user_id: 2, project_id: 6)
+Like.create!(user_id: 3, project_id: 6)
+
+Like.create!(user_id: 1, project_id: 7)
+
+Like.create!(user_id: 2, project_id: 11)
+Like.create!(user_id: 3, project_id: 11)
+
+Like.create!(user_id: 2, project_id: 13)
+
+Like.create!(user_id: 2, project_id: 14)
+Like.create!(user_id: 3, project_id: 14)
+
+Like.create!(user_id: 1, project_id: 15)
+Like.create!(user_id: 2, project_id: 15)
+Like.create!(user_id: 3, project_id: 15)
+
+# Like.create!(user_id: 1, project_id: 17)
+
+# Like.create!(user_id: 1, project_id: 18)
+# Like.create!(user_id: 2, project_id: 18)
+# Like.create!(user_id: 3, project_id: 18)
+
+# Like.create!(user_id: 2, project_id: 21)
+# Like.create!(user_id: 3, project_id: 21)
+# Like.create!(user_id: 1, project_id: 22)
+# Like.create!(user_id: 3, project_id: 22)
+# Like.create!(user_id: 2, project_id: 23)
+
+# Like.create!(user_id: 2, project_id: 24)
+# Like.create!(user_id: 3, project_id: 24)
+
+# Like.create!(user_id: 2, project_id: 25)
+
+# Like.create!(user_id: 2, project_id: 26)
+# Like.create!(user_id: 3, project_id: 26)
+
+# Like.create!(user_id: 1, project_id: 27)
+# Like.create!(user_id: 3, project_id: 27)
+# Like.create!(user_id: 2, project_id: 27)
+
+# Like.create!(user_id: 1, project_id: 30)
+# Like.create!(user_id: 2, project_id: 30)
+# Like.create!(user_id: 3, project_id: 30)
+
+puts "Seed is done!"
