@@ -4,6 +4,7 @@
 
       <h1>[Project]</h1>
       <h2><%= @project.title %></h2>
+      <%= cl_image_tag @project.photo.key, width: 300 if @project.photo.attached? %>
       <p><%= @project.description %></p>
       <p><%= @project.user.nickname %></p>
       <% if @project.likes.length == 0 %>
@@ -13,7 +14,6 @@
           <p><%= @project.likes.length %> Like (already liked)</p>
         <% else %>
           <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
-          <p>On me voit?</p>
         <% end %>
       <% end %>
     </div>
