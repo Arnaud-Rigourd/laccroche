@@ -9,6 +9,18 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<% # ###### search ############ début ############%>
+      <%= form_with url: projects_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control me-2",
+          placeholder: "Find a project",
+          "aria-label": "Search"
+        %>
+        <%= submit_tag "Search", class: "btn btn-outline-primary" %>
+      <% end %>
+
+<% # ###### search ############ fin ############%>
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
