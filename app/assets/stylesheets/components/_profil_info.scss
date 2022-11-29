@@ -1,5 +1,5 @@
 
-.card {
+.profil-info {
   font-family: $body-font;
   height: 600px;
   width: 400px;
@@ -9,7 +9,7 @@
   border-top: 1px solid rgb(125, 125, 125);
   border-left: 1px solid rgb(125, 125, 125);
 
-    .contenu {
+    .contenu-profil {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -38,7 +38,7 @@
     margin: 0 auto;
     margin-bottom: 40px;
 
-    .image_card {
+    .image_profil-info {
       width: 100%;
       height: 100%;
       border-radius: 100%;
@@ -73,13 +73,15 @@
     box-shadow: 0 2px 16px -24px #f13b9e;
   }
 
-  .card-links {
+  .profil-info-links {
     display: flex;
     justify-content: center;
     align-items: center;
     background: none;
     font-size: 24px;
     margin: 10px 10px;
+    position: absolute;
+    bottom: 0;
 
     .fab {
       color: #F13B7C;
