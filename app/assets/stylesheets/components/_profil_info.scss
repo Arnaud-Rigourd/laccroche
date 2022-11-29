@@ -1,0 +1,97 @@
+
+.profil-info {
+  font-family: $body-font;
+  height: 600px;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border-top: 1px solid rgb(125, 125, 125);
+  border-left: 1px solid rgb(125, 125, 125);
+
+    .contenu-profil {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 0 20px;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "ACCROCHE";
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 17em;
+        color: rgba(255, 255, 255, 0.05);
+        font-weight: bolder;
+        line-height: 0.8;
+      }
+    }
+
+  .picture {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+
+    .image_profil-info {
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      border: 2px solid #F13B7C;
+    }
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: white;
+    text-align: center;
+  }
+
+  .btn-contact {
+    color: white;
+    font-family: $headers-font;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: linear-gradient(317deg, #6e0000 30%, #F13B7C 100%);
+    width: 200px;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 40px;
+    box-shadow: 0 2px 16px -24px #f13b9e;
+  }
+
+  .profil-info-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    font-size: 24px;
+    margin: 10px 10px;
+    position: absolute;
+    bottom: 0;
+
+    .fab {
+      color: #F13B7C;
+      opacity: 0.4;
+      text-decoration: none;
+      padding: 0 10px;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
