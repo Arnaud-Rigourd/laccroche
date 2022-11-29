@@ -14,7 +14,6 @@
           <p><%= @project.likes.length %> Like (already liked)</p>
         <% else %>
           <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
-          <p>On me voit?</p>
         <% end %>
       <% end %>
     </div>
