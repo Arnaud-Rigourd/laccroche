@@ -4,7 +4,11 @@
 
       <h1>[Project]</h1>
       <h2><%= @project.title %></h2>
-      <%= cl_image_tag @project.photo.key, width: 300 if @project.photo.attached? %>
+      <% if @project.photo.attached? %>
+        <%= cl_image_tag @project.photo.key, width: 300 %>
+      <% else %>
+        <%= image_url @project.video_url %>
+      <% end %>
       <p><%= @project.description %></p>
       <p><%= @project.user.nickname %></p>
       <% if @project.likes.length == 0 %>
@@ -19,5 +23,3 @@
     </div>
   </div>
 </div>
-
-<% console %>
