@@ -17,4 +17,8 @@ class ProjectPolicy < ApplicationPolicy
   def create?
     record.user == user
   end
+
+  def top?
+    true
+  end
 end

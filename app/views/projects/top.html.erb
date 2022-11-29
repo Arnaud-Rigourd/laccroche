@@ -1,0 +1,19 @@
+<h1>TOP 10</h1>
+
+<div class="container">
+  <% @top10.each do |t| %>
+    <div class="card">
+      <div>
+        <%= t.title %>
+      </div>
+      <div>
+        <%= t.description %>
+      </div>
+      <div>
+        <%= t.category %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% console %>
