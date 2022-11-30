@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :set_user
+
   def index
     @projects = policy_scope(Project)
 
@@ -49,5 +51,9 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:title, :description, :category, :photo)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
