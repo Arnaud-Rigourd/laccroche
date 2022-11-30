@@ -1,8 +1,9 @@
-<h1>TOP 10</h1>
+<%# <h1>TOP 10</h1> %>
 
-<div class="container">
+<main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context">
+
   <% @top10.each do |t| %>
-    <div class="card">
+    <section class="top-card float-image">
       <div>
         <%= t.title %>
       </div>
@@ -12,6 +13,23 @@
       <div>
         <%= t.category %>
       </div>
-    </div>
+    </section>
   <% end %>
-</div>
+
+<%# clones %>
+
+  <% @top10.first(2).each do |t| %>
+    <section class="top1 is-clone" data-top-project-target="clone">
+        <div>
+          <%= t.title %>
+        </div>
+        <div>
+          <%= t.description %>
+        </div>
+        <div>
+          <%= t.category %>
+        </div>
+    </section>
+  <% end %>
+
+</main>

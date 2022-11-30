@@ -1,0 +1,28 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  background: rgb(66, 66, 66);
+  background: radial-gradient(circle, rgb(66, 66, 66) 0%, rgb(0, 0, 0) 100%);
+}
+
+.loop {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+section {
+  border: 2px solid red;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  min-height: 300px;
+  max-height: 700px;
+  height: 635px;
+  margin: 50px auto;
+  width: 450px;
+}
