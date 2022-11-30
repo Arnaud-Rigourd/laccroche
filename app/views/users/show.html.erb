@@ -2,7 +2,14 @@
   <div class="page_profil">
     <div class="grid">
       <%= render "shared/banner" %>
+
+        <div class="navigation_profil">
+        <%= render "shared/bouton", text: "filter" %>
+        <%= render "shared/bouton", text: "filter" %>
+        <%= render "shared/bouton", text: "filter" %>
+        </div>
       <%= render "shared/card_grid", locals: {projects: @projects} %>
+
     </div>
 
     <div class="infos">
@@ -11,6 +18,7 @@
   </div>
 </div>
 
+
 <%= render partial: "shared/user_likes", locals: { user: @user, projects: @liked_projects } %>
 
-<% console %>
+

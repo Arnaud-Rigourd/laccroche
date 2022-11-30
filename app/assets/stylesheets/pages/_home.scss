@@ -11,11 +11,9 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   // background-image: url("https://i.pinimg.com/originals/c4/53/a6/c453a619c9fa1f0e1e3894560b1a7321.jpg");
-  background-color: #10001d;
+  background-color: #10001D;
   color: white;
 }
-
-
 
 
 
@@ -27,11 +25,18 @@ body {
 
 /* mettre le titre du milieu */
 
+.contenu-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .content_homepage {
-	display: grid;
+	display: flex;
 	width: 100vw;
 	height: calc(100vh - 13rem);
-	position: relative;
+  justify-content: space-around;
+  align-items: center;
 
 }
 
@@ -56,6 +61,59 @@ body {
   background: rgb(110,0,0);
   background: linear-gradient(320deg, rgba(110,0,0,1) 29%, rgba(241,59,158,1) 100%);
 }
+
+
+
+  .btn-direction {
+    text-decoration: none;
+    color: #fff;
+    font-family: bely-display, serif;
+    font-size: 25px;
+    opacity: 0.7;
+    text-align: center;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 30px;
+    margin: 45px 0;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid $btn-home;
+      border-left: 2px solid $btn-home;
+      transition: 0.2s linear;
+      transition-delay: 0.2s linear;
+   }
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid $btn-home;
+      border-right: 2px solid $btn-home;
+      transition: 0.2s linear;
+      transition-delay: 0.2s linear;
+   }
+    &:hover::before, &:hover::after {
+      width: 15%;
+      height: 30%;
+      transition-delay: 0s;
+   }
+
+    &:hover {
+      // background: $btn-home;
+      color: white;
+      // box-shadow: 0 0 50px $btn-home;
+      // transition-delay: 0.5s;
+    }
+  }
 
 /* @media screen and (min-width: 53em) { */
 

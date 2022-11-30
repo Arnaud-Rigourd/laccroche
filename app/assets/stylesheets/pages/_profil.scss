@@ -7,11 +7,20 @@
 
 .grid {
   width: 70%;
-  padding-right: 10px;
   display: flex;
   flex-direction: column;
   margin-right: 25px;
 }
+
+.navigation_profil {
+
+  margin: 25px 0;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-around;
+
+}
+
 
 .infos {
   width: 30%;

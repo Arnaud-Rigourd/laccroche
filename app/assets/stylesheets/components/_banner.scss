@@ -19,28 +19,27 @@
       font-weight: bold;
     }
 
-  p {
-    font-size: 20px;
+  .typing {
+    font-size: 30px;
     color: white;
     opacity: .7;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    width: 36ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: $body-font;
   }
 
-  .btn {
-    color: white;
-    font-family: $headers-font;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 20px;
-    background: linear-gradient(317deg, #6e0000 30%, #F13B7C 100%);
-    width: 200px;
-    padding: 8px 0;
-    border-radius: 8px;
-    font-weight: 500;
-    margin-top: 40px;
-    box-shadow: 0 2px 16px -24px #f13b9e;
+  @keyframes typing {
+    from {
+      width: 0
+    }
   }
 
-
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
 }
