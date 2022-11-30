@@ -1,21 +1,22 @@
 .glow-button {
-  --button-background: #09041e;
+  --button-background: #69005d00;
   --button-color: #fff;
   --button-shadow: rgba(33, 4, 104, 0.2);
-  --button-shine-left: rgba(120, 0, 245, 0.5);
-  --button-shine-right: rgba(200, 148, 255, 0.65);
-  --button-glow-start: #B000E8;
-  --button-glow-end: #009FFD;
+  --button-shine-left: rgb(98 0 61 / 50%);
+  --button-shine-right: rgb(228 52 111 / 65%);
+  --button-glow-start: #e80072;
+  --button-glow-end: #8700fd;
 
   appearance: none;
   outline: none;
   border: none;
-  font-family: inherit;
+  font-family: $headers-font;
+  text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
   border-radius: 11px;
   position: relative;
-  line-height: 24px;
+  line-height: 30px;
   cursor: pointer;
   color: var(--button-color);
   padding: 0;

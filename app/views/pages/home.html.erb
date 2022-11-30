@@ -1,4 +1,4 @@
-<main>
+<div class="contenu-home">
   <div id="canvasContainer"
     data-grid="15"
     data-mouse="0.13"
@@ -8,9 +8,13 @@
 
     <%= image_tag "daft_punk.jpg" %>
   </div>
-  <div class="content_homepage">
-    <h2 class="content_title" >L'ACC
-      ROCHE</h2>
+
+  <div class="text-home-page">
+    <div class="content_homepage">
+      <%= link_to "Top 10", top_projects_path, class: "btn-direction" %>
+      <h2 class="content_title" >L'ACC
+        ROCHE</h2>
+      <a href="" class="btn-direction">univers</a>
+    </div>
   </div>
-  <%= render "shared/bouton", text: "bonjour" %>
-</main>
+</div>
