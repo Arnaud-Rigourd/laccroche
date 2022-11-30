@@ -3,5 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @projects = @user.projects
     authorize @user
+    @projects = Project.all
   end
 end

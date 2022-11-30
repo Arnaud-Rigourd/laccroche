@@ -5,6 +5,10 @@ class PagesController < ApplicationController
     @user = current_user
   end
 
+  def show
+    @user = current_user
+  end
+
   def profil
     @user = current_user
   end

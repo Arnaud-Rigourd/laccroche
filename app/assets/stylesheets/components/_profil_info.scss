@@ -10,25 +10,27 @@
   border-left: 1px solid rgb(125, 125, 125);
 
     .contenu-profil {
+      position: relative;
+      align-items: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
       height: 100%;
-      padding: 0 20px;
-      position: relative;
+      justify-content: center;
       overflow: hidden;
+      padding: 0 20px;
 
-      &::before {
-        content: "ACCROCHE";
+      // Modif sur le before / Arnaud
+
+      .user-initials {
         position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 17em;
-        color: rgba(255, 255, 255, 0.05);
-        font-weight: bolder;
-        line-height: 0.8;
+        color: #232222;
+        font-size: 323px;
+        font-weight: bold;
+        left: -144px;
+        top: -217px;
+        z-index: -1;
       }
+      // fin de la modif
     }
 
   .picture {
