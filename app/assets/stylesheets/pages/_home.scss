@@ -4,14 +4,14 @@
 html, body {
   margin:0;
   padding:0;
-  height:100vh;
+  min-height:100vh;
 }
 
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
   // background-image: url("https://i.pinimg.com/originals/c4/53/a6/c453a619c9fa1f0e1e3894560b1a7321.jpg");
-  background: black;
+  background-color: #10001d;
   color: white;
 }
 
