@@ -11,15 +11,15 @@
       <% end %>
       <p><%= @project.description %></p>
       <p><%= @project.user.nickname %></p>
-      <% if @project.likes.length == 0 %>
-        <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
+
+      <% if @project_liked %>
+        <p><%= @project.likes.length %> Like (already liked)</p>
       <% else %>
-        <% if @project.likes.include?(@project_liked.last) %>
-          <p><%= @project.likes.length %> Like (already liked)</p>
-        <% else %>
-          <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
-        <% end %>
+        <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
       <% end %>
+
     </div>
   </div>
 </div>
+
+<% console %>
