@@ -10,22 +10,26 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-      <%= render 'shared/searchbar' %>
+      <% if params[:action] != "home" && params[:action] != "top"%>
+        <%= render "shared/searchbar" %>
+      <% end %>
 
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Top 10", top_projects_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to "Home", "/", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Profil", user_path(@user), class: "nav-link" %>
-          </li>
+        <% if params[:action] != "home" %>
+            <li class="nav-item active">
+              <%= link_to "Top 10", top_projects_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item active">
+              <%= link_to "Home", "/", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Messages", "#", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Profil", user_path(@user), class: "nav-link" %>
+            </li>
+          <% end %>
           <li class="nav-item dropdown">
             <%= image_tag "https://i.pinimg.com/originals/12/f2/d1/12f2d1001e4abf1cdf95a1c2f2db7abe.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
