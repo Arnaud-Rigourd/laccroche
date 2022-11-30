@@ -31,10 +31,10 @@ music_5 = Project.create!(category: Project::CATEGORIES[0], title: "Between The 
 
 # 2. VIDEO ART
 video_1 = Project.create!(category: Project::CATEGORIES[1], title: "Flying in the Sky", collab: music_video_artist.nickname, video_url: "https://www.youtube.com/embed/9Z4TiA5JH_0", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
-video_2 = Project.create!(category: Project::CATEGORIES[1], title: "Dance of the Yōkai", collab: music_video_artist.nickname, video_url: "https://youtu.be/piQpugWN2Xw", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
-video_3 = Project.create!(category: Project::CATEGORIES[1], title: "Winter Hunting", collab: music_video_artist.nickname, video_url: "https://youtu.be/RDfu4iEeyro", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
-video_4 = Project.create!(category: Project::CATEGORIES[1], title: "Lines Animation", collab: music_video_artist.nickname, video_url: "https://youtu.be/qMtsaIiwiaA", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
-video_5 = Project.create!(category: Project::CATEGORIES[1], title: "Rough Animation", collab: "", video_url: "https://youtu.be/upzThAC2A_s", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+video_2 = Project.create!(category: Project::CATEGORIES[1], title: "Dance of the Yōkai", collab: music_video_artist.nickname, video_url: "https://www.youtube.com/embed/piQpugWN2Xw", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+video_3 = Project.create!(category: Project::CATEGORIES[1], title: "Winter Hunting", collab: music_video_artist.nickname, video_url: "https://www.youtube.com/embed/RDfu4iEeyro", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+video_4 = Project.create!(category: Project::CATEGORIES[1], title: "Lines Animation", collab: music_video_artist.nickname, video_url: "https://www.youtube.com/embed/qMtsaIiwiaA", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
+video_5 = Project.create!(category: Project::CATEGORIES[1], title: "Rough Animation", collab: "", video_url: "https://www.youtube.com/embed/upzThAC2A_s", music_url: "", user_id: motion_design_artist.id, description: lorem_ipsum_medium)
 
 # 3. ARTWORK
 puts "Downloading Cloudinary images..."
