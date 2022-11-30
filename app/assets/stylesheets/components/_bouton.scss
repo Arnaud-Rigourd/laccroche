@@ -82,35 +82,3 @@
     transform: scale(1.05) translateY(-44px) rotate(360deg) translateZ(0);
   }
 }
-
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: inherit;
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-}
-
-// Center
-body {
-  min-height: 100vh;
-  display: flex;
-  font-family: 'Inter', Arial;
-  justify-content: center;
-  align-items: center;
-  background-color: #020112;
-  overflow: hidden;
-
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 40% -60% 0 -60%;
-    background-image: radial-gradient(ellipse at bottom, #1D0559 0%, #020112 50%);
-    opacity: .4;
-  }
-}
