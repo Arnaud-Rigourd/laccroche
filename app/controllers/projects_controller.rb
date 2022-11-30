@@ -1,10 +1,16 @@
 class ProjectsController < ApplicationController
+  before_action :set_user
+
   def index
     @projects = policy_scope(Project)
 
+    # Search
     if params[:query].present?
-      #@projects = @projects.where(title:  params[:query])
       @projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
+
+    # Category filter
+    elsif params[:category].present?
+      @projects = @projects.where(category: params[:category])
     end
   end
 
@@ -49,5 +55,9 @@ class ProjectsController < ApplicationController
 
   def project_params
     params.require(:project).permit(:title, :description, :category, :photo)
+  end
+
+  def set_user
+    @user = current_user
   end
 end
