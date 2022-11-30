@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   def index
     @projects = policy_scope(Project)
+
+    if params[:query].present?
+      @projects = @projects.where(title: params[:query])
+    end
   end
 
   def show
@@ -24,6 +28,21 @@ class ProjectsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def top
+    @projects = Project.all
+    authorize @projects
+    @top = @projects.sort_by { |p| p.likes.length }.reverse!
+    @top10 = @top.first(10)
+  end
+
+  # def top(category)
+  #   @projects = Project.all
+  #   authorize @projects
+  #   @project_category = @projects.select { |p| p.category == category }
+  #   @top = @project_category.sort_by { |p| p.likes.length }
+  #   @top10 = @top.first(10)
+  # end
 
   private
 

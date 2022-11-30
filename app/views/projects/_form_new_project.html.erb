@@ -5,13 +5,13 @@
       <h1>[New project]</h1>
 
       <%= simple_form_for @project do |f| %>
-      <div>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :category %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit 'Publish' %>
-      </div>
+        <div>
+          <%= f.input :title %>
+          <%= f.input :description %>
+          <%= f.input :category, as: :select, collection: Project::CATEGORIES %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit 'Publish' %>
+        </div>
       <% end %>
 
     </div>

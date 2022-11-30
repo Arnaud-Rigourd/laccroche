@@ -10,6 +10,7 @@ lorem_ipsum_short = "Neque porro quisquam est qui dolorem ipsum quia dolor sit a
 puts "Launching the seed"
 puts "Destroying..."
 
+
 User.destroy_all
 Project.destroy_all
 Like.destroy_all
