@@ -20,15 +20,8 @@
 
             <!-- Display Spotify player if project has a music URL -->
             <% if !p.music_url.nil? %>
-              <iframe style="border-radius:12px",
-                src="<%= p.music_url %>",
-                width="580",
-                height="352",
-                frameBorder="0",
-                allowfullscreen="",
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
-                loading="lazy">
-              </iframe>
+              <% url = p.music_url %>
+              <%= render 'spotify_player_large', url: url %>
             <% end %>
           </li>
         <% end %>
