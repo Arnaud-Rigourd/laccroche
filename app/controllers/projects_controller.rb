@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   def index
     @projects = policy_scope(Project)
+
+    if params[:query].present?
+      @projects = @projects.where(title: params[:query])
+    end
   end
 
   def show

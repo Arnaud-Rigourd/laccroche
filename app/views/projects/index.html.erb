@@ -5,18 +5,23 @@
 
       <ul>
         <% @projects.each do |p| %>
-        <li><%= p.title %></li>
-        <li>
-          <% if p.photo.attached? %>
-            <%= cl_image_tag p.photo.key, width: 300 %>
-          <% elsif p.video_url.present? %>
-            <%= image_url p.video_url %>
-          <% elsif p.music_url.present? %>
-            <%= image_url p.image_url %>
-          <% end %>
-        </li>
+          <li>
+            <%= p.title %>
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+          </li>
+
         <% end %>
       </ul>
+
+
+      <%= render "shared/profil_info"%>
+<br>
+<br>
+<br>
+<br>
+<br>
+      <%= render "shared/card"%>
+
 
     </div>
   </div>

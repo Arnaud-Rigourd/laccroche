@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%= image_tag "A.svg" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,6 +9,18 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<% # ###### search ############ début ############%>
+      <%= form_with url: projects_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control me-2",
+          placeholder: "Find a project",
+          "aria-label": "Search"
+        %>
+        <%= submit_tag "Search", class: "btn btn-outline-primary" %>
+      <% end %>
+
+<% # ###### search ############ fin ############%>
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
@@ -24,7 +36,7 @@
             <%= link_to "Profil", profil_path(@user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag "https://i.pinimg.com/originals/12/f2/d1/12f2d1001e4abf1cdf95a1c2f2db7abe.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>
@@ -40,3 +52,7 @@
     </div>
   </div>
 </div>
+
+
+
+<%# <%= link_to "Profil", profil_path(@user) %>
