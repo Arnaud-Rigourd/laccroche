@@ -2,8 +2,13 @@ class ProjectsController < ApplicationController
   def index
     @projects = policy_scope(Project)
 
+    # Search filter
     if params[:query].present?
       @projects = @projects.where(title: params[:query])
+
+    # Category filter
+    elsif params[:category].present?
+      @projects = @projects.where(category: params[:category])
     end
   end
 
