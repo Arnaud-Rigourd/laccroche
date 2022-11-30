@@ -1,5 +1,15 @@
 <div class="card">
   <div class="contenu-card">
-    <h1>Arnaud</h1>
+    <h1><%= project.title %></h1>
+      <div class="description">
+        <p><%= project.description %></p>
+      </div>
   </div>
+  <%= render "shared/youtubeapi" %>
+  <div class="icons">
+    <div class="category"><i class="fa-solid fa-film"></i></div>
+    <div class="like"><i class="fa-regular fa-star"></i></div>
+    <div class="follow"><i class="fa-regular fa-heart"></i></div>
+  </div>
+
 </div>

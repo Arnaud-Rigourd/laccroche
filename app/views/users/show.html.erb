@@ -2,7 +2,7 @@
   <div class="page_profil">
     <div class="grid">
       <%= render "shared/banner" %>
-      <%= render "shared/card_grid" %>
+      <%= render "shared/card_grid", locals: {projects: @projects} %>
     </div>
 
     <div class="infos">
