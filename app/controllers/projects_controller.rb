@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
     if params[:query].present?
       #@projects = @projects.where(title:  params[:query])
-      @projects = @projects.where("title ILIKE ?", "%#{params[:query]}%")
+      @projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
     end
   end
 

@@ -11,9 +11,9 @@ puts "Launching the seed"
 puts "Destroying..."
 
 
-User.destroy_all
-Project.destroy_all
 Like.destroy_all
+Project.destroy_all
+User.destroy_all
 
 puts "Creating users..."
 
