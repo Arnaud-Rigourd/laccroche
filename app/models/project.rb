@@ -1,5 +1,6 @@
 class Project < ApplicationRecord
-  CATEGORIES = ["Music Video", "Artistic Video", "Motion Design", "Artwork"]
+  CATEGORIES = ["Music", "Video Art", "Artwork"]
+
   has_many :likes
   belongs_to :user
 
