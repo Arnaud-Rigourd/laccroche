@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "A.svg" %>
     <% end %>
 
@@ -9,18 +9,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<% # ###### search ############ début ############%>
-      <%= form_with url: projects_path, method: :get, class: "d-flex" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control me-2",
-          placeholder: "Find a project",
-          "aria-label": "Search"
-        %>
-        <%= submit_tag "Search", class: "btn btn-outline-primary" %>
-      <% end %>
 
-<% # ###### search ############ fin ############%>
+      <%= render 'shared/searchbar' %>
+
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
@@ -33,7 +24,7 @@
             <%= link_to "Messages", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Profil", profil_path(@user), class: "nav-link" %>
+            <%= link_to "Profil", user_path(@user), class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <%= image_tag "https://i.pinimg.com/originals/12/f2/d1/12f2d1001e4abf1cdf95a1c2f2db7abe.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

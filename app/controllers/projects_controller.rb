@@ -4,7 +4,7 @@ class ProjectsController < ApplicationController
 
     # Search filter
     if params[:query].present?
-      @projects = @projects.where(title: params[:query])
+      @projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
 
     # Category filter
     elsif params[:category].present?

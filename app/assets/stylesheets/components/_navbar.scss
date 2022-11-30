@@ -10,6 +10,7 @@
 
   .navbar-brand img {
     width: 40px;
+    background-color: white;
   }
 }
 
@@ -21,32 +22,29 @@ a.nav-link {
   border: none;
   transition: border 500ms;
     &:hover {
-     border: 2px solid $rose;
+     border: 2px solid #540366;
     }
-}
-
-.navbar {
-  background-color: black;
 }
 
 .navbar-nav {
   li {
     margin-bottom: 0;
+
   }
 
   a {
-    color: white;
+    color: $rose;
     text-decoration: none;
     position: relative;
     padding-bottom: 0;
 
     &:hover {
-      color: rgb(199, 199, 199);
+      color: $rose;
     }
 
     &::before {
       content: "";
-      background-color: #8ea7c6;
+      background-color: #540366;
       transition: 0.4s ease-out;
       width: 0%;
       height: 2px;

@@ -1,0 +1,11 @@
+<% # ###### search ############ début ############%>
+      <%= form_with url: projects_path, method: :get, class: "d-flex" do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control me-2",
+          placeholder: "Find a project",
+          "aria-label": "Search"
+        %>
+        <%= submit_tag "Search", class: "btn btn-outline-primary" %>
+      <% end %>
+<% # ###### search ############ fin ############%>
