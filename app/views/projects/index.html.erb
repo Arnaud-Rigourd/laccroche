@@ -21,7 +21,7 @@
             <!-- Display Spotify player if project has a music URL -->
             <% if !p.music_url.nil? %>
               <% url = p.music_url %>
-              <%= render 'spotify_player_large', url: url %>
+              <%= render 'spotify_player_medium', url: url %>
             <% end %>
           </li>
         <% end %>
