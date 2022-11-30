@@ -9,6 +9,7 @@
   border-left: 1px solid rgb(125, 125, 125);
 
   .contenu-card {
+    flex-direction: column;
     height: 100%;
     display: flex;
   	justify-content: center;
@@ -26,4 +27,8 @@
   	// border-image-slice: 1;
     // }
   }
+}
+
+.icons {
+  display: flex;
 }

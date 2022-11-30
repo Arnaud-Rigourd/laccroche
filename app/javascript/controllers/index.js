@@ -12,3 +12,6 @@ application.register("hello", HelloController)
 
 import SketchController from "./sketch_controller"
 application.register("sketch", SketchController)
+
+import TopProjectController from "./top_project_controller"
+application.register("top-project", TopProjectController)
