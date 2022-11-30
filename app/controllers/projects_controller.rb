@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     authorize @project
-    @project_liked = current_user.likes.select { |like| like.project_id == params[:id].to_i }
+    @project_liked = current_user.likes.where(project: @project).exists?
   end
 
   def new
