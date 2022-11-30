@@ -23,11 +23,11 @@ artwork_artist = User.create!(nickname: "Novans Adikresna", first_name: "Novans"
 puts "Creating projects..."
 
 # 1. MUSIC
-music_1 = Project.create!(category: Project::CATEGORIES[0], title: "Always With You", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/embed/track/1JBqbYJKV57GBuSLl3j3TN?utm_source=generator&theme=0", user_id: musician.id, description: lorem_ipsum_medium)
+music_1 = Project.create!(category: Project::CATEGORIES[0], title: "Always With You", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/embed/track/1JBqbYJKV57GBuSLl3j3TN?utm_source=generator", user_id: musician.id, description: lorem_ipsum_medium)
 music_2 = Project.create!(category: Project::CATEGORIES[0], title: "Salt Lake Seagull", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/embed/track/4WvAR6CHlqVjbUupNjkmcb?utm_source=generator&theme=0", user_id: musician.id, description: lorem_ipsum_medium)
-music_3 = Project.create!(category: Project::CATEGORIES[0], title: "Heavy Heart", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/embed/track/2iqXKIikPBMKMrIISWVEEE?utm_source=generator&theme=0", user_id: musician.id, description: lorem_ipsum_medium)
+music_3 = Project.create!(category: Project::CATEGORIES[0], title: "Heavy Heart", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/embed/track/2iqXKIikPBMKMrIISWVEEE?utm_source=generator", user_id: musician.id, description: lorem_ipsum_medium)
 music_4 = Project.create!(category: Project::CATEGORIES[0], title: "Ghetto Dreamin'", collab: artwork_artist.nickname, video_url: "", music_url: "https://open.spotify.com/embed/track/2ETiOcuJDgUwaXLNZKnZrM?utm_source=generator&theme=0", user_id: musician.id, description: lorem_ipsum_medium)
-music_5 = Project.create!(category: Project::CATEGORIES[0], title: "Between The Waves", collab: "", video_url: "", music_url: "https://open.spotify.com/embed/track/5lz7FCk3apkROsI6hctQLU?utm_source=generator&theme=0", user_id: musician.id, description: lorem_ipsum_medium)
+music_5 = Project.create!(category: Project::CATEGORIES[0], title: "Between The Waves", collab: "", video_url: "", music_url: "https://open.spotify.com/embed/track/5lz7FCk3apkROsI6hctQLU?utm_source=generator", user_id: musician.id, description: lorem_ipsum_medium)
 
 # 2. VIDEO ART
 video_1 = Project.create!(category: Project::CATEGORIES[1], title: "Flying in the Sky", collab: musician.nickname, video_url: "https://www.youtube.com/embed/9Z4TiA5JH_0", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
@@ -37,7 +37,7 @@ video_4 = Project.create!(category: Project::CATEGORIES[1], title: "Lines Animat
 video_5 = Project.create!(category: Project::CATEGORIES[1], title: "Rough Animation", collab: "", video_url: "https://www.youtube.com/embed/upzThAC2A_s", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
 
 # 3. ARTWORK
-puts "Downloading Cloudinary images..."
+puts "Processing Cloudinary images..."
 tesseract_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-tesseract_twl56v.webp")
 hyperspace_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-hyperspace_lboe8r.webp")
 planetarium_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-planetariumwebp_jrjfqd.webp")

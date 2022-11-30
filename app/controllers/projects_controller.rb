@@ -1,6 +1,5 @@
 class ProjectsController < ApplicationController
   before_action :set_user
-  before_save :convert_spotify_url
 
   def index
     @projects = policy_scope(Project)
@@ -30,6 +29,12 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     authorize @project
+
+    # Convert Spotify URL given by the user into a URL which can be embedded in HTML
+    regex = /track\/(?<spotify_id>\w+)\?/
+    id = @project.music_url.match(regex)[:spotify_id]
+    @project.music_url = "https://open.spotify.com/embed/track/#{id}?utm_source=generator&theme=0"
+    
     if @project.save
       redirect_to project_path(@project)
     else
@@ -60,13 +65,5 @@ class ProjectsController < ApplicationController
 
   def set_user
     @user = current_user
-  end
-
-  # Convert Spotify URL given by the user into a URL which can be embedded in HTML
-  def convert_spotify_url
-    # EN CONSTRUCTION
-    regex = /track\/(?<spotify_id>\w+)\?/
-    id = @project.music_url.match(regex)[:spotify_id]
-    @project.music_url = "https://open.spotify.com/embed/track/#{id}?utm_source=generator"
   end
 end
