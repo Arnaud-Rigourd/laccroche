@@ -10,9 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+    <div class="nav_search">
       <% if params[:action] != "home" && params[:action] != "top"%>
         <%= render "shared/searchbar" %>
       <% end %>
+    </div>
 
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>

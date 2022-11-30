@@ -1,5 +1,5 @@
 .navbar-lewagon {
-  justify-content: space-between;
+  display: flex;
   background: none;
   color: #F13B9E;
   font-family: $body-font;
@@ -17,13 +17,14 @@
 
 a.nav-link {
   color: $rose;
+  opacity: 0.8;
 }
 
 .avatar {
   border: none;
   transition: border 500ms;
     &:hover {
-     border: 2px solid #540366;
+     border: 3px solid #540366;
     }
 }
 
@@ -59,4 +60,5 @@ a.nav-link {
       width: 87%;
     }
   }
+
 }
