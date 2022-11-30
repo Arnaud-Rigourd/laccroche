@@ -1,20 +1,6 @@
 <div class="cards">
   <% @projects.each do |project|%>
-    <%# render 'shared/card', locals: {project: project} %>
-    <div class="card">
-      <div class="contenu-card">
-        <h1><%= project.title %></h1>
-          <div class="description">
-            <p><%= project.description %></p>
-          </div>
-      </div>
-      <%#= render "shared/youtubeapi" %>
-      <iframe width="560" height="315" src= "<%= project.video_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="icons">
-        <div class="category"><i class="fa-solid fa-film"></i></div>
-        <div class="like"><i class="fa-regular fa-star"></i></div>
-        <div class="follow"><i class="fa-regular fa-heart"></i></div>
-      </div>
-    </div>
+    <%= render 'shared/card', project: project %>
+
   <% end %>
 </div>

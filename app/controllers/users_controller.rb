@@ -3,6 +3,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @projects = @user.projects
     authorize @user
-    @projects = Project.all
+    @liked_projects = Project.all
   end
 end
