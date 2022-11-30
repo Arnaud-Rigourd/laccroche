@@ -3,7 +3,8 @@ class ProjectsController < ApplicationController
     @projects = policy_scope(Project)
 
     if params[:query].present?
-      @projects = @projects.where(title: params[:query])
+      #@projects = @projects.where(title:  params[:query])
+      @projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
     end
   end
 
