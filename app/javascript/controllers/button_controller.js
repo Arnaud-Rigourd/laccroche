@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 // Connects to data-controller="button"
 export default class extends Controller {
   connect() {
+
     const button = this.element
       const gradientElem = document.createElement("div");
       gradientElem.classList.add("gradient");
