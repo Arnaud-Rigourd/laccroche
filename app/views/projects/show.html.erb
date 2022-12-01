@@ -25,7 +25,7 @@
       <%= cl_image_tag(@project.photo.key, height: 500, width: 500) if @project.photo.attached? %>
 
       <!-- Display Spotify player if project has a music URL -->
-      <% if !@project.music_url.nil? %>
+      <% if @project.music_url.present? %>
         <%= render 'spotify_player_large', url: @project.music_embed_url %>
       <% end %>
 
