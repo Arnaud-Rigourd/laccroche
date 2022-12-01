@@ -7,7 +7,9 @@ class ProjectsController < ApplicationController
     # Search
     if params[:query].present?
       @projects = Project.global_search(params[:query])
-
+    # Category filter
+    elsif params[:category].present?
+    @projects = @projects.where(category: params[:category])
     else
       @projects = @projects.none
     end
