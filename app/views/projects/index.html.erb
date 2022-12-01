@@ -15,20 +15,13 @@
           <li>
             <%= p.title %>
 
-            <!-- Display image IF there is a Cloudinary photo attached -->
+            <!-- Display image if project has a Cloudinary photo attached -->
             <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
-            <!-- Display embedded Spotify IF project has a music_url -->
-            <% if p.video_url.present? %>
-            <!-- EN CONSTRUCTION -->
-            <iframe style="border-radius:12px"
-              src="https://open.spotify.com/embed/track/1JBqbYJKV57GBuSLl3j3TN?utm_source=generator"
-              width="100%"
-              height="352"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"></iframe>
+            <!-- Display Spotify player if project has a music URL -->
+            <% if !p.music_url.nil? %>
+              <% url = p.music_url %>
+              <%= render 'spotify_player_medium', url: url %>
             <% end %>
           </li>
         <% end %>
