@@ -22,6 +22,10 @@
             <% if !p.music_url.nil? %>
               <%= render 'spotify_player_medium', url: p.music_embed_url %>
             <% end %>
+
+            <% if !p.music_url.nil? %>
+              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <% end %>
           </li>
         <% end %>
       </ul>

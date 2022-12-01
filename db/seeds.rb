@@ -30,11 +30,11 @@ music_4 = Project.create!(category: Project::CATEGORIES[0], title: "Ghetto Dream
 music_5 = Project.create!(category: Project::CATEGORIES[0], title: "Between The Waves", collab: "", video_url: "", music_url: "https://open.spotify.com/track/5lz7FCk3apkROsI6hctQLU?si=07cf0f8e9deb4772", user_id: musician.id, description: lorem_ipsum_medium)
 
 # 2. VIDEO ART
-video_1 = Project.create!(category: Project::CATEGORIES[1], title: "Flying in the Sky", collab: musician.nickname, video_url: "https://www.youtube.com/embed/9Z4TiA5JH_0", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
-video_2 = Project.create!(category: Project::CATEGORIES[1], title: "Dance of the Yōkai", collab: musician.nickname, video_url: "https://www.youtube.com/embed/piQpugWN2Xw", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
-video_3 = Project.create!(category: Project::CATEGORIES[1], title: "Winter Hunting", collab: musician.nickname, video_url: "https://www.youtube.com/embed/RDfu4iEeyro", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
-video_4 = Project.create!(category: Project::CATEGORIES[1], title: "Lines Animation", collab: musician.nickname, video_url: "https://www.youtube.com/embed/qMtsaIiwiaA", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
-video_5 = Project.create!(category: Project::CATEGORIES[1], title: "Rough Animation", collab: "", video_url: "https://www.youtube.com/embed/upzThAC2A_s", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
+video_1 = Project.create!(category: Project::CATEGORIES[1], title: "Flying in the Sky", collab: musician.nickname, video_url: "https://youtu.be/9Z4TiA5JH_0", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
+video_2 = Project.create!(category: Project::CATEGORIES[1], title: "Dance of the Yōkai", collab: musician.nickname, video_url: "https://youtu.be/piQpugWN2Xw", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
+video_3 = Project.create!(category: Project::CATEGORIES[1], title: "Winter Hunting", collab: musician.nickname, video_url: "https://youtu.be/RDfu4iEeyro", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
+video_4 = Project.create!(category: Project::CATEGORIES[1], title: "Lines Animation", collab: musician.nickname, video_url: "https://youtu.be/qMtsaIiwiaA", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
+video_5 = Project.create!(category: Project::CATEGORIES[1], title: "Rough Animation", collab: "", video_url: "https://youtu.be/upzThAC2A_s", music_url: "", user_id: video_artist.id, description: lorem_ipsum_medium)
 
 # 3. ARTWORK
 puts "Processing Cloudinary images..."
