@@ -48,7 +48,7 @@
       width: 100%;
       height: 100%;
       border-radius: 100%;
-      border: 2px solid #F13B7C;
+      border: 2px solid #460170;
     }
   }
 
@@ -70,13 +70,13 @@
     text-align: center;
     text-transform: uppercase;
     font-size: 20px;
-    background: linear-gradient(317deg, #6e0000 30%, #F13B7C 100%);
+    background: linear-gradient(317deg, #291F9E 30%, #8100BE 100%);
     width: 200px;
     padding: 8px 0;
     border-radius: 8px;
     font-weight: 500;
     margin-top: 40px;
-    box-shadow: 0 2px 16px -24px #f13b9e;
+    box-shadow: 0 2px 16px -24px #291F9E;
   }
 
   .profil-info-links {
@@ -95,7 +95,7 @@
     // ------------------
 
     .fab {
-      color: #F13B7C;
+      color: #8100BE;
       opacity: 0.4;
       text-decoration: none;
       padding: 0 10px;
