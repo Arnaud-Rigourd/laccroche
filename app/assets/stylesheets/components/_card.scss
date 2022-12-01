@@ -20,6 +20,12 @@
     radial-gradient(circle at bottom right, #F13B7C, transparent 50%);
   	border-image-slice: 1;
   	padding: 15px;
+
+    // &:before {
+    //   border-image-source:
+    //   radial-gradient(circle at top left, #F13B7C, transparent 50%);
+  	// border-image-slice: 1;
+    // }
   }
 }
 
