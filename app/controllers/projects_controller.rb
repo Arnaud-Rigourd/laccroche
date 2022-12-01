@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     authorize @project
-    @project_liked = current_user.likes.where(project: @project).exists?
+     @project_liked = current_user.likes.where(project: @project).exists?
   end
 
   def new
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     authorize @project
-    
+
     if @project.save
       redirect_to project_path(@project)
     else
