@@ -1,3 +1,7 @@
+.profil-to-email {
+  position: sticky;
+  top:10px;
+}
 
 .profil-info {
   font-family: $body-font;
@@ -8,8 +12,21 @@
   border-radius: 15px;
   border-top: 1px solid rgb(125, 125, 125);
   border-left: 1px solid rgb(125, 125, 125);
-  position: sticky;
-  top:10px;
+
+  .email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+    transition: all ease 1s;
+    &.hidden {
+      position: absolute;
+      opacity: 0;
+    }
+  }
 
 
     .contenu-profil {
@@ -21,7 +38,12 @@
       justify-content: center;
       overflow: hidden;
       padding: 0 20px;
-
+      opacity: 1;
+      transition: all ease 1s;
+      &.hidden {
+        position: absolute;
+        opacity: 0;
+      }
       // Modif sur le before / Arnaud
 
 

@@ -1,7 +1,7 @@
 .navbar-lewagon {
   display: flex;
   background: none;
-  color: #F13B9E;
+  color: $medium-violet;
   font-family: $body-font;
 
   .navbar-collapse {
@@ -16,7 +16,7 @@
 }
 
 a.nav-link {
-  color: $rose;
+  color: $medium-violet;
   opacity: 0.8;
 }
 
@@ -24,7 +24,7 @@ a.nav-link {
   border: none;
   transition: border 500ms;
     &:hover {
-     border: 3px solid #540366;
+     border: 3px solid $medium-violet;
     }
 }
 
@@ -35,18 +35,23 @@ a.nav-link {
   }
 
   a {
-    color: $rose;
+    color: $medium-violet;
     text-decoration: none;
     position: relative;
     padding-bottom: 0;
+    opacity: 0.8;
+    transition: opacity 300ms;
+    font-weight: bold;
+
 
     &:hover {
-      color: $rose;
+      color: $medium-violet;
+      opacity: 1;
     }
 
     &::before {
       content: "";
-      background-color: #540366;
+      background-color: $medium-blue;
       transition: 0.4s ease-out;
       width: 0%;
       height: 2px;
