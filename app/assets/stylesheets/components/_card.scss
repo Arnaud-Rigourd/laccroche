@@ -1,28 +1,56 @@
-.card {
-  font-family: $body-font;
-  height: 600px;
-  width: 400px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  border-top: 1px solid rgb(125, 125, 125);
-  border-left: 1px solid rgb(125, 125, 125);
 
-  .contenu-card {
-    flex-direction: column;
-    height: 100%;
-    display: flex;
-  	justify-content: center;
-  	align-items: center;
-    margin: 20px;
-    border: 4px solid white;
-    border-image-source:
-    radial-gradient(circle at bottom right, #F13B7C, transparent 50%);
-  	border-image-slice: 1;
-  	padding: 15px;
-  }
-}
 
-.icons {
-  display: flex;
-}
+
+
+
+// .card {
+//   font-family: $body-font;
+//   height: 600px;
+//   width: 400px;
+//   background: rgba(255, 255, 255, 0.1);
+//   backdrop-filter: blur(5px);
+//   border-radius: 15px;
+//   border-top: 1px solid rgb(125, 125, 125);
+//   border-left: 1px solid rgb(125, 125, 125);
+
+//   .contenu-card {
+//     flex-direction: column;
+//     height: 100%;
+//     display: flex;
+//   	justify-content: center;
+//   	align-items: center;
+//     margin: 20px;
+//     border: 4px solid white;
+//     border-image-source:
+//     radial-gradient(circle at bottom right, #F13B7C, transparent 50%);
+//   	border-image-slice: 1;
+//   	padding: 15px;
+
+//     // &:before {
+//     //   border-image-source:
+//     //   radial-gradient(circle at top left, #F13B7C, transparent 50%);
+//   	// border-image-slice: 1;
+//     // }
+//   }
+// }
+
+// .icons {
+//   display: flex;
+// }
+
+
+
+// .card-category {
+//   background-size: cover;
+//   background-position: center;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   color: white;
+//   font-size: 24px;
+//   font-weight: bold;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
