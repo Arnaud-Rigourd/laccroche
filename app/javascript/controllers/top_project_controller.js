@@ -1,13 +1,15 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["clone", "context"]
+  static targets = ["clone", "context", "floatImage"]
 
   connect() {
     this.disableScroll = false
     this.scrollHeight = 0
     this.scrollPos = 0
     this.clonesHeight = 0
+
+    this.imageCount = this.floatImageTargets.length
 
     document.querySelector("html").classList.add("projects-top")
 
@@ -25,6 +27,22 @@ export default class extends Controller {
   scroll(event){
     event.preventDefault()
     window.requestAnimationFrame(this.#scrollUpdate);
+  }
+
+  float(event) {
+    let x = event.clientX * 100 / window.innerWidth
+    let y = event.clientY * 100 / window.innerHeight
+
+    x /= 10
+    y /= 10
+
+    x += "%"
+    y += "%"
+
+    for (let i=0; i < this.imageCount; i++) {
+      this.floatImageTargets[i].style.transform = "translate(-" + x + ",-" + y + ")"
+      this.floatImageTargets[i].style.transition = "transform 600ms linear"
+    }
   }
 
   #getScrollPos = () => {
