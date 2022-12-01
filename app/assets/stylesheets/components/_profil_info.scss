@@ -1,13 +1,16 @@
 
 .profil-info {
   font-family: $body-font;
-  height: 600px;
+  height: 550px;
   width: 400px;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 15px;
   border-top: 1px solid rgb(125, 125, 125);
   border-left: 1px solid rgb(125, 125, 125);
+  position: sticky;
+  top:10px;
+
 
     .contenu-profil {
       position: relative;

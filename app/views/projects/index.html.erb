@@ -1,31 +1,27 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1>[Projects]</h1>
+
 
       <!-- Buttons to filter projects by category -->
-      <ul>
-        <li><%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]) %></li>
-        <li><%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]) %></li>
-        <li><%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]) %></li>
-      </ul>
-
-      <ul>
-        <% @projects.each do |p| %>
-          <li>
-            <%= p.title %>
-
-            <!-- Display image if project has a Cloudinary photo attached -->
-            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
-
-            <!-- Display Spotify player if project has a music URL -->
-            <% if !p.music_url.nil? %>
-              <% url = p.music_url %>
-              <%= render 'spotify_player_medium', url: url %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+  <div class="categories">
+    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category" %>
+    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category" %>
+    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category" %>
   </div>
-</div>
+
+  <div class="spotify">
+    <ul>
+      <% @projects.each do |p| %>
+        <li>
+          <%= p.title %>
+
+          <!-- Display image if project has a Cloudinary photo attached -->
+          <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+
+          <!-- Display Spotify player if project has a music URL -->
+          <% if !p.music_url.nil? %>
+            <% url = p.music_url %>
+            <%= render 'spotify_player_medium', url: url %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
