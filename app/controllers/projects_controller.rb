@@ -11,6 +11,8 @@ class ProjectsController < ApplicationController
     # Category filter
     elsif params[:category].present?
       @projects = @projects.where(category: params[:category])
+    else
+      @projects = @projects.none
     end
   end
 
