@@ -6,11 +6,19 @@ class ProjectsController < ApplicationController
 
     # Search
     if params[:query].present?
-      @projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
+      #@projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
 
-    # Category filter
-    elsif params[:category].present?
-      @projects = @projects.where(category: params[:category])
+      pg_search_scope :query:( "%#{params[:query]}%" ),
+      against: [ :title, :category ],
+      associated_against: {
+        user: [ :first_name, :last_name, :nickname ]
+      },
+      using: {
+        tsearch: { prefix: true }
+        }
+      end
+      end
+
     else
       @projects = @projects.none
     end
