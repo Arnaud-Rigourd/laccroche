@@ -19,8 +19,13 @@
           <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
-            <% if !p.music_url.nil? %>
+            <% if p.music_url.present? %>
               <%= render 'spotify_player_medium', url: p.music_embed_url %>
+            <% end %>
+
+            <!-- Display YouTube player if project has a video URL -->
+            <% if p.video_url.present? %>
+              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
             <% end %>
           </li>
         <% end %>

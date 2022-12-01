@@ -28,6 +28,11 @@
       <% if !@project.music_url.nil? %>
         <%= render 'spotify_player_large', url: @project.music_embed_url %>
       <% end %>
+
+      <!-- Display YouTube player if project has a video URL -->
+      <% if @project.video_url.present? %>
+        <%= render 'projects/youtube_player', url: @project.youtube_embed_url %>
+      <% end %>
     </div>
   </div>
 </div>
