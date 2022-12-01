@@ -4,9 +4,14 @@
       <%= render "shared/banner" %>
 
         <div class="navigation_profil">
-        <%= render "shared/bouton", text: "filter" %>
-        <%= render "shared/bouton", text: "filter" %>
-        <%= render "shared/bouton", text: "+ Project" %>
+        <%# <%= render "shared/bouton", text: "filter" %>
+        <%#= render "shared/bouton", text: "filter" %>
+        <%#= render "shared/bouton", text: "+ Project" %>
+          <ul>
+            <li><%= link_to "My projects", user_path(@user) %></li>
+            <li>My likes</li>
+            <li>New project</li>
+          </ul>
         </div>
       <%= render "shared/card_grid", locals: {projects: @projects} %>
       <%= render partial: "shared/user_likes", locals: { user: @user, projects: @liked_projects } %>
