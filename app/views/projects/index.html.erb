@@ -13,15 +13,14 @@
       <ul>
         <% @projects.each do |p| %>
           <li>
-            <%= p.title %>
+            <%= link_to p.title, project_path(p) %>
 
             <!-- Display image if project has a Cloudinary photo attached -->
             <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
             <% if !p.music_url.nil? %>
-              <% url = p.music_url %>
-              <%= render 'spotify_player_medium', url: url %>
+              <%= render 'spotify_player_medium', url: p.music_embed_url %>
             <% end %>
           </li>
         <% end %>

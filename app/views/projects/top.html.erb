@@ -1,10 +1,10 @@
 <%# <h1>TOP 10</h1> %>
 
-<main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context" data-action="scroll->top-project#scroll">
+<main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context" data-action="scroll->top-project#scroll mousemove->top-project#float">
 
   <% @top10.each_with_index do |t, index| %>
-    <section class="scrool_card top-card float-image card">
-      <div class="scrool_card_contenu">
+    <section class="scrool_card top-card card" data-top-project-target="floatImage">
+      <div class="scrool_card_contenu float-image">
         <%= t.title %>
       </div>
       <div>
@@ -19,7 +19,7 @@
   <%# clones %>
 
   <% @top10.first(2).each_with_index do |t, index| %>
-    <section class="scrool_card top1 is-clone card" data-top-project-target="clone">
+    <section class="scrool_card top1 is-clone card " data-top-project-target="clone floatImage">
         <div class="scrool_card_contenu">
           <%= t.title %>
         </div>

@@ -1,29 +1,33 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-
       <h1>[Project]</h1>
-
       <h2><%= @project.title %></h2>
+
       <% if @project.photo.attached? %>
         <%= cl_image_tag @project.photo.key, width: 300 %>
       <% else %>
         <%= image_url @project.video_url %>
       <% end %>
+
       <p><%= @project.description %></p>
       <p><%= @project.user.nickname %></p>
 
-
+      <!-- Display a like button if the current user hasn't liked yet... -->
+      <!-- ... else display a like counter -->
       <% if @project_liked %>
         <p><%= @project.likes.length %> Like (already liked)</p>
-
       <% else %>
         <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
       <% end %>
 
-
+      <!-- Display image if project has a Cloudinary photo attached -->
       <%= cl_image_tag(@project.photo.key, height: 500, width: 500) if @project.photo.attached? %>
 
+      <!-- Display Spotify player if project has a music URL -->
+      <% if !@project.music_url.nil? %>
+        <%= render 'spotify_player_large', url: @project.music_embed_url %>
+      <% end %>
     </div>
   </div>
 </div>
