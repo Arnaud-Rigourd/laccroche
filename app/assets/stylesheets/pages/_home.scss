@@ -86,8 +86,8 @@ body {
       height: 10px;
       border-top: 2px solid $btn-home;
       border-left: 2px solid $btn-home;
-      transition: 0.2s linear;
-      transition-delay: 0.2s linear;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
    }
     &:after {
       content: " ";
@@ -98,8 +98,8 @@ body {
       height: 10px;
       border-bottom: 2px solid $btn-home;
       border-right: 2px solid $btn-home;
-      transition: 0.2s linear;
-      transition-delay: 0.2s linear;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
    }
     &:hover::before, &:hover::after {
       width: 15%;
@@ -110,8 +110,9 @@ body {
     &:hover {
       // background: $btn-home;
       color: white;
+      opacity: 1;
       // box-shadow: 0 0 50px $btn-home;
-      // transition-delay: 0.5s;
+      transition-delay: all 0.5s;
     }
   }
 
