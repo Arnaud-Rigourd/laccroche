@@ -5,47 +5,107 @@
   justify-content: space-between;
   margin-left:  40px;
 
-    a {
-      font-size: 115px;
-      text-decoration: none;
-      font-family: $headers-font;
+
+  .title-category{
+    text-decoration: none;
+    color: #fff;
+    font-family: bely-display, serif;
+    font-size: 45px;
+    opacity: 0.7;
+    text-align: center;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+    position: relative;
+    padding: 10px 30px;
+    margin: 45px 0;
+    width: fit-content;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
+   }
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
+   }
+    &:hover::before, &:hover::after {
+      width: 15%;
+      height: 30%;
+      transition-delay: 0s;
+   }
+
+    &:hover {
+      // background: white;
       color: white;
-      opacity: 0.7;
-      position: relative;
-      z-index: 1;
-      text-shadow: 1px 1px 3px $clear-pink;
-      width: fit-content;
-      transition: opacity 400ms;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &:before {
-        border-top: 50px solid white;
-        opacity: 0.8;
-        content:"";
-        position: absolute;
-        top: 50%; left: 0; right: 0; bottom: 0;
-        z-index: -1;
-        transition: 0.7s ease-out;
-        width: 0%;
-
-      }
-
-      &:hover:before {
-        width: 105%;
-      }
-
+      opacity: 1;
+      // box-shadow: 0 0 50px white;
+      transition-delay: all 0.5s;
     }
+  }
 
-    .title-category-video {
-      align-self: center;
 
-    }
 
-    .title-category-artwork {
-      align-self: flex-end;
-      margin-right: 40px;
-    }
+
+
+
+
+    // a {
+    //   font-size: 115px;
+    //   text-decoration: none;
+    //   font-family: $headers-font;
+    //   color: white;
+    //   opacity: 0.7;
+    //   position: relative;
+    //   z-index: 1;
+    //   text-shadow: 1px 1px 3px $clear-pink;
+    //   width: fit-content;
+    //   transition: opacity 400ms;
+
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+
+    //   &:before {
+    //     border-top: 50px solid white;
+    //     opacity: 0.8;
+    //     content:"";
+    //     position: absolute;
+    //     top: 50%; left: 0; right: 0; bottom: 0;
+    //     z-index: -1;
+    //     transition: 0.7s ease-out;
+    //     width: 0%;
+
+    //   }
+
+    //   &:hover:before {
+    //     width: 105%;
+    //   }
+
+    // }
+
+    // .title-category-video {
+    //   align-self: center;
+
+    // }
+
+    // .title-category-artwork {
+    //   align-self: flex-end;
+    //   margin-right: 40px;
+    // }
   }
