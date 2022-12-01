@@ -84,8 +84,8 @@ body {
       left: -1px;
       width: 10px;
       height: 10px;
-      border-top: 2px solid $btn-home;
-      border-left: 2px solid $btn-home;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
       transition: all 0.2s linear;
       transition-delay: all 0.2s linear;
    }
@@ -96,8 +96,8 @@ body {
       right: -1px;
       width: 10px;
       height: 10px;
-      border-bottom: 2px solid $btn-home;
-      border-right: 2px solid $btn-home;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
       transition: all 0.2s linear;
       transition-delay: all 0.2s linear;
    }
@@ -108,10 +108,10 @@ body {
    }
 
     &:hover {
-      // background: $btn-home;
+      // background: white;
       color: white;
       opacity: 1;
-      // box-shadow: 0 0 50px $btn-home;
+      // box-shadow: 0 0 50px white;
       transition-delay: all 0.5s;
     }
   }

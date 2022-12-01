@@ -1,11 +1,16 @@
 .glow-button {
   --button-background: #69005d00;
   --button-color: #fff;
-  --button-shadow: rgba(33, 4, 104, 0.2);
-  --button-shine-left: rgb(98 0 61 / 50%);
-  --button-shine-right: rgb(228 52 111 / 65%);
-  --button-glow-start: #e80072;
-  --button-glow-end: #8700fd;
+  // --button-shadow: rgba(33, 4, 104, 0.2);
+  --button-shadow: rgba(241, 59, 158, 0.2);
+  // --button-shine-left: rgb(98 0 61 / 50%);
+  --button-shine-left: #291F9E;
+  // --button-shine-right: rgb(228 52 111 / 65%);
+  --button-shine-right: #8100BE;
+  // --button-glow-start: #e80072;
+  --button-glow-start: #7794FB;
+  // --button-glow-end: #8700fd;
+  --button-glow-end: #F13B9E;
 
   appearance: none;
   outline: none;
