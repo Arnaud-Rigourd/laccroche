@@ -1,13 +1,11 @@
 
 
       <!-- Buttons to filter projects by category -->
-  <div class="categories">
-    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category-music" %>
-    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category-video" %>
-    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category-artwork" %>
-  </div>
-
-
+    <div class="categories">
+      <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category-music" %>
+      <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category-video" %>
+      <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category-artwork" %>
+    </div>
 
   <div class="spotify">
       <ul>

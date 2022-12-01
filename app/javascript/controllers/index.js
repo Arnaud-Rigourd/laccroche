@@ -10,6 +10,9 @@ application.register("button", ButtonController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import ProfilController from "./profil_controller"
+application.register("profil", ProfilController)
+
 import SketchController from "./sketch_controller"
 application.register("sketch", SketchController)
 

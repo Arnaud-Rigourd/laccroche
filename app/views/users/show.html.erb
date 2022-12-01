@@ -1,5 +1,5 @@
 <div class="container py-3">
-  <div class="page_profil">
+  <div class="page_profil" data-controller="profil">
     <div class="grid">
       <%= render "shared/banner" %>
         <div class="navigation_profil">
@@ -7,9 +7,9 @@
         <%#= render "shared/bouton", text: "filter" %>
         <%#= render "shared/bouton", text: "+ Project" %>
           <ul>
-            <li><%= link_to "My projects", user_path(@user) %></li>
-            <li>My likes</li>
-            <li>New project</li>
+            <li class="cursor" data-action="click->profil#toggleProjects">My projects</li>
+            <li class="cursor"  data-action="click->profil#toggleLikes">My likes</li>
+            <li class="cursor"  data-profil-target="newProject">New project</li>
           </ul>
         </div>
       <%= render "shared/card_grid", locals: {projects: @projects} %>
