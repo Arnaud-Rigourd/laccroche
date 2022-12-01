@@ -23,7 +23,8 @@
               <%= render 'spotify_player_medium', url: p.music_embed_url %>
             <% end %>
 
-            <% if !p.music_url.nil? %>
+            <!-- Display YouTube player if project has a video URL -->
+            <% if !p.video_url.nil? %>
               <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
             <% end %>
           </li>
