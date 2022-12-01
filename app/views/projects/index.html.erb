@@ -1,5 +1,6 @@
 
 
+<div data-controller>
       <!-- Buttons to filter projects by category -->
   <div class="categories">
     <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category-music" %>
@@ -7,20 +8,18 @@
     <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category-artwork" %>
   </div>
 
-
-
   <div class="spotify">
       <ul>
         <% @projects.each do |p| %>
           <li>
             <%= link_to p.title, project_path(p) %>
 
-          <!-- Display image if project has a Cloudinary photo attached -->
-          <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+            <!-- Display image if project has a Cloudinary photo attached -->
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
             <% if p.music_url.present? %>
-              <%= render 'spotify_player_medium', url: p.music_embed_url %>
+              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
             <% end %>
 
             <!-- Display YouTube player if project has a video URL -->
@@ -32,3 +31,4 @@
       </ul>
     </div>
   </div>
+</div>

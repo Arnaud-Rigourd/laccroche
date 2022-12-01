@@ -7,6 +7,9 @@ import { application } from "./application"
 import ButtonController from "./button_controller"
 application.register("button", ButtonController)
 
+import CategoryButtonsScrollDownController from "./category_buttons_scroll_down_controller"
+application.register("category-buttons-scroll-down", CategoryButtonsScrollDownController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
@@ -15,3 +18,4 @@ application.register("sketch", SketchController)
 
 import TopProjectController from "./top_project_controller"
 application.register("top-project", TopProjectController)
+ 
