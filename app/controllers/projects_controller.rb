@@ -8,17 +8,6 @@ class ProjectsController < ApplicationController
     if params[:query].present?
       #@projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
 
-      pg_search_scope :query:( "%#{params[:query]}%" ),
-      against: [ :title, :category ],
-      associated_against: {
-        user: [ :first_name, :last_name, :nickname ]
-      },
-      using: {
-        tsearch: { prefix: true }
-        }
-      end
-      end
-
     else
       @projects = @projects.none
     end
@@ -39,7 +28,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.user = current_user
     authorize @project
-    
+
     if @project.save
       redirect_to project_path(@project)
     else
