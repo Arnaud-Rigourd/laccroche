@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 
     # Search
     if params[:query].present?
-      #@projects = @projects.joins(:user).where("title ILIKE :query OR users.nickname ILIKE :query", query: "%#{params[:query]}%")
+      @projects = Project.global_search(params[:query])
 
     else
       @projects = @projects.none
