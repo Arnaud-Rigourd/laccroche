@@ -15,9 +15,10 @@
       z-index: 1;
       text-shadow: 1px 1px 3px $rose;
       width: fit-content;
+      transition: color 400ms, text-shadow 400ms;
 
       &:hover {
-        color: $rose;
+        color: black;
         text-shadow: 1px 1px 3px white;
       }
 
@@ -28,13 +29,24 @@
         position: absolute;
         top: 50%; left: 0; right: 0; bottom: 0;
         z-index: -1;
-        transition: 1s ease-out;
+        transition: 0.7s ease-out;
         width: 0%;
 
       }
 
       &:hover:before {
-        width: 110%;
+        width: 105%;
       }
+
+    }
+
+    .title-category-video {
+      align-self: center;
+
+    }
+
+    .title-category-artwork {
+      align-self: flex-end;
+      margin-right: 40px;
+    }
   }
-}
