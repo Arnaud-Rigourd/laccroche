@@ -12,11 +12,17 @@
   </head>
 
   <body>
+
     <%= render "shared/navbar" %>
 
 
-    <%= render "shared/flashes" %>
-    <%= yield %>
+  <%= render "shared/flashes" %>
+  <%= yield %>
+
+
+  <% if params[:action] != "top" && params[:action] != "home" %>
     <%= render "shared/footer" %>
+  <% end %>
+
   </body>
 </html>

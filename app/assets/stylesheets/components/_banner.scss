@@ -5,10 +5,38 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-  // suppression du border radius
+
+  padding-left: 25px;
+  position: relative;
+  border-radius: 0 10px 0 10px;
   border-top: 1px solid rgb(125, 125, 125);
   border-left: 1px solid rgb(125, 125, 125);
-  padding-left: 25px;
+
+  // -----petit cadre blanc début------------------------------------------->
+
+  // &:before {
+  //   content: " ";
+  //   position: absolute;
+  //   top: -1px;
+  //   left: -1px;
+  //   width: 20px;
+  //   height: 20px;
+  //   border-top: 2px solid white;
+  //   border-left: 2px solid white;
+  // }
+
+  // &:after {
+  //   content: " ";
+  //   position: absolute;
+  //   bottom: -1px;
+  //   right: -1px;
+  //   width: 20px;
+  //   height: 20px;
+  //   border-bottom: 2px solid white;
+  //   border-right: 2px solid white;
+  // }
+
+  // -----petit cadre blanc fin------------------------------------------->
 
 
   h1 {
