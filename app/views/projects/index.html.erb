@@ -1,83 +1,76 @@
 
-      <!-- Buttons to filter projects by category -->
-  <div class="categories" data-controller="toggle">
-    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category title-category-music" %>
-      <div class="d-none d-flex horizontal-scroll-box">
-        <% @projects.each do |p| %>
-          <% if p.category === Project::CATEGORIES[0] %>
-            <div class="px-3 project-box">
-              <%= link_to p.title, project_path(p) %>
+    <!-- Buttons to filter projects by category -->
+<div class="categories" data-controller="toggle">
+  <span data-action="click->toggle#change_categorie_music"><%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category title-category-music" %></span>
+    <div class="d-none d-flex horizontal-scroll-box" data-toggle-target="boxmusic">
+      <% @projects.each do |p| %>
+        <% if p.category === Project::CATEGORIES[0] %>
+          <div class="px-3 project-box">
+            <%= link_to p.title, project_path(p) %>
 
-              <!-- Display image if project has a Cloudinary photo attached -->
-              <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+            <!-- Display image if project has a Cloudinary photo attached -->
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
-              <!-- Display Spotify player if project has a music URL -->
-              <% if p.music_url.present? %>
-                <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-              <% end %>
+            <!-- Display Spotify player if project has a music URL -->
+            <% if p.music_url.present? %>
+              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <% end %>
 
-              <!-- Display YouTube player if project has a video URL -->
-              <% if p.video_url.present? %>
-                <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-              <% end %>
-            </div>
-          <% end %>
+            <!-- Display YouTube player if project has a video URL -->
+            <% if p.video_url.present? %>
+              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category title-category-video" %>
-      <div class="d-none d-flex horizontal-scroll-box">
-        <% @projects.each do |p| %>
-          <% if p.category === Project::CATEGORIES[1] %>
-            <div class="px-3 project-box ">
-              <%= link_to p.title, project_path(p) %>
+      <% end %>
+    </div>
 
-              <!-- Display image if project has a Cloudinary photo attached -->
-              <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+  <span data-action="click->toggle#change_categorie_artwork"><%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category title-category-video" %></span>
+    <div class="d-none d-flex horizontal-scroll-box" data-toggle-target="boxartwork">
+      <% @projects.each do |p| %>
+        <% if p.category === Project::CATEGORIES[1] %>
+          <div class="px-3 project-box ">
+            <%= link_to p.title, project_path(p) %>
 
-              <!-- Display Spotify player if project has a music URL -->
-              <% if p.music_url.present? %>
-                <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-              <% end %>
+            <!-- Display image if project has a Cloudinary photo attached -->
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
-              <!-- Display YouTube player if project has a video URL -->
-              <% if p.video_url.present? %>
-                <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-              <% end %>
-            </div>
-          <% end %>
+            <!-- Display Spotify player if project has a music URL -->
+            <% if p.music_url.present? %>
+              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <% end %>
+
+            <!-- Display YouTube player if project has a video URL -->
+            <% if p.video_url.present? %>
+              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category title-category-artwork" %>
-      <div class="d-none d-flex horizontal-scroll-box box-video">
-        <% @projects.each do |p| %>
-          <% if p.category === Project::CATEGORIES[2] %>
-            <div class="px-3 project-box project-box">
-              <%= link_to p.title, project_path(p) %>
+      <% end %>
+    </div>
 
-              <!-- Display image if project has a Cloudinary photo attached -->
-              <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+  <span data-action="click->toggle#change_categorie_video"><%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category title-category-artwork" %></span>
 
-              <!-- Display Spotify player if project has a music URL -->
-              <% if p.music_url.present? %>
-                <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-              <% end %>
+    <div class="d-none d-flex horizontal-scroll-box" data-toggle-target="boxvideo">
+      <% @projects.each do |p| %>
+        <% if p.category === Project::CATEGORIES[2] %>
+          <div class="px-3 project-box project-box">
+            <%= link_to p.title, project_path(p) %>
 
-              <!-- Display YouTube player if project has a video URL -->
-              <% if p.video_url.present? %>
-                <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-              <% end %>
-            </div>
-          <% end %>
+            <!-- Display image if project has a Cloudinary photo attached -->
+            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+
+            <!-- Display Spotify player if project has a music URL -->
+            <% if p.music_url.present? %>
+              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <% end %>
+
+            <!-- Display YouTube player if project has a video URL -->
+            <% if p.video_url.present? %>
+              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <% end %>
+          </div>
         <% end %>
-      </div>
-  </div>
-
-<script>
-
-  console.log("coucou")
-  var toggle = document.querySelector(".title-category-artwork");
-  var boxVideo = document.querySelector(".box-video")
-  console.log(boxVideo);
-  toggle.addEventListener("click", boxVideo.classList.toggle("d-none"));
-  /* + anchor scroll to top */
-</script>
+      <% end %>
+    </div>
+</div>
