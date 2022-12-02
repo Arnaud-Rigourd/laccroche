@@ -3,7 +3,7 @@
     <div class="contenu-profil" data-profil-to-email-target="viewprofil">
       <div class="picture">
         <div class="user-initials">
-          <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize  %>
+          <%= link_to "#{@user.nickname}" , user_path(@user) %>
         </div>
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
