@@ -27,13 +27,18 @@ section {
 
 .top-title{
   color: rgba(83, 83, 83, 0.3);
+  z-index: -10;
 
   &:first-child {
     position: fixed;
   }
 
   &:nth-child(2) {
-    text-align: right;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    right: 0;
+    text-align: right;
   }
 }

@@ -26,10 +26,10 @@
         <% if user_signed_in? %>
         <% if params[:action] != "home" %>
             <li class="nav-item active">
-              <%= link_to "Discover", top_projects_path, class: "nav-link" %>
+              <%= link_to "Top 10", top_projects_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Universe", projects_path, class: "nav-link" %>
+              <%= link_to "All Projects", projects_path, class: "nav-link" %>
             </li>
           <% end %>
 
