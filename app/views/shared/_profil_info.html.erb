@@ -3,7 +3,8 @@
     <div class="contenu-profil" data-profil-to-email-target="viewprofil">
       <div class="picture">
         <div class="user-initials">
-          <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize  %>
+
+         <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize %>
         </div>
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
@@ -18,7 +19,9 @@
     </div>
 
     <div class="email hidden" data-profil-to-email-target="viewemail">
-      <h2>ICI UN FROM EMAIL</h2>
+
+      <%= render "shared/form_contact" %>
+
       <%= render "shared/bouton", text: "envoyer" %>
     </div>
   </div>
