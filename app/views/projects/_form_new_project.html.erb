@@ -9,6 +9,8 @@
           <%= f.input :title %>
           <%= f.input :description %>
           <%= f.input :category, as: :select, collection: Project::CATEGORIES %>
+          <%= f.input :video_url %>
+          <%= f.input :music_url %>
           <%= f.input :photo, as: :file %>
           <%= f.submit 'Publish' %>
         </div>
