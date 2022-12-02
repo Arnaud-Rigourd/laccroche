@@ -16,22 +16,23 @@
     <% end %>
   </div>
 
-  <% @top10.each_with_index do |t, index| %>
-    <section class="scrool_card top-card card" data-top-project-target="floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')" >
-      <div class="scrool_card_contenu float-image">
-        <%= t.title %>
-      </div>
-    </section>
-  <% end %>
-
-  <%# clones %>
-
-  <% @top10.first(2).each_with_index do |t, index| %>
-    <section class="scrool_card top1 is-clone card " data-top-project-target="clone floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')">
-        <div class="scrool_card_contenu">
-          <%= t.title %>
+  <div class="infinite-scroll">
+    <% @top10.each_with_index do |t, index| %>
+      <section class="scrool_card top-card card" data-top-project-target="floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')" >
+        <div class="scrool_card_contenu float-image">
+          <%= link_to t.title, project_path(t) %>
         </div>
-    </section>
-  <% end %>
+      </section>
+    <% end %>
 
+    <%# clones %>
+
+    <% @top10.first(2).each_with_index do |t, index| %>
+      <section class="scrool_card top1 is-clone card " data-top-project-target="clone floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')">
+          <div class="scrool_card_contenu">
+            <%= link_to t.title, project_path(t) %>
+          </div>
+      </section>
+    <% end %>
+  </div>
 </main>

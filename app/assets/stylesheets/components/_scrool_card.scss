@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: $body-font;
   height: 450px;
   width: 325px;
   background: rgba(255, 255, 255, 0.1);
@@ -30,16 +29,19 @@
     border-right: 2px solid $border;
   }
 
-  .scrool_card_contenu {
+  .scrool_card_contenu > a {
+    font-family: $body-font;
+    color: white;
     font-size: 50px;
     font-weight: bold;
     overflow: visible;
     opacity: 0;
     transition: opacity 500ms;
+    text-decoration: none;
   }
 
-  &:hover > .scrool_card_contenu {
-    opacity: 1;
+  &:hover > .scrool_card_contenu > a {
+    opacity: 0.8;
   }
 }
 
