@@ -1,6 +1,6 @@
 <%# <h1>TOP 10</h1> %>
 
-<main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context" data-action="scroll->top-project#scroll mousemove->top-project#float">
+<main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context" data-action="scroll->top-project#scroll mousemove->top-project#float scroll->top-project#zoomOnScroll">
 
   <div class="top-title">
     <h1>TOP 10</h1>
@@ -11,15 +11,15 @@
 
    <div class="top-title">
    <h1>TOP 10</h1>
-    <% @top10.reverse!.each_with_index do |t, index| %>
+    <% @top10.reverse.each_with_index do |t, index| %>
       <h1><%= t.title %></h1>
     <% end %>
   </div>
 
-  <div class="infinite-scroll">
+  <div class="infinite-scroll" data-top-project-target="zoom">
     <% @top10.each_with_index do |t, index| %>
       <section class="scrool_card top-card card" data-top-project-target="floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')" >
-        <div class="scrool_card_contenu float-image">
+        <div class="scrool_card_contenu float-image" data-top-project-target="floatTitle">
           <%= link_to t.title, project_path(t) %>
         </div>
       </section>
@@ -29,10 +29,11 @@
 
     <% @top10.first(2).each_with_index do |t, index| %>
       <section class="scrool_card top1 is-clone card " data-top-project-target="clone floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')">
-          <div class="scrool_card_contenu">
+          <div class="scrool_card_contenu" data-top-project-target="floatTitle">
             <%= link_to t.title, project_path(t) %>
           </div>
       </section>
     <% end %>
   </div>
+
 </main>

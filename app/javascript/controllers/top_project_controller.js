@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["clone", "context", "floatImage"]
+  static targets = ["clone", "context", "floatImage", "zoom", "floatTitle"]
 
   connect() {
     this.disableScroll = false
@@ -39,10 +39,26 @@ export default class extends Controller {
     x += "%"
     y += "%"
 
+    // float effect on cards
     for (let i=0; i < this.imageCount; i++) {
       this.floatImageTargets[i].style.transform = "translate(-" + x + ",-" + y + ")"
       this.floatImageTargets[i].style.transition = "transform 600ms linear"
     }
+
+    // float effect on titles
+    for (let i=0; i < this.imageCount; i++) {
+      this.floatTitleTargets[i].style.transform = "translate(" + x + "," + y + ")"
+      this.floatTitleTargets[i].style.transition = "transform 600ms linear"
+    }
+  }
+
+  zoomOnScroll(event) {
+    console.log("hey zoomOnScroll is ready 1!");
+    // console.log(this.zoomTargets)
+    console.log(event)
+    // if (event)
+    // this.zoomTarget.style.transform = "scale(1.5)"
+    // this.zoomTarget.style.transition = "transform ease"
   }
 
   #getScrollPos = () => {

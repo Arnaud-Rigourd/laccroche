@@ -1,6 +1,6 @@
 .search-form-control {
   position: relative;
-  width: 500px;
+  width: 600px;
 
   .btn {
     position: absolute;
@@ -8,17 +8,17 @@
     top: 8px;
     bottom: 8px;
     right: 8px;
-    background-color: $dark-violet;
-    color: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 5px;
-    opacity: 0.7;
+    background-color: $medium-violet;
+    color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    opacity: 1;
     transition: all 300ms linear;
     text-transform: uppercase;
 
       &:hover {
         background-color: $medium-violet;
-        opacity: 1;
+        opacity: 0.7;
       }
     }
 
@@ -26,12 +26,13 @@
       height: 3.5rem;
       background-color: rgb(26,26,26);
       border: 0;
+      border-radius: 40px;
       transition: all 500ms linear;
     }
 
     .form-control:focus {
-      border: 1px solid $medium-violet;
+      border: 0.8px solid $medium-violet;
       outline: none !important;
-      box-shadow: 0 2px 6px $medium-violet;
+      box-shadow: 0 0px 6px $medium-violet;
     }
 }

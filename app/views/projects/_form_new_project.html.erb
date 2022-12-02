@@ -2,13 +2,15 @@
   <div class="row justify-content-center">
     <div class="grid_form col-12 col-lg-6 p-5">
 
-      <h1>[New project]</h1>
+      <h1>Share your project</h1>
 
       <%= simple_form_for @project do |f| %>
         <div>
           <%= f.input :title %>
           <%= f.input :description %>
           <%= f.input :category, as: :select, collection: Project::CATEGORIES %>
+          <%= f.input :music_url, label: 'Spotify music URL' %>
+          <%= f.input :video_url, label: 'YouTube video URL' %>
           <%= f.input :photo, as: :file %>
           <%= f.submit 'Publish' %>
         </div>
