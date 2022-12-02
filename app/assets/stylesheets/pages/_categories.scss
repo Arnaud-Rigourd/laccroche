@@ -5,6 +5,15 @@
   justify-content: space-between;
   margin-left:  40px;
 
+  .horizontal-scroll-box {
+    width: 93vw;
+    height: 80vh;
+    overflow: scroll;
+  }
+
+  .project-box {
+    max-width: 580px;
+  }
 
   .title-category{
     text-decoration: none;
