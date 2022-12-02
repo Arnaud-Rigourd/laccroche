@@ -3,12 +3,14 @@
 <main class="loop js-loop" id="main" data-controller="top-project" data-top-project-target="context" data-action="scroll->top-project#scroll mousemove->top-project#float">
 
   <div class="top-title">
+    <h1>TOP 10</h1>
     <% @top10.each_with_index do |t, index| %>
       <h1><%= t.title %></h1>
     <% end %>
   </div>
 
    <div class="top-title">
+   <h1>TOP 10</h1>
     <% @top10.reverse!.each_with_index do |t, index| %>
       <h1><%= t.title %></h1>
     <% end %>
