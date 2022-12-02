@@ -1,0 +1,118 @@
+.navbar-lewagon {
+  display: flex;
+  background: none;
+  color: $medium-violet;
+  font-family: $body-font;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand img {
+    width: 40px;
+    background-color: white;
+    opacity: 0.8;
+  }
+
+}
+
+a.nav-link {
+  color: $medium-violet;
+  opacity: 0.8;
+}
+
+.avatar {
+  border: none;
+  transition: border 500ms;
+    &:hover {
+     border: 3px solid $medium-violet;
+    }
+}
+
+.navbar-nav {
+  li {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 0;
+    opacity: 1;
+    transition: opacity 300ms linear;
+    font-weight: bold;
+
+    &:hover {
+      color: white;
+      opacity: 0.8;
+    }
+
+    &::before {
+      content: "";
+      background-color: $medium-violet;
+      transition: 0.4s ease-out;
+      width: 0%;
+      height: 2px;
+
+      position: absolute;
+      left: 5px;
+      bottom: 0;
+    }
+
+    &:hover::before {
+      width: 87%;
+    }
+  }
+
+  .dropdown-menu{
+    background: black;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
+    }
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 10px;
+      height: 10px;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+      transition: all 0.2s linear;
+      transition-delay: all 0.2s linear;
+    }
+
+    .dropdown-item {
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      &::before {
+        content: "";
+        background-color: $medium-violet;
+        transition: 0.4s ease-out;
+        width: 0%;
+        height: 2px;
+
+        position: absolute;
+        left: 5px;
+        bottom: 0;
+      }
+
+      &:hover::before {
+        width: 60%;
+      }
+    }
+  }
+}
