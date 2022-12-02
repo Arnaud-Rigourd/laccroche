@@ -9,7 +9,7 @@
           <ul>
             <li class="cursor" data-action="click->profil#toggleProjects">My projects</li>
             <li class="cursor"  data-action="click->profil#toggleLikes">My likes</li>
-            <li class="cursor"  data-profil-target="newProject">New project</li>
+            <li class="cursor"  data-profil-target="newProject"><%= link_to "New project", new_project_path %></li>
           </ul>
         </div>
       <%= render "shared/card_grid", locals: {projects: @projects} %>
