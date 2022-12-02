@@ -1,18 +1,25 @@
-<div class="profil-info">
-  <div class="contenu-profil">
-    <div class="picture">
-      <div class="user-initials">
-        <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize  %>
+<div class="profil-to-email" data-controller="profil-to-email">
+  <div class="profil-info">
+    <div class="contenu-profil" data-profil-to-email-target="viewprofil">
+      <div class="picture">
+        <div class="user-initials">
+          <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize  %>
+        </div>
+        <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
-      <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
+      <h1><%= @user.first_name %></h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi.</p>
+      <%= render "shared/bouton", text: "contact" %>
+      <div class="profil-info-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
-    <h1><%= @user.first_name %></h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi.</p>
-    <%= render "shared/bouton", text: "contact" %>
-    <div class="profil-info-links">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
+
+    <div class="email hidden" data-profil-to-email-target="viewemail">
+      <h2>ICI UN EMAIL</h2>
+      <%= render "shared/bouton", text: "envoyer" %>
     </div>
   </div>
 </div>

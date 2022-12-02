@@ -1,9 +1,9 @@
 <%# <div data-controller="category-buttons-scroll-down"> %>
       <!-- Buttons to filter projects by category -->
   <div class="categories">
-    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category-music" %>
-    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category-video" %>
-    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category-artwork" %>
+    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category title-category-music" %>
+    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category title-category-video" %>
+    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category title-category-artwork" %>
   </div>
 
   <div class="spotify" data-controller="category-buttons-scroll-down">
