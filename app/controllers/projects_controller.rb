@@ -2,6 +2,7 @@ class ProjectsController < ApplicationController
   before_action :set_user
 
   def index
+    # ok
     @projects = policy_scope(Project)
 
     # Search
