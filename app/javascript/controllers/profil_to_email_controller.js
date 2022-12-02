@@ -8,7 +8,7 @@ export default class extends Controller {
   }
 
   transform() {
-    this.viewprofilTarget.classList.toggle("hidden")
-    this.viewemailTarget.classList.toggle("hidden")
+    this.category.classList.toggle("hidden")
+    this.category.classList.toggle("hidden")
   }
 }
