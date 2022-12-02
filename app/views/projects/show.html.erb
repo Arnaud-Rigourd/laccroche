@@ -11,7 +11,8 @@
       <% end %>
 
       <p><%= @project.description %></p>
-      <p><%= @project.user.nickname %></p>
+      <%= link_to "#{@project.user.nickname}" , user_path(@project.user) %>
+
 
       <!-- Display a like button if the current user hasn't liked yet... -->
       <!-- ... else display a like counter -->

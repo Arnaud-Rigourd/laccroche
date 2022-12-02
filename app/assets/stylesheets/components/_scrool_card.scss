@@ -29,15 +29,22 @@
     border-right: 2px solid $border;
   }
 
-  .scrool_card_contenu > a {
-    font-family: $body-font;
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    overflow: visible;
-    opacity: 0;
-    transition: opacity 500ms;
-    text-decoration: none;
+  .scrool_card_contenu {
+    max-width: 900px;
+    min-width: 600px;
+    position: absolute;
+    left: -170px;
+
+  & > a {
+      font-family: $body-font;
+      color: white;
+      font-size: 50px;
+      font-weight: bold;
+      overflow: visible;
+      opacity: 0;
+      transition: opacity 500ms;
+      text-decoration: none;
+    }
   }
 
   &:hover > .scrool_card_contenu > a {

@@ -2,19 +2,21 @@ class ProjectsController < ApplicationController
   before_action :set_user
 
   def index
+    # ok
     @projects = policy_scope(Project)
 
     # Search
     if params[:query].present?
       @projects = Project.global_search(params[:query])
+    end
 
     # Category filter
-    elsif params[:category].present?
-      @projects = @projects.where(category: params[:category])
+    # elsif params[:category].present?
+    #   @projects = @projects.where(category: params[:category])
 
-    else
-      @projects = @projects.none
-    end
+    # else
+    #   @projects = @projects.none
+    # end
   end
 
   def show

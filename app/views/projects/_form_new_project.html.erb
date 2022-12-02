@@ -9,8 +9,8 @@
           <%= f.input :title %>
           <%= f.input :description %>
           <%= f.input :category, as: :select, collection: Project::CATEGORIES %>
-          <%= f.input :music_url, label: 'Share your Spotify music URL' %>
-          <%= f.input :video_url, label: 'Share your YouTube video URL' %>
+          <%= f.input :music_url, label: 'Spotify music URL' %>
+          <%= f.input :video_url, label: 'YouTube video URL' %>
           <%= f.input :photo, as: :file %>
           <%= f.submit 'Publish' %>
         </div>
