@@ -20,7 +20,7 @@
   <%= yield %>
 
 
-  <% if params[:action] != "top" %>
+  <% if params[:action] != "top" && params[:action] != "home" %>
     <%= render "shared/footer" %>
   <% end %>
 

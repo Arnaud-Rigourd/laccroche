@@ -1,32 +1,31 @@
-<%# <div data-controller="category-buttons-scroll-down"> %>
+
       <!-- Buttons to filter projects by category -->
-  <div class="categories">
-    <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category title-category-music" %>
-    <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category title-category-video" %>
-    <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category title-category-artwork" %>
-  </div>
+<div class="categories">
+  <%= link_to Project::CATEGORIES[0], projects_path(:category => Project::CATEGORIES[0]), class: "title-category title-category-music" %>
+  <%= link_to Project::CATEGORIES[1], projects_path(:category => Project::CATEGORIES[1]), class: "title-category title-category-video" %>
+  <%= link_to Project::CATEGORIES[2], projects_path(:category => Project::CATEGORIES[2]), class: "title-category title-category-artwork" %>
+</div>
 
-  <div class="spotify" data-controller="category-buttons-scroll-down">
-      <ul>
-        <% @projects.each do |p| %>
-          <li>
-            <%= link_to p.title, project_path(p) %>
 
-            <!-- Display image if project has a Cloudinary photo attached -->
-            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+<div class="categories-type">
+  <ul>
+    <% @projects.each do |p| %>
+      <li>
+        <%= link_to p.title, project_path(p) %>
 
-            <!-- Display Spotify player if project has a music URL -->
-            <% if p.music_url.present? %>
-              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-            <% end %>
+        <!-- Display image if project has a Cloudinary photo attached -->
+        <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
 
-            <!-- Display YouTube player if project has a video URL -->
-            <% if p.video_url.present? %>
-              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-            <% end %>
-          </li>
+        <!-- Display Spotify player if project has a music URL -->
+        <% if p.music_url.present? %>
+          <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
         <% end %>
-      </ul>
-    </div>
-  </div>
-<%# </div> %>
+
+        <!-- Display YouTube player if project has a video URL -->
+        <% if p.video_url.present? %>
+          <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
