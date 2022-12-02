@@ -13,10 +13,20 @@
 }
 
 .navigation_profil {
+  border-bottom: 1px solid #ffffff91;
+  display: flex;
+  justify-content: center;
   margin: 25px 0;
   padding: 10px 10px;
-  display: flex;
-  justify-content: space-around;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+    padding: 0 10px;
+    margin: 0;
+  }
 }
 
 

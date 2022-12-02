@@ -13,8 +13,13 @@ application.register("category-buttons-scroll-down", CategoryButtonsScrollDownCo
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+
+import ProfilController from "./profil_controller"
+application.register("profil", ProfilController)
+
 import ProfilToEmailController from "./profil_to_email_controller"
 application.register("profil-to-email", ProfilToEmailController)
+
 
 import SketchController from "./sketch_controller"
 application.register("sketch", SketchController)

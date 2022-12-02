@@ -24,3 +24,16 @@ section {
   margin: 50px auto;
   width: 450px;
 }
+
+.top-title{
+  color: rgba(83, 83, 83, 0.3);
+
+  &:first-child {
+    position: fixed;
+  }
+
+  &:nth-child(2) {
+    text-align: right;
+    position: fixed;
+  }
+}

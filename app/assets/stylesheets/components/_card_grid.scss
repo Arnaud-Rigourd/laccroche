@@ -27,6 +27,7 @@
 //  }
 
 
+
   .card-category{
     border-radius: 0 10px 0 10px;
     border-top: 1px solid rgb(125, 125, 125);
@@ -76,6 +77,10 @@
       }
     }
   }
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 // Smallest device
