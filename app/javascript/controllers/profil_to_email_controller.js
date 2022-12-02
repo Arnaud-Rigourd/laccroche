@@ -5,10 +5,12 @@ export default class extends Controller {
   static targets = ["viewprofil", "viewemail"]
 
   connect() {
+    console.log("hello")
   }
 
   transform() {
-    this.category.classList.toggle("hidden")
-    this.category.classList.toggle("hidden")
+    console.log("c'est ok")
+    this.viewprofilTarget.classList.toggle("hidden")
+    this.viewemailTarget.classList.toggle("hidden")
   }
 }
