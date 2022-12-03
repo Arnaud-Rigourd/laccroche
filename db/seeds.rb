@@ -56,7 +56,7 @@ planetarium = Project.new(category: Project::CATEGORIES[1], title: "Planetarium"
 planetarium.photo.attach(io: planetarium_file, filename: "artwork-planetarium.webp", content_type: "image/webp")
 planetarium.save!
 
-moon = Project.new(category: Project::CATEGORIES[1], title: "Planetarium", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
+moon = Project.new(category: Project::CATEGORIES[1], title: "Moon", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: lorem_ipsum_medium)
 moon.photo.attach(io: moon_file, filename: "artwork-moon.webp", content_type: "image/webp")
 moon.save!
 
