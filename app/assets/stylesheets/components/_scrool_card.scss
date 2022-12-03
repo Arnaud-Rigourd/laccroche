@@ -45,6 +45,11 @@
       transition: opacity 500ms;
       text-decoration: none;
     }
+
+  & > .artist-nickname {
+      font-size: 20px;
+      color: #cdcdcd;
+    }
   }
 
   &:hover > .scrool_card_contenu > a {

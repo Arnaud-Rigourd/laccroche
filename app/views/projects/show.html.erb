@@ -6,8 +6,6 @@
 
       <% if @project.photo.attached? %>
         <%= cl_image_tag @project.photo.key, width: 300 %>
-      <% else %>
-        <%= image_url @project.video_url %>
       <% end %>
 
       <p><%= @project.description %></p>
@@ -37,3 +35,5 @@
     </div>
   </div>
 </div>
+
+<% console %>
