@@ -7,9 +7,10 @@
 
   .horizontal-scroll-box {
     width: 93vw;
-    height: 80vh;
+    height: 60vh;
     overflow: scroll;
-
+    align-items: flex-end;
+    margin-bottom: 150px;
   }
 
   .project-box {
@@ -19,9 +20,17 @@
 
     align-items: center;
 
+    h3 {
+      text-align: center;
+    }
+
     a {
       text-decoration: none;
       color: white;
+    }
+
+    & > iframe {
+      width: fit-content;
     }
   }
 
