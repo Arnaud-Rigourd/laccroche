@@ -8,8 +8,9 @@ export default class extends Controller {
   connect() {
     console.log("TEST2")
     console.log(this.testTarget)
-
-    new TomSelect(this.element)
-    console.log("Hello from Tom Select!")
+    const optionValues = this.element.querySelector(".tom-select-options")
+    let options = {}
+    options["options"] = JSON.parse(optionValues.innerText);
+    new TomSelect(this.testTarget, options)
   }
 }
