@@ -1,41 +1,67 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h1>[Project]</h1>
 
-      <!-- Display Spotify player if project has a music URL -->
-      <% if @project.music_url.present? %>
-        <%= render 'spotify_player_large', url: @project.music_embed_url %>
-      <% end %>
-
-      <!-- Display YouTube player if project has a video URL -->
-      <% if @project.video_url.present? %>
-        <%= render 'projects/youtube_player', url: @project.youtube_embed_url %>
-      <% end %>
-
-      <h2><%= @project.title %></h2>
-
-      <% if @project.photo.attached? %>
-        <%= cl_image_tag @project.photo.key, width: 300 %>
-      <% end %>
-
-      <p><%= @project.description %></p>
-      <%= link_to "#{@project.user.nickname}" , user_path(@project.user) %>
+<%# <div class="banner_project"> %>
+  <%# <div class="container"> %>
 
 
-      <!-- Display a like button if the current user hasn't liked yet... -->
-      <!-- ... else display a like counter -->
-      <% if @project_liked %>
-        <p><%= @project.likes.length %> Like (already liked)</p>
-      <% else %>
-        <p><%= link_to "Like", project_likes_path(@project), data: { turbo_method: :post } %></p>
-      <% end %>
+    <!-- Display Spotify player if project has a music URL -->
+<div class="banner-wrapper">
+  <picture class="img">
+    <% if @project.music_url.present? %>
+      <%= render 'spotify_player_large', url: @project.music_embed_url, class: "img" %>
 
-      <!-- Display image if project has a Cloudinary photo attached -->
-      <%#= cl_image_tag(@project.photo.key, height: 500, width: 500) if @project.photo.attached? %>
+    <% elsif @project.video_url.present? %>
+      <%# <%= cimage_tag @project.youtube_embed_url., class: "img" %>
 
-    </div>
-  </div>
+    <% elsif @project.photo.attached? %>
+      <%= cl_image_tag @project.photo.key, class: "img" %>
+
+    <% end %>
+
+      <h1><%= @project.title %></h1>
+      <p>Défiler pour découvrir<br>|</p>
+  </picture>
 </div>
 
-<% console %>
+  <%# </div> %>
+<%# </div> %>
+
+
+
+
+<div class="description_project px-5">
+    <div class="header_description">
+      <div class="title_desciption">
+        <h2><%= @project.title %></h2>
+        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %></h3>
+      </div>
+
+      <div class="like">
+        <!-- Display a like button if the current user hasn't liked yet... -->
+        <!-- ... else display a like counter -->
+        <% if @project_liked %>
+          <i class="fa-solid fa-heart"> <%= @project.likes.length%> </i>
+        <% else %>
+          <%= link_to project_likes_path(@project), data: { turbo_method: :post } do %>
+            <i class="fa-regular fa-heart"> </i>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="content_description">
+      <% if @project.music_url.present? %>
+        <%= render 'spotify_player_large', url: @project.music_embed_url, class: "img" %>
+
+      <% elsif @project.video_url.present? %>
+        <%= render 'projects/youtube_player', url: @project.youtube_embed_url, class: "img" %>
+
+      <% elsif @project.photo.attached? %>
+        <%= cl_image_tag @project.photo.key, class: "img" %>
+
+      <% end %>
+    </div>
+
+    <p><%= @project.description %></p>
+
+    </div>
+</div>
