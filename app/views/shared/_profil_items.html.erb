@@ -1,21 +1,17 @@
-<ul>
-  <li class="cursor is-active" data-action="click->profil#toggleProjects" data-profil-target="projectBtn">
-    <% if current_user == @user%>
-      My projects
-    <% else %>
-      <%= @user.nickname.capitalize %>'s projects
-    <% end %>
-  </li>
-  <li class="cursor"  data-action="click->profil#toggleLikes" data-profil-target="likeBtn">
-    <% if current_user == @user%>
-      My likes
-    <% else %>
-      <%= @user.nickname.capitalize %>'s likes
-    <% end %>
-  </li>
+<li class="cursor is-active" data-action="click->profil#toggleProjects" data-profil-target="projectBtn">
   <% if current_user == @user%>
-    <li class="cursor new-project-btn"  data-profil-target="newProject"><i class="fa-solid fa-plus"></i><%= link_to "Project", new_project_path %></li>
+    My projects
   <% else %>
-      <li class="cursor"> </li>
+    <%= @user.nickname.capitalize %>'s projects
   <% end %>
-</ul>
+</li>
+<li class="cursor"  data-action="click->profil#toggleLikes" data-profil-target="likeBtn">
+  <% if current_user == @user%>
+    My likes
+  <% else %>
+    <%= @user.nickname.capitalize %>'s likes
+  <% end %>
+</li>
+<% if current_user == @user%>
+  <li class="cursor new-project-btn"  data-profil-target="newProject"><i class="fa-solid fa-plus"></i><%= link_to "Project", new_project_path %></li>
+<% end %>

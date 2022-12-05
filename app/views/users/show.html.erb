@@ -7,7 +7,7 @@
             <%= render "shared/profil_items" %>
           </ul>
         </div>
-      <%= render "shared/card_grid", locals: {projects: @projects} %>
+      <%= render partial: "shared/card_grid", locals: { projects: @projects } %>
       <%= render partial: "shared/user_likes", locals: { user: @user, projects: @liked_projects } %>
     </div>
     <div class="infos">
