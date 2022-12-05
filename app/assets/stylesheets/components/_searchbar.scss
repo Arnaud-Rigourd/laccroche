@@ -29,6 +29,16 @@
       border: 0;
       border-radius: 40px;
       transition: all 500ms linear;
+
+      & > .ts-dropdown {
+        border-radius: 4px;
+      }
+
+      & .option {
+        border-radius: 4px;
+        // font-family: ;
+        padding-left: 5px;
+      }
     }
 
     .form-control:focus {
@@ -47,7 +57,7 @@
     z-index: 1;
     background-color: #f1f1f1;
     border: none;
-    color: white;
+    // color: white;
 
     input {
       color: black;

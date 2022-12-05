@@ -1,23 +1,19 @@
-<div data-controller="tom-select">
+<div
+  data-controller="tom-select"
+  data-tom-select-options-value="<%= @autocomplete_items.to_json %>"
+  >
   <%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control me-2 px-4",
       placeholder: "Find a project",
       "aria-label": "Search",
-      data: {tom_select_target: "test"}
+      data: { tom_select_target: "input" }
     %>
 
-    <div class="tom-select-options" style="opacity: 0; position: absolute; height: 0;">
-      <%= Project.all.map {|project| {value: project.id, text: project.title} }.to_json %>
-    </div>
-
-  <button type="submit" class="btn btn-outline-primary" id="submit">
-    <i class="fa-solid fa-music"></i>
-  </button>
-
-
-
+    <button type="submit" class="btn btn-outline-primary" id="submit">
+      <i class="fa-solid fa-music"></i>
+    </button>
   <% end %>
 </div>
 
