@@ -1,13 +1,20 @@
-<% # ###### search ############ début ############%>
+<div
+  data-controller="tom-select"
+  data-tom-select-options-value="<%= @autocomplete_items.to_json %>"
+  >
   <%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control me-2 px-4",
       placeholder: "Find a project",
-      "aria-label": "Search"
+      "aria-label": "Search",
+      data: { tom_select_target: "input" }
     %>
-    <%# <i class="fa-solid fa-music"></i> %>
-    <%= submit_tag "launch", class: "btn btn-outline-primary" %>
+
+    <button type="submit" class="btn btn-outline-primary" id="submit">
+      <i class="fa-solid fa-music"></i>
+    </button>
   <% end %>
-<% # ###### search ############ fin ############%>
+</div>
+
 <%#  render "shared/bouton", text: "search" %>
