@@ -51,7 +51,6 @@ gem "sassc-rails"
 
 # Searchbar
 gem "pg_search"
-gem "select2-rails"
 
 gem "devise"
 gem "autoprefixer-rails"
