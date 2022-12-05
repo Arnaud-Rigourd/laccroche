@@ -1,16 +1,14 @@
 
-<%# <div class="banner_project"> %>
-  <%# <div class="container"> %>
-
 
     <!-- Display Spotify player if project has a music URL -->
 <div class="banner-wrapper">
   <picture class="img">
     <% if @project.music_url.present? %>
-      <%= render 'spotify_player_large', url: @project.music_embed_url, class: "img" %>
+      <%# <%= render 'spotify_player_large', url: @project.music_embed_url, class: "img" %>
 
     <% elsif @project.video_url.present? %>
       <%# <%= cimage_tag @project.youtube_embed_url., class: "img" %>
+      <%# <%= image_tag @project.photo.key %>
 
     <% elsif @project.photo.attached? %>
       <%= cl_image_tag @project.photo.key, class: "img" %>
@@ -22,8 +20,6 @@
   </picture>
 </div>
 
-  <%# </div> %>
-<%# </div> %>
 
 
 

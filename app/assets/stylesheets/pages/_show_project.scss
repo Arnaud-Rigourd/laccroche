@@ -73,6 +73,8 @@
   background-color: #f1f1f1;
   color: black;
 
+
+
   .header_description {
     display: flex;
     justify-content: space-between;
@@ -136,4 +138,9 @@
   justify-content: center;
   align-items: center;
   padding: 30px 0;
+
+  .img {
+    width: 60%;
+    height: 60%;
+  }
 }
