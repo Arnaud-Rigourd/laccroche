@@ -6,8 +6,8 @@ export default class extends Controller {
   connect() {
     this.videoUrl = document.querySelector(".project_video_url")
     this.musicUrl = document.querySelector(".project_music_url")
-    this.videoTarget.d-none = true
-    this.musicTarget.d-none = true
+    this.musicUrl.classList.add("d-none")
+    this.videoUrl.classList.add("d-none")
   }
   toggle(event) {
 
