@@ -1,5 +1,5 @@
   <% if project.photo.attached? %>
-    <div class="card-category" style="background-image: url('<%= cl_image_path project.photo.key, height: 200, width: 300 %>')">
+    <div class="card-category" style="background-image: url('<%= cl_image_path project.photo.key, height: 200, width: 200 %>')">
     <%= link_to project.title, project_path(project) %>
   <% else %>
     <div class="card-category" style="background-image: url(https://dr.savee-cdn.com/things/thumbnails/6/1/77b68ffe82f0d0ad49ce5c.webp)">

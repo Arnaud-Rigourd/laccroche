@@ -44,11 +44,13 @@
       opacity: 0;
       transition: opacity 500ms;
       text-decoration: none;
+      text-shadow: 6px 6px 5px black;
     }
 
   & > .artist-nickname {
       font-size: 20px;
       color: #cdcdcd;
+      text-shadow: 6px 6px 5px black;
     }
   }
 
