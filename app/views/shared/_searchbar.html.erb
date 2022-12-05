@@ -7,11 +7,17 @@
       "aria-label": "Search",
       data: {tom_select_target: "test"}
     %>
+
     <div class="tom-select-options" style="opacity: 0; position: absolute; height: 0;">
       <%= Project.all.map {|project| {value: project.id, text: project.title} }.to_json %>
     </div>
-    <!-- <i class="fa-solid fa-music"></i> -->
-    <%= submit_tag "launch", class: "btn btn-outline-primary" %>
+
+  <button type="submit" class="btn btn-outline-primary" id="submit">
+    <i class="fa-solid fa-music"></i>
+  </button>
+
+
+
   <% end %>
 </div>
 

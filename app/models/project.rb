@@ -9,6 +9,7 @@ class Project < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
+  validates :photo, presence: true
 
   # Implement the gem pg_search for the search bar
   include PgSearch::Model
