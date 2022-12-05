@@ -76,6 +76,8 @@ danse_yokai_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v
 showreel_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670262235/showreel_kmtgdz.jpg")
 animation_reel_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670262234/animation_reel_j3ss0u.jpg")
 
+puts "Creating videos..."
+
 # 2. VIDEO ART
 video_1 = Project.new(category: Project::CATEGORIES[2], title: "Flying in the Sky", collab: musician.nickname, video_url: "https://youtu.be/9Z4TiA5JH_0", music_url: "", user_id: video_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
 
@@ -87,12 +89,16 @@ Kara 🫶 this started as a simple sunlight + background study piece referenced 
 video_1.photo.attach(io: animation_showreel_file, filename: "animation_showreel.jpg", content_type: "image/jpg")
 video_1.save!
 
+puts "Issue on video 2"
+
 video_2 = Project.new(category: Project::CATEGORIES[2], title: "Dance of the Yōkai", collab: musician.nickname, video_url: "https://youtu.be/piQpugWN2Xw", music_url: "", user_id: video_artist.id, description: "First snow ❄️ im thinking about doing more environments this month, gotta shake off the rust. Process is recorded and I'll be uploading it to patreon in the coming week! Took about 2 hours total. Value study. Based on our next Patreon tutorial for Values! 🫶 this is like a blend of realistic rendering and very stylized proportions, pretty fun to experiment with. Snow. My drawing vibes really do be changing with the seasons. This was a fun study, really satisfying process to get the snow effect down. Didnt record this process but if u guys are interested in my workflow i post process videos on patreon! Thanks to everyone who is able to support 🫶.
 AND BIRBS ARE SOLD OUT! But we still have some birb pins in stock! Merch store link in my bio :) thank u to everyone who adopted a birb!
 
 BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶")
 video_2.photo.attach(io: danse_yokai_file, filename: "danse_of_the_yokai.jpg", content_type: "image/jpg")
 video_2.save!
+
+puts "Issue on video 3"
 
 video_3 = Project.new(category: Project::CATEGORIES[2], title: "Winter Hunting", collab: musician.nickname, video_url: "https://youtu.be/RDfu4iEeyro", music_url: "", user_id: video_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
 
@@ -104,6 +110,8 @@ Kara 🫶 this started as a simple sunlight + background study piece referenced 
 video_3.photo.attach(io: encounter_file, filename: "encounter.jpg", content_type: "image/jpg")
 video_3.save!
 
+puts "Issue on video 4"
+
 video_4 = Project.new(category: Project::CATEGORIES[2], title: "Lines Animation", collab: musician.nickname, video_url: "https://youtu.be/qMtsaIiwiaA", music_url: "", user_id: video_artist.id, description: "First snow ❄️ im thinking about doing more environments this month, gotta shake off the rust. Process is recorded and I'll be uploading it to patreon in the coming week! Took about 2 hours total. Value study. Based on our next Patreon tutorial for Values! 🫶 this is like a blend of realistic rendering and very stylized proportions, pretty fun to experiment with. Snow. My drawing vibes really do be changing with the seasons. This was a fun study, really satisfying process to get the snow effect down. Didnt record this process but if u guys are interested in my workflow i post process videos on patreon! Thanks to everyone who is able to support 🫶.
 AND BIRBS ARE SOLD OUT! But we still have some birb pins in stock! Merch store link in my bio :) thank u to everyone who adopted a birb!
 
@@ -111,13 +119,18 @@ BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available o
 video_4.photo.attach(io: showreel_file, filename: "showreel.jpg", content_type: "image/jpg")
 video_4.save!
 
-video_5 = Project.create!(category: Project::CATEGORIES[2], title: "Rough Animation", collab: "", video_url: "https://youtu.be/upzThAC2A_s", music_url: "", user_id: video_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
+puts "Issue on video 5"
+
+video_5 = Project.new(category: Project::CATEGORIES[2], title: "Rough Animation", collab: "", video_url: "https://youtu.be/upzThAC2A_s", music_url: "", user_id: video_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
 
 BOOOOOOORRRRB! 🐔 Birb plushies will be Available Nov 23, worldwide shipping, very limited! I'll keep you guys updated as we approach launch day! Patrons on patreon will be getting early access! :)
 
 Learning to use cooler tones. I find myself being really comfortable in the warm range but hardly ever stepping out of it. So I just wanted to try out a slightly less conventional lighting scenario for myself. I think the colours play into the mood a lot. Hope u like! 😗 check out my patreon for our monthly tutorial!
 
 Kara 🫶 this started as a simple sunlight + background study piece referenced from @makenzie_raine but it kinda took on a life of its own. 😗 check out my patreon this month for our new advanced tutorial on character shapes and flow 🫶")
+
+puts "Issue here?"
+
 video_5.photo.attach(io: animation_reel_file, filename: "animation_reel.jpg", content_type: "image/jpg")
 video_5.save!
 
@@ -138,12 +151,16 @@ sunset_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v16702
 
 # ARTWORK.create
 
+puts "Issue on Atwork 1"
+
 tesseract = Project.new(category: Project::CATEGORIES[1], title: "Tesseract", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: "First snow ❄️ im thinking about doing more environments this month, gotta shake off the rust. Process is recorded and I'll be uploading it to patreon in the coming week! Took about 2 hours total. Value study. Based on our next Patreon tutorial for Values! 🫶 this is like a blend of realistic rendering and very stylized proportions, pretty fun to experiment with. Snow. My drawing vibes really do be changing with the seasons. This was a fun study, really satisfying process to get the snow effect down. Didnt record this process but if u guys are interested in my workflow i post process videos on patreon! Thanks to everyone who is able to support 🫶.
 AND BIRBS ARE SOLD OUT! But we still have some birb pins in stock! Merch store link in my bio :) thank u to everyone who adopted a birb!
 
 BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶")
 tesseract.photo.attach(io: tesseract_file, filename: "artwork-tesseract.webp", content_type: "image/webp")
 tesseract.save!
+
+puts "Issue on Atwork 2"
 
 hyperspace = Project.new(category: Project::CATEGORIES[1], title: "Hyperspace", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
 
@@ -155,6 +172,8 @@ Kara 🫶 this started as a simple sunlight + background study piece referenced 
 hyperspace.photo.attach(io: hyperspace_file, filename: "artwork-hyperspace.webp", content_type: "image/webp")
 hyperspace.save!
 
+puts "Issue on Atwork 3"
+
 sunset = Project.new(category: Project::CATEGORIES[1], title: "Sunset", collab: "Will I am", video_url: "", music_url: "", user_id: artwork_artist_sam.id, description: "Sunset, focusing on some lighting and expression work! Reminder to draw today 😀🔪
 
 BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
@@ -165,6 +184,8 @@ Happy to announce that our birb plushies are NOW available on my merch store sam
 sunset.photo.attach(io: sunset_file, filename: "sunset.jpg", content_type: "image/jpg")
 sunset.save!
 
+puts "Issue on Atwork 4"
+
 planetarium = Project.new(category: Project::CATEGORIES[1], title: "Planetarium", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: "Bout to enter my villain arc between ppl stealing my work through ai and my camera overheating 3 times in one shoot. Head over to my patreon or print shop to support my descent. Study, focusing on some lighting and expression work! Reminder to draw today 😀🔪
 Check out my patreon for monthly tutorial and process vids! Love u guys 🫶
 Yassifying some more characters!!! Check out the new youtube video to see the process! Link is up in my bio now 😗😗
@@ -173,6 +194,8 @@ Tessa! This is the hardest angle for the face and u cant tell me otherwise! Did 
 Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock")
 planetarium.photo.attach(io: planetarium_file, filename: "artwork-planetarium.webp", content_type: "image/webp")
 planetarium.save!
+
+puts "Issue on Atwork 5"
 
 snow = Project.new(category: Project::CATEGORIES[1], title: "Snow", collab: "Will I am", video_url: "", music_url: "", user_id: artwork_artist_sam.id, description: "Snow, focusing on some lighting and expression work! Reminder to draw today 😀🔪
 
@@ -184,6 +207,8 @@ Happy to announce that our birb plushies are NOW available on my merch store sam
 snow.photo.attach(io: snow_file, filename: "snow.jpg", content_type: "image/jpg")
 snow.save!
 
+puts "Issue on Atwork 6"
+
 moon = Project.new(category: Project::CATEGORIES[1], title: "Moon", collab: musician.nickname, video_url: "", music_url: "", user_id: artwork_artist.id, description: "BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
 
 BOOOOOOORRRRB! 🐔 Birb plushies will be Available Nov 23, worldwide shipping, very limited! I'll keep you guys updated as we approach launch day! Patrons on patreon will be getting early access! :)
@@ -194,12 +219,16 @@ Kara 🫶 this started as a simple sunlight + background study piece referenced 
 moon.photo.attach(io: moon_file, filename: "artwork-moon.webp", content_type: "image/webp")
 moon.save!
 
+puts "Issue on Atwork 7"
+
 troglodyte = Project.new(category: Project::CATEGORIES[1], title: "Troglodyte", collab: "", video_url: "", music_url: "", user_id: artwork_artist.id, description: "First snow ❄️ im thinking about doing more environments this month, gotta shake off the rust. Process is recorded and I'll be uploading it to patreon in the coming week! Took about 2 hours total. Value study. Based on our next Patreon tutorial for Values! 🫶 this is like a blend of realistic rendering and very stylized proportions, pretty fun to experiment with. Snow. My drawing vibes really do be changing with the seasons. This was a fun study, really satisfying process to get the snow effect down. Didnt record this process but if u guys are interested in my workflow i post process videos on patreon! Thanks to everyone who is able to support 🫶.
 AND BIRBS ARE SOLD OUT! But we still have some birb pins in stock! Merch store link in my bio :) thank u to everyone who adopted a birb!
 
 BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶")
 troglodyte.photo.attach(io: troglodyte_file, filename: "artwork-troglodyte.webp", content_type: "image/webp")
 troglodyte.save!
+
+puts "Issue on Atwork 8"
 
 study = Project.new(category: Project::CATEGORIES[1], title: "Study", collab: "Will I am", video_url: "", music_url: "", user_id: artwork_artist_sam.id, description: "Study, focusing on some lighting and expression work! Reminder to draw today 😀🔪
 
@@ -211,6 +240,8 @@ Happy to announce that our birb plushies are NOW available on my merch store sam
 study.photo.attach(io: study_file, filename: "study.jpg", content_type: "image/jpg")
 study.save!
 
+puts "Issue on Atwork 9"
+
 more_studies = Project.new(category: Project::CATEGORIES[1], title: "More study", collab: "Chris Shard", video_url: "", music_url: "", user_id: artwork_artist_sam.id, description: "Study, focusing on some lighting and expression work! Reminder to draw today 😀🔪
 
 BIRBS HAVE ARRIVED! Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock 🫶
@@ -220,6 +251,8 @@ Tessa! This is the hardest angle for the face and u cant tell me otherwise! Did 
 Happy to announce that our birb plushies are NOW available on my merch store samdoesarts.com! Head over and adopt one today 🥹 stock is limited! Winterrrrrrrrr!!!! Ft. BIRB. Just uploaded a new youtube video where I paintover your guys' work while giving life changing roasts and advice. 😃 go check it out!. Omg also BIRB PLUSHIES ARE LAUNCHING NOVEMBER 23rd! Patreon members will be getting early access! Limited numbers!! Shoutout to the patrons on patreon who got an early access birb, we sold out of our entire early access stock")
 more_studies.photo.attach(io: more_studies_file, filename: "more_studies.jpg", content_type: "image/jpg")
 more_studies.save!
+
+puts "Issue on Atwork 10"
 
 puts "Creating likes..."
 
