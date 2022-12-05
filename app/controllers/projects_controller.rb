@@ -47,6 +47,7 @@ class ProjectsController < ApplicationController
     authorize @projects
     @top = @projects.sort_by { |p| p.likes.length }.reverse!
     @top10 = @top.first(10)
+    @top_artists = @top10.map { |t| t.user }
   end
 
   # def top(category)

@@ -4,15 +4,15 @@
 
   <div class="top-title">
     <h1>TOP 10</h1>
-    <% @top10.each_with_index do |t, index| %>
+    <% @top10.each do |t| %>
       <h1><%= t.title %></h1>
     <% end %>
   </div>
 
    <div class="top-title">
-   <h1>TOP 10</h1>
-    <% @top10.reverse.each_with_index do |t, index| %>
-      <h1><%= t.title %></h1>
+   <h1>ARTISTS</h1>
+    <% @top_artists.each do |t| %>
+      <h1><%= t.nickname %></h1>
     <% end %>
   </div>
 
@@ -21,6 +21,8 @@
       <section class="scrool_card top-card card" data-top-project-target="floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')" >
         <div class="scrool_card_contenu float-image" data-top-project-target="floatTitle">
           <%= link_to t.title, project_path(t) %>
+          <br />
+          <%= link_to "by #{t.user.nickname}", user_path(t.user), class:"artist-nickname" %>
         </div>
       </section>
     <% end %>
@@ -31,6 +33,8 @@
       <section class="scrool_card top1 is-clone card " data-top-project-target="clone floatImage", style = "background-image: url('<%= cl_image_path t.photo.key if t.photo.attached? %>')">
           <div class="scrool_card_contenu" data-top-project-target="floatTitle">
             <%= link_to t.title, project_path(t) %>
+            <br />
+            <%= link_to "by #{t.user.nickname}", user_path(t.user), class:"artist-nickname" %>
           </div>
       </section>
     <% end %>

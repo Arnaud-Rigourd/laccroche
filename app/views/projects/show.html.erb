@@ -2,12 +2,21 @@
   <div class="row">
     <div class="col-12">
       <h1>[Project]</h1>
+
+      <!-- Display Spotify player if project has a music URL -->
+      <% if @project.music_url.present? %>
+        <%= render 'spotify_player_large', url: @project.music_embed_url %>
+      <% end %>
+
+      <!-- Display YouTube player if project has a video URL -->
+      <% if @project.video_url.present? %>
+        <%= render 'projects/youtube_player', url: @project.youtube_embed_url %>
+      <% end %>
+
       <h2><%= @project.title %></h2>
 
       <% if @project.photo.attached? %>
         <%= cl_image_tag @project.photo.key, width: 300 %>
-      <% else %>
-        <%= image_url @project.video_url %>
       <% end %>
 
       <p><%= @project.description %></p>
@@ -25,15 +34,8 @@
       <!-- Display image if project has a Cloudinary photo attached -->
       <%#= cl_image_tag(@project.photo.key, height: 500, width: 500) if @project.photo.attached? %>
 
-      <!-- Display Spotify player if project has a music URL -->
-      <% if @project.music_url.present? %>
-        <%= render 'spotify_player_large', url: @project.music_embed_url %>
-      <% end %>
-
-      <!-- Display YouTube player if project has a video URL -->
-      <% if @project.video_url.present? %>
-        <%= render 'projects/youtube_player', url: @project.youtube_embed_url %>
-      <% end %>
     </div>
   </div>
 </div>
+
+<% console %>
