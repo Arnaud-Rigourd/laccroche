@@ -4,14 +4,14 @@
 
       <h1>Share your project</h1>
 
-      <%= simple_form_for @project do |f| %>
+      <%= simple_form_for @project, data: {controller: "project-form"} do |f| %>
         <div>
           <%= f.input :title %>
           <%= f.input :description %>
-          <%= f.input :category, as: :select, collection: Project::CATEGORIES %>
-          <%= f.input :music_url, label: 'Spotify music URL' %>
-          <%= f.input :video_url, label: 'YouTube video URL' %>
-          <%= f.input :photo, as: :file %>
+          <%= f.input :category, as: :select, collection: Project::CATEGORIES, input_html: { data: { action: "change->project-form#toggle" }} %>
+          <%= f.input :music_url, label: 'Spotify music URL', input_html: { data: { project_form_target:"music" }} %>
+          <%= f.input :video_url, label: 'YouTube video URL', input_html: { data:{ project_form_target:"video" }} %>
+          <%= f.input :photo, as: :file, hint: "this picture will define the visual identity of your project. this can't be left blank. " %>
           <%= f.submit 'Publish' %>
         </div>
       <% end %>
