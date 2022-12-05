@@ -32,6 +32,7 @@ album2bis_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v16
 album3_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670259397/chris_album3_t1efww.jpg")
 
 # 1. MUSIC
+
 music_1 = Project.new(category: Project::CATEGORIES[0], title: "Always With You", collab: "#{artwork_artist.nickname} and #{video_artist.nickname}", video_url: "", music_url: "https://open.spotify.com/track/1JBqbYJKV57GBuSLl3j3TN?si=07cf0f8e9deb4772", user_id: musician.id, description: "First snow ❄️ im thinking about doing more environments this month, gotta shake off the rust. Process is recorded and I'll be uploading it to patreon in the coming week! Took about 2 hours total. Value study. Based on our next Patreon tutorial for Values! 🫶 this is like a blend of realistic rendering and very stylized proportions, pretty fun to experiment with. Snow. My drawing vibes really do be changing with the seasons. This was a fun study, really satisfying process to get the snow effect down. Didnt record this process but if u guys are interested in my workflow i post process videos on patreon! Thanks to everyone who is able to support 🫶.
 AND BIRBS ARE SOLD OUT! But we still have some birb pins in stock! Merch store link in my bio :) thank u to everyone who adopted a birb!
 
