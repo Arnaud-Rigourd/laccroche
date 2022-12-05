@@ -20,7 +20,7 @@
 
     <div class="email hidden" data-profil-to-email-target="viewemail">
 
-      <%= render "shared/form_contact" %>
+      <%= render partial: "shared/form_contact", locals: { user: @user } %>
 
       <%= render "shared/bouton", text: "envoyer" %>
     </div>
