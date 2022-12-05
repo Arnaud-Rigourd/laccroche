@@ -5,18 +5,24 @@
       <%= image_tag "A.svg" %>
     <% end %>
 
+    <!-- Display searchbar except on homepage and Top 10 -->
     <div class="nav_search">
       <% if params[:action] != "home" && params[:action] != "top"%>
         <%= render "shared/searchbar" %>
       <% end %>
     </div>
 
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+      <!-- Display navbar except on home -->
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-        <% if params[:action] != "home" %>
+          <% if params[:action] != "home" %>
             <li class="nav-item active">
               <%= link_to "Top 10", top_projects_path, class: "nav-link" %>
             </li>
@@ -25,14 +31,12 @@
             </li>
           <% end %>
 
+          <!-- Dropdown on profile picture -->
           <li class="nav-item dropdown">
             <%= image_tag "https://i.pinimg.com/originals/12/f2/d1/12f2d1001e4abf1cdf95a1c2f2db7abe.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
               <%= link_to "Upload", new_project_path, class: "dropdown-item" %>
-              <!-- <%= link_to "Music", "/projects?category=Music", class: "dropdown-item" %>
-              <%= link_to "Video", "/projects?category=Video+Art", class: "dropdown-item" %>
-              <%= link_to "Artwork", "/projects?category=Artwork", class: "dropdown-item" %> -->
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>

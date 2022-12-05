@@ -1,19 +1,24 @@
-<% # ###### search ############ début ############%>
+<div data-controller="tom-select">
   <%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control me-2 px-4",
       placeholder: "Find a project",
-      "aria-label": "Search"
+      "aria-label": "Search",
+      data: {tom_select_target: "test"}
     %>
-    <%# <i class="fa-solid fa-music"></i> %>
-    <%# <%= submit_tag "launch", class: "btn btn-outline-primary" %>
+
+    <div class="tom-select-options" style="opacity: 0; position: absolute; height: 0;">
+      <%= Project.all.map {|project| {value: project.id, text: project.title} }.to_json %>
+    </div>
 
   <button type="submit" class="btn btn-outline-primary" id="submit">
     <i class="fa-solid fa-music"></i>
   </button>
 
 
+
   <% end %>
-<% # ###### search ############ fin ############%>
+</div>
+
 <%#  render "shared/bouton", text: "search" %>
