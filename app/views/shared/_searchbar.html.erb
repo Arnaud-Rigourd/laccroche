@@ -1,4 +1,3 @@
-<% # ###### search ############ début ############%>
   <%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
     <%= text_field_tag :query,
       params[:query],
@@ -6,8 +5,8 @@
       placeholder: "Find a project",
       "aria-label": "Search"
     %>
-    <%# <i class="fa-solid fa-music"></i> %>
+    <!-- <i class="fa-solid fa-music"></i> -->
     <%= submit_tag "launch", class: "btn btn-outline-primary" %>
   <% end %>
-<% # ###### search ############ fin ############%>
+
 <%#  render "shared/bouton", text: "search" %>
