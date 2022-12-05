@@ -9,7 +9,7 @@ class Project < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :category, presence: true, inclusion: { in: CATEGORIES }
-  validates :photo, presence: true, inclusion: { in: CATEGORIES }
+  validates :photo, presence: true
 
   # include PG_search
   include PgSearch::Model
