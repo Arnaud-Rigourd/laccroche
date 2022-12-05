@@ -1,12 +1,15 @@
-  <%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control me-2 px-4",
-      placeholder: "Find a project",
-      "aria-label": "Search"
-    %>
-    <!-- <i class="fa-solid fa-music"></i> -->
-    <%= submit_tag "launch", class: "btn btn-outline-primary" %>
-  <% end %>
+<!-- Search bar form -->
+
+<%= form_with url: projects_path, method: :get, class: "d-flex search-form-control" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control me-2 px-4",
+    placeholder: "Find a project",
+    "aria-label": "Search",
+    input_html: { class: 'select2' }
+  %>
+  <!-- <i class="fa-solid fa-music"></i> -->
+  <%= submit_tag "launch", class: "btn btn-outline-primary" %>
+<% end %>
 
 <%#  render "shared/bouton", text: "search" %>
