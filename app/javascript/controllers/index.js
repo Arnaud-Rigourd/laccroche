@@ -28,5 +28,8 @@ application.register("sketch", SketchController)
 import ToggleController from "./toggle_controller"
 application.register("toggle", ToggleController)
 
+import TomSelectController from "./tom_select_controller"
+application.register("tom-select", TomSelectController)
+
 import TopProjectController from "./top_project_controller"
 application.register("top-project", TopProjectController)

@@ -11,7 +11,7 @@ class Project < ApplicationRecord
   validates :category, presence: true, inclusion: { in: CATEGORIES }
   validates :photo, presence: true
 
-  # include PG_search
+  # Implement the gem pg_search for the search bar
   include PgSearch::Model
   pg_search_scope :global_search,
     against: [ :title, :category ],
@@ -21,7 +21,6 @@ class Project < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
-  # fin PG_Search
 
   # Convert Spotify URL given by the user into a URL which can be embedded in HTML
   def music_embed_url
