@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
+  include Pundit::Authorization
+
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
-  include Pundit::Authorization
+  before_action :set_autocomplete_items
 
   # Pundit: allow-list approach
   after_action :verify_authorized, except: :index, unless: :skip_pundit?
@@ -15,6 +17,20 @@ class ApplicationController < ActionController::Base
   # end
 
   private
+
+  def set_autocomplete_items
+    @autocomplete_items = []
+
+    Project.all.each do |project|
+      @autocomplete_items << { value: "project-#{project.id}", text: project.title, url: project_path(project) }
+    end
+
+    User.all.each do |user|
+      @autocomplete_items << { value: "user-#{user.id}", text: user.nickname, url: user_path(user) }
+    end
+
+    @autocomplete_items.sort_by! { |item| item[:text] }
+  end
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
