@@ -110,9 +110,12 @@
   p {
     font-family: $body-font;
     font-size: 25px;
-    border-top: 2px solid black;
     margin-top: 20px;
     padding: 30px 50px;
+  }
+
+  .description {
+    border-top: 2px solid black;
   }
 }
 
