@@ -18,4 +18,20 @@
   <% else %>
       <li class="cursor"> </li>
   <% end %>
+<<<<<<< HEAD
 </ul>
+=======
+</li>
+<li class="cursor"  data-action="click->profil#toggleLikes" data-profil-target="likeBtn">
+  <% if current_user == @user%>
+    My likes
+  <% else %>
+    <%= @user.nickname.capitalize %>'s likes
+  <% end %>
+</li>
+
+<% if current_user == @user%>
+  <li class="cyberpunk"  data-profil-target="newProject">
+    <%= link_to "+ Project", new_project_path%></li>
+<% end %>
+>>>>>>> ff937a48a5ad703987beb992e6e04258df2f0bf8

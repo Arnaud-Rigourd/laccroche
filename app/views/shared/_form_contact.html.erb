@@ -1,3 +1,4 @@
+<!--
 <div class="container contact_form">
   <div class="mb-3 contact_form">
     <label for="FormContactInput1" class="form-control me-2">write to :</label>
@@ -12,5 +13,13 @@
   <div class="mb-3 contact_form">
     <label for="FormContactInput1" class="form-label">Your message</label>
     <textarea class="form-control me-2" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message"></textarea>
+  </div>
+</div>
+-->
+
+<div class="container contact_form">
+  <div class="contact_form">
+    <h3>Who is <%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>?</h3>
+    <p><%= @user.description %></p>
   </div>
 </div>

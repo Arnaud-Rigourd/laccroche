@@ -8,9 +8,19 @@
         </div>
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
-      <h1><%= @user.first_name %></h1>
-      <p><%= @user.description %></p>
-      <%= render "shared/bouton", text: "contact" %>
+
+      <h1><%= @user.nickname.capitalize %></h1>
+      <p>
+        <strong>Collaborations</strong>: <br/>
+        <%= @collabs %>
+      </p>
+      <p class="overflow"><%= @user.description.first(130) %>...</p>
+      <%= render "shared/bouton", text: "Show more" %>
+
+      <% if @user != current_user %>
+        <%= link_to "Chat", user_chatrooms_path(@user), data: { turbo_method: :post } %>
+      <% end %>
+
       <div class="profil-info-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -22,7 +32,7 @@
 
       <%= render partial: "shared/form_contact", locals: { user: @user } %>
 
-      <%= render "shared/bouton", text: "envoyer" %>
+      <%= render "shared/bouton", text: "back" %>
     </div>
   </div>
 </div>
