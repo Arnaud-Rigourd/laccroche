@@ -29,6 +29,13 @@
             <li class="nav-item">
               <%= link_to "See All Projects", projects_path, class: "nav-link" %>
             </li>
+            <li class="nav-item" data-controller="chatrooms">
+              <!-- <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#open" } %> -->
+              <button class="nav-link btn btn-info" data-action="click->chatrooms#open">Messages</button>
+              <div class="chatbox d-none" data-chatrooms-target="chatbox">
+                <%= render "shared/chatrooms" %>
+              </div>
+            </li>
           <% end %>
 
           <!-- Dropdown on profile picture -->
@@ -40,8 +47,6 @@
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
-
-          <!-- <%= render "shared/chatrooms" %> -->
 
         <% else %>
           <li class="nav-item">
