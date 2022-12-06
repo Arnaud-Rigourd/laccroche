@@ -6,6 +6,8 @@ require 'open-uri'
 puts "Launching the seed"
 puts "Destroying..."
 
+Message.destroy_all
+Chatroom.destroy_all
 Like.destroy_all
 Project.destroy_all
 User.destroy_all
