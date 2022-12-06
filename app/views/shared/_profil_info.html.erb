@@ -9,7 +9,7 @@
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
       <h1><%= @user.first_name %></h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit, sequi.</p>
+      <p><%= @user.description %></p>
       <%= render "shared/bouton", text: "contact" %>
       <div class="profil-info-links">
         <a href="#"><i class="fab fa-instagram"></i></a>

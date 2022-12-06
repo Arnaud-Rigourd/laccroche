@@ -9,17 +9,19 @@
             <h3><%= link_to p.title, project_path(p) %></h3>
 
             <!-- Display image if project has a Cloudinary photo attached -->
-            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+            <%#= cl_image_tag(p.photo.key, height: 400, width: 360) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
             <% if p.music_url.present? %>
               <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <% else %>
+              <%= cl_image_tag(p.photo.key, height: 400, width: 360) %>
             <% end %>
 
             <!-- Display YouTube player if project has a video URL -->
-            <% if p.video_url.present? %>
-              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-            <% end %>
+            <%# if p.video_url.present? %>
+              <%#= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <%# end %>
 
           </div>
         <% end %>
@@ -34,17 +36,17 @@
             <h3><%= link_to p.title, project_path(p) %></h3>
 
             <!-- Display image if project has a Cloudinary photo attached -->
-            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+            <%= cl_image_tag(p.photo.key, height: 400, width: 360) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
-            <% if p.music_url.present? %>
-              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-            <% end %>
+            <%# if p.music_url.present? %>
+              <%#= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <%# end %>
 
             <!-- Display YouTube player if project has a video URL -->
-            <% if p.video_url.present? %>
-              <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
-            <% end %>
+            <%# if p.video_url.present? %>
+              <%#= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <%# end %>
           </div>
         <% end %>
       <% end %>
@@ -59,16 +61,18 @@
             <h3><%= link_to p.title, project_path(p) %></h3>
 
             <!-- Display image if project has a Cloudinary photo attached -->
-            <%= cl_image_tag(p.photo.key, height: 400, width: 400) if p.photo.attached? %>
+            <%#= cl_image_tag(p.photo.key, height: 400, width: 360) if p.photo.attached? %>
 
             <!-- Display Spotify player if project has a music URL -->
-            <% if p.music_url.present? %>
-              <%= render 'projects/spotify_player_medium', url: p.music_embed_url %>
-            <% end %>
+            <%# <% if p.music_url.present? %>
+              <%#= render 'projects/spotify_player_medium', url: p.music_embed_url %>
+            <%# <% end %>
 
             <!-- Display YouTube player if project has a video URL -->
             <% if p.video_url.present? %>
               <%= render 'projects/youtube_player', url: p.youtube_embed_url %>
+            <% else %>
+              <%= cl_image_tag(p.photo.key, height: 400, width: 360) %>
             <% end %>
 
           </div>
