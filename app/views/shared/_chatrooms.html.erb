@@ -1,0 +1,9 @@
+<h1>Messages</h1>
+
+<% current_user.chatrooms.each do |chatroom| %>
+  <% if current_user == chatroom.user1 %>
+    <%= chatroom.user2.nickname %>
+  <% else %>
+    <%= chatroom.user1.nickname %>
+  <% end %>
+<% end %>
