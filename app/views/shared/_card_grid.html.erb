@@ -1,4 +1,4 @@
-<div class="cards hidden" data-profil-target="projectCards">
+<div class="cards hidden" data-profil-target="projectCards" data-controller="cardsmove">
   <% projects.each do |project|%>
     <%= render partial: 'shared/card', locals: { project: project } %>
   <% end %>
