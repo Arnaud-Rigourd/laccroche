@@ -17,7 +17,12 @@ export default class extends Controller {
 
   #insertMessageAndScrollDown(data) {
     this.messagesTarget.insertAdjacentHTML("beforeend", data)
-    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight)
+
+    // si scroll dans la boite des messages
+    this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight);
+
+    // si pas de scroll dans la boite des messages
+    // this.messagesTarget.scrollIntoView({block: "end"});
   }
 
   resetForm(event) {
