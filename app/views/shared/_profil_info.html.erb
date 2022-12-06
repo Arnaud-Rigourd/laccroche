@@ -13,7 +13,7 @@
         <strong>Collaborations</strong>: <br/>
         <%= @collabs %>
       </p>
-      <p class="overflow"><%= @user.description %></p>
+      <p class="overflow"><%= @user.description.first(130) %>...</p>
       <%= render "shared/bouton", text: "Show more" %>
       <div class="profil-info-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
