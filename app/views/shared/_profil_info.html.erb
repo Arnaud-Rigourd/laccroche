@@ -12,7 +12,7 @@
       <h1><%= @user.nickname.capitalize %></h1>
       <p>
         <strong>Collaborations</strong>: <br/>
-        <%= @collabs %>
+        <%= @collabs_s %>
       </p>
       <p class="overflow"><%= @user.description.first(130) %>...</p>
       <%= render "shared/bouton", text: "Show more" %>
