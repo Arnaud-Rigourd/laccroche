@@ -11,6 +11,12 @@ Rails.application.routes.draw do
     end
     resources :likes, only: [:create]
   end
-  resources :users, only: [:show]
+
+  resources :users, only: [:show] do
+    resources :chatrooms, only: [:create]
+  end
+
+  resources :chatrooms, only: [:show]
+
   get "profil", to: "pages#profil"
 end
