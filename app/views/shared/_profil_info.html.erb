@@ -8,7 +8,7 @@
         </div>
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
-      <h1><%= @user.first_name %></h1>
+      <h1><%= @user.nickname.capitalize %></h1>
       <p>
         <strong>Collaborations</strong>: <br/>
         <%= @collabs %>

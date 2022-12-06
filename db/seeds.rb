@@ -12,12 +12,12 @@ User.destroy_all
 
 puts "Creating users..."
 
-musician = User.create!(nickname: "Chris", first_name: "Chris", last_name: "Shards", email: "chris@gmail.com", password: "123456", description: "Chris Shard is an American musician, singer, songwriter and record producer. He is the founding and lead member of the musical group Black Eyed Peas.
+musician = User.create!(nickname: "ChrisMusic", first_name: "Chris", last_name: "Shards", email: "chris@gmail.com", password: "123456", description: "Chris Shard is an American musician, singer, songwriter and record producer. He is the founding and lead member of the musical group Black Eyed Peas.
 As a solo artist, Chris Shard has released four albums, beginning with Lost Change (2001), through Atlantic Records. His second solo outing, Must B 21, was released on September 23, 2003.")
 
 video_artist = User.create!(nickname: "Howard", first_name: "Howard", last_name: "Wimshurst", email: "howard@gmail.com", password: "123456", description: "Howard Wimshurst is an award-winning filmmaker and artist who specializes in hand-drawn animation. His background in animation spans 10 years, starting with independent filmmaking from his bedroom, progressing to a foundation degree in art and design, then a Bachelor of Arts degree in Animation.")
 
-artwork_artist = User.create!(nickname: "Novans", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "My name is Novans. I was born in Surabaya, Indonesia. Most of my works here were done for my personal hobby, but a few of them are for commercial projects. Freelance..?? Maybe, contact me for freelance possibillities.")
+artwork_artist = User.create!(nickname: "Novansad", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "My name is Novans. I was born in Surabaya, Indonesia. Most of my works here were done for my personal hobby, but a few of them are for commercial projects. Freelance..?? Maybe, contact me for freelance possibillities.")
 
 artwork_artist_sam = User.create!(nickname: "Samdoesart", first_name: "Sam", last_name: "Adams", email: "sam@gmail.com", password: "123456", description: "Hello! My name is Sam! I'm a 24yo digital artist based in Toronto. I love to paint! Art has actually been a passion of mine for most of my life!
 
