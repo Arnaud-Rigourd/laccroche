@@ -27,6 +27,8 @@ a.nav-link {
 
 .avatar {
   border: none;
+  height: 38px;
+  width: 38px;
   transition: border 500ms;
     &:hover {
      border: 3px solid $medium-violet;
