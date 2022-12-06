@@ -16,7 +16,9 @@ Rails.application.routes.draw do
     resources :chatrooms, only: [:create]
   end
 
-  resources :chatrooms, only: [:show]
+  resources :chatrooms, only: [:show] do
+    resources :messages, only: [:create]
+  end
 
   get "profil", to: "pages#profil"
 end
