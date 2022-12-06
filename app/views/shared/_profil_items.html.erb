@@ -12,6 +12,8 @@
     <%= @user.nickname.capitalize %>'s likes
   <% end %>
 </li>
+
 <% if current_user == @user%>
-  <li class="cursor new-project-btn"  data-profil-target="newProject"><i class="fa-solid fa-plus"></i><%= link_to "Project", new_project_path %></li>
+  <li class="cyberpunk"  data-profil-target="newProject">
+    <%= link_to "+ Project", new_project_path%></li>
 <% end %>
