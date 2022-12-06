@@ -1,5 +1,5 @@
-meta_name: "L'Accroche"
-meta_title: "L'Accroche - creates your musical network"
+meta_name: "L'Accroche - create your musical network"
+meta_title: "L'Accroche"
 meta_description: "Get in touch with a community of music makers, editors and artists"
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "accroche_card_rsx.png" # should exist in `app/assets/images/`
 twitter_account: "@your_twitter_account"   # required for Twitter Cards
