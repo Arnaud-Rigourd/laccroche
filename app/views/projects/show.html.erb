@@ -22,7 +22,7 @@
     <div class="header_description">
       <div class="title_desciption">
         <h2 id="project_title"><%= @project.title %></h2>
-        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %></h3>
+        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %> | in collaboration with <%= @project.collab %></h3>
       </div>
 
       <div class="like">
@@ -57,3 +57,5 @@
 
     </div>
 </div>
+
+<% console %>
