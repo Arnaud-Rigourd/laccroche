@@ -21,6 +21,9 @@
 
       <!-- Display navbar except on home -->
       <ul class="navbar-nav me-auto">
+
+
+
         <% if user_signed_in? %>
           <% if params[:action] != "home" %>
             <li class="nav-item active">
@@ -29,11 +32,16 @@
             <li class="nav-item">
               <%= link_to "See All Projects", projects_path, class: "nav-link" %>
             </li>
+            <li class="nav-item">
+              <%= link_to "Chat", user_chatrooms_path(@user), data: { turbo_method: :post }, class: "nav-link"  %>
+            </li>
           <% end %>
+
+
 
           <!-- Dropdown on profile picture -->
           <li class="nav-item dropdown">
-            <%= image_tag "https://i.pinimg.com/originals/12/f2/d1/12f2d1001e4abf1cdf95a1c2f2db7abe.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= image_tag @user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", user_path(current_user), class: "dropdown-item" %>
               <%= link_to "Upload", new_project_path, class: "dropdown-item" %>

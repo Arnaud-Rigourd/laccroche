@@ -6,7 +6,7 @@
 
          <%= @user.first_name[0].capitalize %><%= @user.last_name[0].capitalize %>
         </div>
-        <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
+        <%= image_tag @user.avatar, class: "image_profil-info"%>
       </div>
       <h1><%= @user.first_name %></h1>
       <p><%= @user.description %></p>
@@ -16,7 +16,7 @@
       <% end %>
 
       <%= render "shared/bouton", text: "contact" %>
-      
+
       <div class="profil-info-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
