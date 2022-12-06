@@ -5,11 +5,12 @@ export default class extends Controller {
   static targets = ["chatbox"]
 
   connect() {
-    console.log("Hello")
+    console.log("Hello from chatrooms stimulus controller!")
   }
 
-  open() {
-    console.log("ça marche")
+  open(event) {
+    event.preventDefault()
+    console.log("Method open is connected!")
     this.chatboxTarget.classList.toggle("d-none")
   }
 }
