@@ -64,12 +64,16 @@
       padding: 0 20px;
       opacity: 1;
       transition: all ease 1s;
+
+      p {
+        color: white;
+        text-align: left;
+      }
+
       &.hidden {
         position: absolute;
         opacity: 0;
       }
-      // Modif sur le before / Arnaud
-
 
       .user-initials {
         position: absolute;
@@ -80,7 +84,6 @@
         top: -217px;
         z-index: -1;
       }
-      // fin de la modif
     }
 
   .picture {
@@ -102,11 +105,6 @@
     color: white;
     text-align: center;
     margin-bottom: 10px;
-  }
-
-  p {
-    color: white;
-    text-align: center;
   }
 
   .btn-contact {
