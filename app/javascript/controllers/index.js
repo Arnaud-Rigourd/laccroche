@@ -13,6 +13,9 @@ application.register("category-buttons-scroll-down", CategoryButtonsScrollDownCo
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
+import ChatroomsController from "./chatrooms_controller"
+application.register("chatrooms", ChatroomsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
