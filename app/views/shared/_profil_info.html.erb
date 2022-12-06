@@ -9,8 +9,12 @@
         <%= image_tag "https://pbs.twimg.com/media/DkV1PXmXoAA7aBS.jpg", class: "image_profil-info"%>
       </div>
       <h1><%= @user.first_name %></h1>
-      <p><%= @user.description %></p>
-      <%= render "shared/bouton", text: "contact" %>
+      <p>
+        <strong>Collaborations</strong>: <br/>
+        <%= @collabs %>
+      </p>
+      <p class="overflow"><%= @user.description %></p>
+      <%= render "shared/bouton", text: "Show more" %>
       <div class="profil-info-links">
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -22,7 +26,7 @@
 
       <%= render partial: "shared/form_contact", locals: { user: @user } %>
 
-      <%= render "shared/bouton", text: "envoyer" %>
+      <%= render "shared/bouton", text: "back" %>
     </div>
   </div>
 </div>

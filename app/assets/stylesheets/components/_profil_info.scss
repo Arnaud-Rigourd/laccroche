@@ -5,7 +5,7 @@
 
 .profil-info {
   font-family: $body-font;
-  height: 550px;
+  height: 600px;
   width: 400px;
   backdrop-filter: blur(5px);
   border-radius: 0 10px 0 10px;
@@ -65,9 +65,14 @@
       opacity: 1;
       transition: all ease 1s;
 
-      p {
+      .overflow {
         color: white;
         text-align: left;
+        overflow: scroll;
+      }
+
+      p {
+        width: 100%;
       }
 
       &.hidden {
@@ -80,8 +85,8 @@
         color: #d3d3d31f;
         font-size: 323px;
         font-weight: bold;
-        left: -144px;
-        top: -217px;
+        left: -149px;
+        top: -140px;
         z-index: -1;
       }
     }
@@ -90,8 +95,7 @@
     position: relative;
     width: 150px;
     height: 150px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+    margin: 5px auto;
 
     .image_profil-info {
       width: 100%;
@@ -104,7 +108,7 @@
   h1 {
     color: white;
     text-align: center;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 
   .btn-contact {
@@ -130,7 +134,6 @@
     background: none;
     font-size: 24px;
     margin: 10px 10px;
-    position: absolute;
     bottom: 0;
 
     // -----------
