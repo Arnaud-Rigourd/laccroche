@@ -126,7 +126,7 @@
 }
 
 .cyberpunk:hover::after {
-  animation: 0.5s glitch;
+  animation: 0.5s glitch linear infinite;
   animation-timing-function: steps(2, end);
 }
 
