@@ -1,0 +1,11 @@
+<h1>Messages</h1>
+
+<div class="chatroom-list">
+  <% current_user.chatrooms.each do |chatroom| %>
+    <% if current_user == chatroom.user1 %>
+      <p class="chatroom"><%= link_to chatroom.user2.nickname, chatroom_path(chatroom) %></p>
+    <% else %>
+       <p class="chatroom"><%= link_to chatroom.user1.nickname, chatroom_path(chatroom) %></p>
+    <% end %>
+  <% end %>
+</div>

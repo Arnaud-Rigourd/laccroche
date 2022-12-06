@@ -1,0 +1,33 @@
+.chatbox {
+  background-color: rgb(15, 15, 15);
+  position: absolute;
+  top: 76px;
+  right: 8px;
+  width: 320px;
+  height: 510px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  z-index: 1;
+
+  .chatroom-list {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+
+    & > p {
+      color: white;
+      font-family: $body-font;
+      padding: 10px;
+      margin-left: 72px;
+    }
+  }
+
+  h1 {
+    font-family: $body-font ;
+    color: white;
+    padding: 16px;
+    margin-top: 8px;
+    margin-left: 12px;
+  }
+}

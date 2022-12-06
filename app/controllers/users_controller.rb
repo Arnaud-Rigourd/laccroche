@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   def show
+    @users = User.all
     @user = User.find(params[:id])
     @projects = @user.projects
     authorize @user
     @liked_projects = Project.all
     @collabs = collabs
+    @collabs_s = collabs.join(", ")
   end
 
   private
@@ -18,6 +20,6 @@ class UsersController < ApplicationController
       c.split(" ") unless c.nil?
     end
 
-    @collabs = @collabs.join(" ").split(" ").uniq.join(", ")
+    @collabs = @collabs.join(" ").split(" ").uniq
   end
 end
