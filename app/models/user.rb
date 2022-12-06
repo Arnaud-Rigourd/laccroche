@@ -9,4 +9,9 @@ class User < ApplicationRecord
   validates :nickname, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  # Toutes les chatrooms d'un user
+  def chatrooms
+    Chatroom.where("user1_id = :id OR user2_id = :id", id: id)
+  end
 end
