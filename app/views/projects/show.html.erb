@@ -1,5 +1,3 @@
-
-
     <!-- Display Spotify player if project has a music URL -->
 <div class="banner-wrapper">
   <picture class="img">
@@ -31,7 +29,9 @@
         <!-- Display a like button if the current user hasn't liked yet... -->
         <!-- ... else display a like counter -->
         <% if @project_liked %>
-          <i class="fa-solid fa-heart"> <%= @project.likes.length%> </i>
+          <%= link_to project_like_path(@project), data: { turbo_method: :delete } do %>
+            <i class="fa-solid fa-heart"> <%= @project.likes.length%> </i>
+          <% end %>
         <% else %>
           <%= link_to project_likes_path(@project), data: { turbo_method: :post } do %>
             <i class="fa-regular fa-heart"> </i>
@@ -57,3 +57,5 @@
 
     </div>
 </div>
+
+<% console %>

@@ -12,4 +12,12 @@ class LikesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    @project = Project.find(params[:id])
+    @like = @project.likes.where(user: current_user)
+    authorize @like
+    @like.last.destroy
+    redirect_to project_path(@project)
+  end
 end
