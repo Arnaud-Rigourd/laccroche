@@ -13,7 +13,7 @@
     <% end %>
 
       <h1><%= @project.title %></h1>
-      <p>Scroll to discover<br>|</p>
+      <p><a href="#project_title">Scroll to discover<br>|</a></p>
   </picture>
 </div>
 
@@ -21,7 +21,7 @@
 <div class="description_project px-5">
     <div class="header_description">
       <div class="title_desciption">
-        <h2><%= @project.title %></h2>
+        <h2 id="project_title"><%= @project.title %></h2>
         <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %></h3>
       </div>
 
