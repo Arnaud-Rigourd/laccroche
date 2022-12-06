@@ -28,6 +28,9 @@ application.register("project-form", ProjectFormController)
 import SketchController from "./sketch_controller"
 application.register("sketch", SketchController)
 
+import SortableCardsController from "./sortable_cards_controller"
+application.register("sortable-cards", SortableCardsController)
+
 import ToggleController from "./toggle_controller"
 application.register("toggle", ToggleController)
 
