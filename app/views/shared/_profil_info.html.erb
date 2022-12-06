@@ -9,12 +9,12 @@
         <%= image_tag @user.avatar, class: "image_profil-info"%>
       </div>
 
-      <h1><%= @user.nickname.capitalize %></h1>
-      <p>
-        <strong>Collaborations</strong>: <br/>
+      <h1><%= @user.nickname %></h1>
+      <p class="collaborations">
+        <strong>Collaborations</strong> : <br/>
         <%= @collabs_s %>
       </p>
-      <p class="overflow"><%= @user.description.first(130) %>...</p>
+      <p class="overflow"><strong>Who am I</strong> : <%= @user.description.first(130) %>...</p>
       <%= render "shared/bouton", text: "Show more" %>
 
       <% if @user != current_user %>
