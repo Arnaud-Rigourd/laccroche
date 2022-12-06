@@ -16,6 +16,7 @@
     flex-direction: column;
     padding: 8px;
 
+
     p {
       color: white;
       font-family: $body-font;
@@ -60,3 +61,55 @@
     }
   }
 }
+
+.message {
+    width: 50%;
+    background-color: #450170b7;
+    display: flex;
+    border-radius: 15px 15px 15px 0;
+    flex-direction: column;
+    padding: 10px 10px 5px;
+    margin: 10px 0;
+    word-wrap:break-word;
+
+    .head_msg {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .avatar_msg {
+      border: none;
+      height: 38px;
+      width: 38px;
+      border-radius: 50px;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      border: 1px solid white;
+    }
+
+    .nickname_msg {
+      font-weight: bolder;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+}
+
+// ---------div user2
+
+// div msg
+// width: 50%;
+// background-color: #012070b7;
+// display: flex;
+// border-radius: 15px 15px 0 15px;
+// flex-direction: column;
+// padding: 10px 10px 5px;
+// margin: 10px 0;
+// word-wrap: break-word;
+
+// div .nickname_msg
+
+// display: flex;
+// align-items: center;
+// justify-content: flex-start;
+// flex-direction: row-reverse;
