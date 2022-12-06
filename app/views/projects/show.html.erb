@@ -4,11 +4,10 @@
 <div class="banner-wrapper">
   <picture class="img">
     <% if @project.music_url.present? %>
-      <%# <%= render 'spotify_player_large', url: @project.music_embed_url, class: "img" %>
+      <%= cl_image_tag @project.photo.key, class: "img" %>
 
     <% elsif @project.video_url.present? %>
-      <%# <%= cimage_tag @project.youtube_embed_url., class: "img" %>
-      <%# <%= image_tag @project.photo.key %>
+      <%= cl_image_tag @project.photo.key, class: "img" %>
 
     <% elsif @project.photo.attached? %>
       <%= cl_image_tag @project.photo.key, class: "img" %>
@@ -16,12 +15,9 @@
     <% end %>
 
       <h1><%= @project.title %></h1>
-      <p>Défiler pour découvrir<br>|</p>
+      <p>Scroll to discover<br>|</p>
   </picture>
 </div>
-
-
-
 
 
 <div class="description_project px-5">
