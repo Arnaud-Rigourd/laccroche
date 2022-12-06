@@ -4,68 +4,21 @@
   grid-gap: 16px;
   position: relative;
 
-//   &:before {
-//     content: " ";
-//     position: absolute;
-//     top: -1px;
-//     left: -1px;
-//     width: 20px;
-//     height: 20px;
-//     border-top: 2px solid white;
-//     border-left: 2px solid white;
-//   }
-
-//   &:after {
-//     content: " ";
-//     position: absolute;
-//     bottom: -1px;
-//     right: -1px;
-//     width: 20px;
-//     height: 20px;
-//     border-bottom: 2px solid white;
-//     border-right: 2px solid white;
-//  }
-
-
-
   .card-category{
-    border-radius: 0 10px 0 10px;
-    // border-top: 1px solid rgb(125, 125, 125);
-    // border-left: 1px solid rgb(125, 125, 125);
     position: relative;
-    background-size: cover;
     background-position: center;
-    height: 250px;
-    width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;
+    border-radius: 0 10px 0 10px;
     color: white;
+    display: flex;
+    align-items: center;
     font-size: 24px;
     font-weight: bold;
+    height: 250px;
+    justify-content: center;
+    text-align: center;
     text-shadow: 1px 1px 3px $rose;
-
-  //   &:before {
-  //     content: " ";
-  //     position: absolute;
-  //     top: -1px;
-  //     left: -1px;
-  //     width: 20px;
-  //     height: 20px;
-  //     border-top: 2px solid white;
-  //     border-left: 2px solid white;
-  //   }
-
-  //   &:after {
-  //     content: " ";
-  //     position: absolute;
-  //     bottom: -1px;
-  //     right: -1px;
-  //     width: 20px;
-  //     height: 20px;
-  //     border-bottom: 2px solid white;
-  //     border-right: 2px solid white;
-  //  }
+    width: 250px;
 
     a {
       text-decoration: none;
