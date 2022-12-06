@@ -13,6 +13,9 @@ application.register("category-buttons-scroll-down", CategoryButtonsScrollDownCo
 import ChatroomSubscriptionController from "./chatroom_subscription_controller"
 application.register("chatroom-subscription", ChatroomSubscriptionController)
 
+import ChatroomsController from "./chatrooms_controller"
+application.register("chatrooms", ChatroomsController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
@@ -27,6 +30,9 @@ application.register("project-form", ProjectFormController)
 
 import SketchController from "./sketch_controller"
 application.register("sketch", SketchController)
+
+import SortableCardsController from "./sortable_cards_controller"
+application.register("sortable-cards", SortableCardsController)
 
 import ToggleController from "./toggle_controller"
 application.register("toggle", ToggleController)
