@@ -16,13 +16,10 @@
       <span class="navbar-toggler-icon"></span>
     </button> -->
 
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <!-- Display navbar except on home -->
       <ul class="navbar-nav me-auto">
-
-
 
         <% if user_signed_in? %>
           <% if params[:action] != "home" %>
@@ -33,15 +30,13 @@
               <%= link_to "See All Projects", projects_path, class: "nav-link" %>
             </li>
             <li class="nav-item" data-controller="chatrooms">
-              <!-- <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#open" } %> -->
-              <button class="nav-link btn btn-info" data-action="click->chatrooms#open">Messages</button>
+              <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#open" } %>
+              <%# <button class="nav-link btn btn-info" data-action="click->chatrooms#open">Messages</button> %>
               <div class="chatbox d-none" data-chatrooms-target="chatbox">
                 <%= render "shared/chatrooms" %>
               </div>
             </li>
           <% end %>
-
-
 
           <!-- Dropdown on profile picture -->
           <li class="nav-item dropdown">

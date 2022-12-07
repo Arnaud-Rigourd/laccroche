@@ -23,6 +23,12 @@
 a.nav-link {
   color: $medium-violet;
   opacity: 0.8;
+
+  &:visited,
+  &:focus {
+    color: white;
+    opacity: 1;
+  }
 }
 
 .avatar {
