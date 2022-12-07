@@ -37,6 +37,7 @@ export default class extends Controller {
     this.messagesTarget.insertAdjacentHTML("beforeend", messageElement)
 
     // si scroll dans la boite des messages
+    console.log(this.messagesTarget.scrollHeight)
     this.messagesTarget.scrollTo(0, this.messagesTarget.scrollHeight);
 
     // si pas de scroll dans la boite des messages
