@@ -69,17 +69,12 @@ export default class Sketch {
       this.mouse.x = e.clientX / this.width;
       this.mouse.y = e.clientY / this.height;
 
-      // console.log(this.mouse.x,this.mouse.y)
-
       this.mouse.vX = this.mouse.x - this.mouse.prevX;
       this.mouse.vY = this.mouse.y - this.mouse.prevY;
 
 
       this.mouse.prevX = this.mouse.x
       this.mouse.prevY = this.mouse.y;
-
-
-      // console.log(this.mouse.vX,'vx')
     })
   }
 

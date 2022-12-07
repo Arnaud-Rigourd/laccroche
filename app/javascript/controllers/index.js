@@ -7,6 +7,7 @@ import { application } from "./application"
 import ButtonController from "./button_controller"
 application.register("button", ButtonController)
 
+
 import CategoryButtonsScrollDownController from "./category_buttons_scroll_down_controller"
 application.register("category-buttons-scroll-down", CategoryButtonsScrollDownController)
 
