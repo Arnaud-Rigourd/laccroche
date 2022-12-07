@@ -93,8 +93,11 @@
 
 
   .header_description {
-    display: flex;
+    position: sticky;
+    background: #f1f1f1;
     justify-content: space-between;
+    display: flex;
+    top: 0;
   }
 
   h2 {
@@ -137,6 +140,8 @@
 }
 
 .like {
+  margin: 10px 0;
+
   .fa-regular {
     color: rgba(0, 0, 0, 0.7);
     font-size: 30px;
