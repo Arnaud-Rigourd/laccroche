@@ -1,3 +1,9 @@
+.scroller {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
 .message-row {
   margin-bottom: 10px;
   padding: 8px;
@@ -11,6 +17,11 @@
   padding: 8px;
   min-height: 80px;
   word-wrap: break-word;
+
+  .nickname_msg {
+    font-weight: bolder;
+    font-size: 18px;
+  }
 }
 
 .sender-style {

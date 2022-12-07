@@ -64,6 +64,10 @@
 
 .chatroom {
 
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+
   h1 {
     margin-top: 20px;
     color: white;
