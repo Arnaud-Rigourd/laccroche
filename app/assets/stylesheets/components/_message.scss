@@ -16,6 +16,8 @@
 .sender-style {
   background-color: $dark-violet;
   border-radius: 30px 30px 0 30px;
+  box-shadow:  4px 4px 0px -1px rgba(70, 70, 70, 0.8);
+
 
   .avatar_msg {
     border: none;
@@ -31,6 +33,7 @@
 .receiver-style {
   background-color: $medium-violet;
   border-radius: 30px 30px 30px 0;
+  box-shadow:  4px 4px 0px -1px rgba(70, 70, 70, 0.8);
 
   .avatar_msg {
     border: none;
