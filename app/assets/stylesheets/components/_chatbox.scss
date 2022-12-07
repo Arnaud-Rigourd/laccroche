@@ -9,17 +9,23 @@
   flex-direction: column;
   border-radius: 12px;
   z-index: 1;
+  border-radius: 10px 0 10px 0;
 
   .chatroom-list {
     display: flex;
     flex-direction: column;
     padding: 8px;
 
-    & > p {
+
+    p {
       color: white;
       font-family: $body-font;
       padding: 10px;
-      margin-left: 72px;
+      transition: all 500ms linear;
+
+      &:hover {
+        background-color: $dark-violet;
+      }
     }
   }
 
@@ -29,5 +35,68 @@
     padding: 16px;
     margin-top: 8px;
     margin-left: 12px;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+    }
+  }
+}
+
+.chatroom {
+
+  h1 {
+    margin-top: 20px;
+    color: white;
+    padding: 30px 10px 30px;
+    // border-bottom: 1px solid;
+    position: relative;
+    display: inline-block;
+
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 20px;
+      height: 20px;
+      border-top: 2px solid white;
+      border-left: 2px solid white;
+    }
+
+    &:after {
+      content: " ";
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 20px;
+      height: 20px;
+      border-bottom: 2px solid white;
+      border-right: 2px solid white;
+    }
+  }
+
+  .btn {
+    background-color: $dark-violet;
+    border: 1px solid white;
   }
 }
