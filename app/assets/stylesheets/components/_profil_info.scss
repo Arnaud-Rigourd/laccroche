@@ -50,9 +50,12 @@
     }
 
     .back {
-    color: white;
-    background: none;
-    border: 1px solid $dark-violet;
+      color: white;
+      background: none;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      border-right: none;
+      border-left: none;
     }
 
   }
@@ -171,6 +174,6 @@
 }
 
 .contact_form {
-  height: 100%;
+  height: fit-content;
   overflow: scroll;
 }
