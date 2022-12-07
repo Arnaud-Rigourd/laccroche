@@ -142,12 +142,12 @@
 
     .fab {
       color: #8100BE;
-      opacity: 0.4;
+      opacity: 1;
       text-decoration: none;
       padding: 0 10px;
 
       &:hover {
-        opacity: 1;
+        opacity: 0.4;
       }
     }
   }
