@@ -5,18 +5,18 @@
 
   <h1>Messages</h1>
 
-  <div class="scroller">
+
     <!-- Display all messages of the chatroom -->
-    <div class="messages" data-chatroom-subscription-target="messages">
-      <% @chatroom.messages.each do |message| %>
-        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-            <%= render "messages/message", message: message %>
-          </div>
+  <div class="messages scroller" data-chatroom-subscription-target="messages">
+    <% @chatroom.messages.each do |message| %>
+      <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+        <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+          <%= render "messages/message", message: message %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
+
 
   <!-- Display a box to write your message -->
   <%= simple_form_for [@chatroom, @message],
