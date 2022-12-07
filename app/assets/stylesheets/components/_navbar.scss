@@ -1,9 +1,13 @@
 .navbar {
   padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 3;
+
+  &.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+  }
 }
+
 
 .navbar-lewagon {
   background: black;

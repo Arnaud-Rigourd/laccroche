@@ -108,9 +108,13 @@
 
   h3 {
     font-family: $body-font;
-    font-size: 30px;
+    font-size: 35px;
     text-decoration: none;
     color: black;
+
+    span {
+      font-size: 20px;
+    }
 
     a {
       text-decoration: none;
@@ -131,11 +135,12 @@
     font-family: $body-font;
     font-size: 25px;
     margin-top: 20px;
-    padding: 30px 50px;
+    padding: 30px 200px;
   }
 
   .description {
     border-top: 2px solid black;
+    margin-bottom: 150px;
   }
 }
 
