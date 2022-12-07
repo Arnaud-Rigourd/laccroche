@@ -41,6 +41,7 @@ a.nav-link {
   transition: border 500ms;
     &:hover {
      border: 3px solid $medium-violet;
+     cursor: pointer;
     }
 }
 

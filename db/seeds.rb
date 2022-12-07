@@ -16,24 +16,26 @@ puts "Creating users..."
 
 
 
-musician = User.create!(nickname: "Chris Shards", first_name: "Chris", last_name: "Shards", email: "chris@gmail.com", password: "123456", description: "Chris Shards is a multi-instrumentalist and producer from the UK. His musical journey began with classical percussion, which led to an exploration of music technology and composition. His unique fusion of organic and electronic elements has seen him remix, produce, and perform alongside some of the biggest names in the industry. With his wide range of production styles, Chris has crafted music for film, television, and video games. As a live performer, Chris brings a dynamic energy to the stage, captivating audiences with his powerful beats and immersive soundscapes.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar4.jpg")
+musician = User.create!(nickname: "Chris Shards", first_name: "Chris", last_name: "Shards", email: "chris@gmail.com", password: "123456", description: "Chris Shards is a multi-instrumentalist and producer from the UK. His musical journey began with classical percussion, which led to an exploration of music technology and composition. His unique fusion of organic and electronic elements has seen him remix, produce, and perform alongside some of the biggest names in the industry. With his wide range of production styles, Chris has crafted music for film, television, and video games. As a live performer, Chris brings a dynamic energy to the stage, captivating audiences with his powerful beats and immersive soundscapes.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar4.jpg", banner: "https://cdn.pixabay.com/photo/2016/11/22/19/15/hand-1850120_1280.jpg")
 
 
 
 video_artist = User.create!(nickname: "Howard Wimshurst", first_name: "Howard", last_name: "Wimshurst", email: "howard@gmail.com", password: "123456", description: "Howard Wimshurst is an award-winning filmmaker and artist who specializes in hand-drawn animation. His background in animation spans 10 years, starting with independent filmmaking from his bedroom, progressing to a foundation degree in art and design, then a Bachelor of Arts degree in Animation. His musical style blends together classical instruments and modern production techniques, creating a unique and mesmerizing soundscape.
 
-His passion for collaboration has seen him work with fellow composers and producers, designing music for video games, television, and film. On stage, Howard brings an electrifying energy and delivers captivating performances that transport you on a musical journey. His tracks infuse traditional elements and modern production styles, delivering a truly unforgettable experience.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar3.jpg")
+His passion for collaboration has seen him work with fellow composers and producers, designing music for video games, television, and film. On stage, Howard brings an electrifying energy and delivers captivating performances that transport you on a musical journey. His tracks infuse traditional elements and modern production styles, delivering a truly unforgettable experience.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar3.jpg", banner: "https://dr.savee-cdn.com/things/5/9/6687ccce6f7269913642e8.webp")
 
 artwork_artist = User.create!(nickname: "Novans", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "Novans Adikresna is a graphic designer from Indonesia. He combines traditional technique with modern design elements to create stunning visuals. His love of experimentation and exploration has seen him venture into a variety of fields, including animation, video games, and web design. With each project, Novans seeks to push boundaries and create something unique and impactful that stands out from the crowd.
 
-He is driven by a passion for collaboration, as he strives to bring together cutting-edge technology and creative ideas. From intricate typography to vibrant illustrations, Novans provides the perfect visual accompaniment to any project.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340209/avatar2.jpg")
+He is driven by a passion for collaboration, as he strives to bring together cutting-edge technology and creative ideas. From intricate typography to vibrant illustrations, Novans provides the perfect visual accompaniment to any project.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340209/avatar2.jpg", banner: " https://dr.savee-cdn.com/things/5/a/ce85f0e7e99754de2a04d5.webp")
+
 
 
 artwork_artist_sam = User.create!(nickname: "Samdoesart", first_name: "Sam", last_name: "Adams", email: "sam@gmail.com", password: "123456", description: "Hello! My name is Sam! I'm a 24yo digital artist based in Toronto. I love to paint! Art has actually been a passion of mine for most of my life!
 
 I stopped learning art after high school, kept it as a side hobby but I didn't make any real attempts to improve and get better. But early 2020 I decided to pick this passion back up because I realized that this is truly the one thing that I love doing. I discovered so many amazing artists, and realized just how much more there is for me to learn. I've made it a habit to create regularly, to study and improve and be able to tell my own stories through my work and hopefully inspire others to pursue their artistic passions along the way.
 
-i'd love more than anything for you to join me on this journey. I'm gonna keep learning, keep creating, and give all I can to the art community and to this passion of mine that brings so much happiness to my life.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar1.jpg")
+i'd love more than anything for you to join me on this journey. I'm gonna keep learning, keep creating, and give all I can to the art community and to this passion of mine that brings so much happiness to my life.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar1.jpg", banner: "")
+
 
 puts "Creating projects..."
 
