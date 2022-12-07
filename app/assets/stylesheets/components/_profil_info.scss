@@ -45,7 +45,16 @@
     &.hidden {
       position: absolute;
       opacity: 0;
+      top: 0;
+      z-index: -11;
     }
+
+    .back {
+    color: white;
+    background: none;
+    border: 1px solid $dark-violet;
+    }
+
   }
 
 
@@ -60,6 +69,12 @@
       padding: 0 20px;
       opacity: 1;
       transition: all ease 1s;
+
+      .show-more {
+        color: rgba(255, 255, 255, 0.598);
+        background: none;
+        border: none;
+      }
 
       .overflow {
         color: white;

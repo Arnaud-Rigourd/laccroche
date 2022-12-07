@@ -22,6 +22,6 @@ export default class extends Controller {
   change_categorie_music(event) {
     event.preventDefault()
     this.boxmusicTarget.classList.toggle("d-none")
-    event.target.scrollIntoView({ behavior: 'smooth', block: 'start'});s
+    event.target.scrollIntoView({ behavior: 'smooth', block: 'start'});
   }
 }
