@@ -1,9 +1,12 @@
 .navbar {
   padding: 10px;
-  background: black;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .navbar-lewagon {
+  background: black;
   display: flex;
   color: $medium-violet;
   font-family: $body-font;
