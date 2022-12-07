@@ -74,6 +74,12 @@
         width: 100%;
       }
 
+      .collaborations {
+        border-bottom: 1px solid gray;
+        border-top: 1px solid grey;
+        padding: 10px 0;
+      }
+
       &.hidden {
         position: absolute;
         opacity: 0;
@@ -151,4 +157,9 @@
       }
     }
   }
+}
+
+.contact_form {
+  height: 100%;
+  overflow: scroll;
 }

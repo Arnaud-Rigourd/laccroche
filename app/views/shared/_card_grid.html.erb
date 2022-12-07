@@ -1,5 +1,9 @@
-<div class="cards hidden" data-profil-target="projectCards" data-controller="sortable-cards" data-sortable-cards-target="cards">
-  <% projects.each do |project|%>
-    <%= render partial: 'shared/card', locals: { project: project } %>
-  <% end %>
-</div>
+<% if current_user == @user %>
+  <div class="cards hidden" data-profil-target="projectCards" data-controller="sortable-cards" data-sortable-cards-target="cards">
+<% else %>
+  <div class="cards hidden" data-profil-target="projectCards">
+<% end %>
+    <% projects.each do |project|%>
+      <%= render partial: 'shared/card', locals: { project: project } %>
+    <% end %>
+  </div>
