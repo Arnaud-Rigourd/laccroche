@@ -33,7 +33,7 @@
       <% @projects.each do |p| %>
         <% if p.category === Project::CATEGORIES[1] %>
           <div class="px-3 project-box ">
-            <h3><%= link_to p.title, project_path(p) %></h3>
+            <h3><%= link_to project_path(p) do %><%= p.title %></h3>
 
             <!-- Display image if project has a Cloudinary photo attached -->
             <%= cl_image_tag(p.photo.key, height: 400, width: 360) if p.photo.attached? %>
@@ -47,6 +47,7 @@
             <%# if p.video_url.present? %>
               <%#= render 'projects/youtube_player', url: p.youtube_embed_url %>
             <%# end %>
+            <% end %>
           </div>
         <% end %>
       <% end %>

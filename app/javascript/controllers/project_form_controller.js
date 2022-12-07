@@ -12,7 +12,6 @@ export default class extends Controller {
   toggle(event) {
 
     if ( event.target.value === "Music" ) {
-      console.log("musiiiic");
       this.musicTarget.disabled = false
       this.videoTarget.disabled = true
       this.videoUrl.classList.add("d-none")

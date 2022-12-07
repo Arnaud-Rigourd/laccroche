@@ -7,9 +7,6 @@ export default class extends Controller {
   static targets = ["input"]
 
   connect() {
-    // console.log("TEST2")
-    // console.log(this.optionsValue)
-    // console.log(this.inputTarget)
 
     const tomSelectOptions = {
       options: this.optionsValue,
@@ -26,9 +23,6 @@ export default class extends Controller {
   }
 
   #goToSelectedItemPage(value, item) {
-    // console.log("item selected", value, item)
-    // console.log(item.dataset.url)
-
     window.location = item.dataset.url
   }
 }
