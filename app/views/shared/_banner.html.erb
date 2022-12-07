@@ -1,5 +1,5 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-                  url(<% @user.banner %>)">
+                  url(<%= @user.banner %>)">
   <% if current_user == @user%>
       <h1>Welcome <%= @user.nickname %>!</h1>
       <p class="typing">Here, you can manage all your projects!

@@ -23,12 +23,12 @@ As a solo artist, Chris Shard has released four albums, beginning with Lost Chan
 
 video_artist = User.create!(nickname: "Howard Wimshurst", first_name: "Howard", last_name: "Wimshurst", email: "howard@gmail.com", password: "123456", description: "Howard Wimshurst is an award-winning filmmaker and artist who specializes in hand-drawn animation. His background in animation spans 10 years, starting with independent filmmaking from his bedroom, progressing to a foundation degree in art and design, then a Bachelor of Arts degree in Animation.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar3.jpg", banner: "https://dr.savee-cdn.com/things/5/9/6687ccce6f7269913642e8.webp")
 
-artwork_artist = User.create!(nickname: "Novans", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "My name is Novans. I was born in Surabaya, Indonesia. Most of my works here were done for my personal hobby, but a few of them are for commercial projects. Freelance..?? Maybe, contact me for freelance possibillities.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340209/avatar2.jpg", banner: " https://dr.savee-cdn.com/things/6/3/6b821867809f79e460e5f8.webp")
+artwork_artist = User.create!(nickname: "Novans", first_name: "Novans", last_name: "Adikresna", email: "novans@gmail.com", password: "123456", description: "My name is Novans. I was born in Surabaya, Indonesia. Most of my works here were done for my personal hobby, but a few of them are for commercial projects. Freelance..?? Maybe, contact me for freelance possibillities.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340209/avatar2.jpg", banner: " https://dr.savee-cdn.com/things/5/a/ce85f0e7e99754de2a04d5.webp")
 
 
 artwork_artist_sam = User.create!(nickname: "Samdoesart", first_name: "Sam", last_name: "Adams", email: "sam@gmail.com", password: "123456", description: "Hello! My name is Sam! I'm a 24yo digital artist based in Toronto. I love to paint! Art has actually been a passion of mine for most of my life!
 
-I stopped learning art after high school, kept it as a side hobby but I didn't make any real attempts to improve and get better.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar1.jpg", banner: "https://dr.savee-cdn.com/things/5/b/3b2107c82900693ae89884.webp")
+I stopped learning art after high school, kept it as a side hobby but I didn't make any real attempts to improve and get better.", avatar: "https://res.cloudinary.com/dwullr589/image/upload/v1670340208/avatar1.jpg", banner: "")
 
 puts "Creating projects..."
 
