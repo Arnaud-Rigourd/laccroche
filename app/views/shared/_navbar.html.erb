@@ -33,10 +33,21 @@
               <%= link_to "See All Projects", projects_path, class: "nav-link" %>
             </li>
             <li class="nav-item" data-controller="chatrooms">
-              <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#open" } %>
-              <%# <button class="nav-link btn btn-info" data-action="click->chatrooms#open">Messages</button> %>
+              <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#openChatbox" } %>
               <div class="chatbox d-none" data-chatrooms-target="chatbox">
-                <%= render "shared/chatrooms", class: "nav-link" %>
+                <!-- TODO: caler un data target pour le listing des chatrooms -->
+                <div>
+                  <%= render "shared/chatrooms" %>
+                </div>
+
+                <% current_user.chatrooms.each do |chatroom| %>
+                  <!-- TODO: caler un data target pour la chatroom -->
+                  <!-- TODO: caler un data-chatroom-id=XXX -->
+                  <div>
+                    <!-- TODO: quand tout marchera, faire un vrai partial -->
+                    ici le partial de la chatroom <%= chatroom.id %>
+                  </div>
+                <% end %>
               </div>
             </li>
           <% end %>

@@ -5,8 +5,7 @@
 
   <h1>Messages</h1>
 
-
-    <!-- Display all messages of the chatroom -->
+  <!-- Display all messages of the chatroom -->
   <div class="messages scroller" data-chatroom-subscription-target="messages">
     <% @chatroom.messages.each do |message| %>
       <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
@@ -16,7 +15,6 @@
       </div>
     <% end %>
   </div>
-
 
   <!-- Display a box to write your message -->
   <%= simple_form_for [@chatroom, @message],
