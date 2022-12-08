@@ -3,7 +3,6 @@
      data-chatroom-subscription-chatroom-id-value="<%= chatroom.id %>"
      data-chatroom-subscription-current-user-id-value="<%= current_user.id %>">
 
-  <h1>Messages</h1>
 
   <!-- Display all messages of the chatroom -->
   <div class="messages scroller" data-chatroom-subscription-target="messages">
@@ -14,8 +13,10 @@
         </div>
       </div>
     <% end %>
-  </div>
 
+
+</div>
+  <div class="input_msg">
   <!-- Display a box to write your message -->
   <% message = Message.new %>
   <%= simple_form_for [chatroom, message],
@@ -29,4 +30,4 @@
     %>
     <%= f.submit "Send", class: "btn btn-primary mb-3" %>
   <% end %>
-</div>
+  </div>
