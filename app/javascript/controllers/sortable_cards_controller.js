@@ -25,10 +25,6 @@ export default class extends Controller {
         fetch(`/sort`, {method: "POST",
         headers: { Accept: "application/json", "X-CSRF-Token": csrfToken },
         body: formData
-    })
-        .then((data) => {
-
-          console.log("hello from data fetch")
         })
       }
     })
