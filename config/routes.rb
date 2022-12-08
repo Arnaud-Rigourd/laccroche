@@ -9,8 +9,9 @@ Rails.application.routes.draw do
     collection do
       get :top
     end
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create]
   end
+  resources :likes, only: [:destroy]
 
   resources :users, only: [:show] do
     resources :chatrooms, only: [:create]

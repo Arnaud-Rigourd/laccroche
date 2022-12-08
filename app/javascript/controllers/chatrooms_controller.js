@@ -5,7 +5,7 @@ export default class extends Controller {
   static targets = ["chatbox"]
 
   connect() {
-    console.log("Hello from chatrooms stimulus controller!")
+    // console.log("Hello from chatrooms stimulus controller!")
   }
 
   open(event) {
