@@ -8,9 +8,11 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show, :new, :create] do
     collection do
       get :top
+      post :sort
     end
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create]
   end
+  resources :likes, only: [:destroy]
 
   resources :users, only: [:show] do
     resources :chatrooms, only: [:create]
@@ -21,4 +23,5 @@ Rails.application.routes.draw do
   end
 
   get "profil", to: "pages#profil"
+  # post "sort", to: "projects#sort", as: "sort"
 end

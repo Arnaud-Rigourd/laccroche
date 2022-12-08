@@ -4,21 +4,22 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
- .rails-default-error-page {
-  background-image: url(500.png);
+  .error_page {
+    background-color: #10001D;
+    background-image: url("/500.png");
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
     margin: 0;
   }
 
-  .rails-default-error-page div.dialog {
+  .error_page div.dialog {
     width: 95%;
     max-width: 33em;
     margin: 4em auto 0;
   }
 
-  .rails-default-error-page div.dialog > div {
+  .error_page div.dialog > div {
     margin-top: 91%;
     border-radius: 9px;
     background-color: rgba(222, 226, 230,0.5);
@@ -26,17 +27,16 @@
     box-shadow: 0 3px 8px rgb(50 50 50 / 17%)
   }
 
-  .rails-default-error-page h1 {
+  .error_page h1 {
     font-size: 100%;
-    color: #730E15;
+    color: #FFF;
     line-height: 1.5em;
   }
 
-  .rails-default-error-page div.dialog > p {
+  .error_page div.dialog > p {
     margin: 0 0 1em;
     padding: 1em;
     background-color: rgba(222, 226, 230,0.5);
-
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
@@ -63,15 +63,15 @@
     left: 700px;
   }
 
-a {
-  color: inherit;
-  text-decoration: inherit;
-  }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+    }
 
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="error_page">
   <!-- This file lives in public/404.html -->
   <!--div><button type="button" class="btn btn-primary"><a href="/">Back to home</a></button>-->
     <div><button class="btn"><a href="/">Back to home</a></button>

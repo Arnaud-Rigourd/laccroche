@@ -9,14 +9,6 @@ class ProjectsController < ApplicationController
     if params[:query].present?
       @projects = Project.global_search(params[:query])
     end
-
-    # Category filter
-    # elsif params[:category].present?
-    #   @projects = @projects.where(category: params[:category])
-
-    # else
-    #   @projects = @projects.none
-    # end
   end
 
   def show
@@ -32,8 +24,10 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-    @project.user = current_user
     authorize @project
+    # Arnaud / sorting
+    @project.position = @user.projects.length + 1
+    @project.user = current_user
 
     if @project.save
       redirect_to project_path(@project)
@@ -50,13 +44,17 @@ class ProjectsController < ApplicationController
     @top_artists = @top10.map { |t| t.user }
   end
 
-  # def top(category)
-  #   @projects = Project.all
-  #   authorize @projects
-  #   @project_category = @projects.select { |p| p.category == category }
-  #   @top = @project_category.sort_by { |p| p.likes.length }
-  #   @top10 = @top.first(10)
-  # end
+  def sort
+    @project_sorted = params[:projectOrdered].split(",").map{ |id| Project.find(id.to_i) }
+
+    @project_sorted.each_with_index do |p, index|
+      p.position = index + 1
+      p.save
+    end
+
+    @user = current_user
+    authorize Project.first
+  end
 
   private
 

@@ -19,6 +19,9 @@ application.register("chatrooms", ChatroomsController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import LikeCounterController from "./like_counter_controller"
+application.register("like-counter", LikeCounterController)
+
 import ProfilController from "./profil_controller"
 application.register("profil", ProfilController)
 

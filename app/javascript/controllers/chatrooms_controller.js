@@ -6,12 +6,12 @@ export default class extends Controller {
   static targets = ["chatbox", "chatroomsList", "chatroom"]
 
   connect() {
-    console.log("Hello from chatrooms stimulus controller!")
+    // console.log("Hello from chatrooms stimulus controller!")
   }
 
   toggleChatbox(event) {
     event.preventDefault()
-    console.log("Method openChatbox is connected!")
+    console.log("Method toggleChatbox is connected!")
     this.chatboxTarget.classList.toggle("d-none")
 
     // TODO: cacher toutes les chatroom targets

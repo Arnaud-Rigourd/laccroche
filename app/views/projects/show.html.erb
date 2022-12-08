@@ -21,22 +21,11 @@
     <div class="header_description">
       <div class="title_desciption">
         <h2 id="project_title"><%= @project.title %></h2>
-        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %><span> | in collaboration with <%=link_to @project.collab, user_path(User.find(User.where(nickname: @project.collab).last.id)) %></span></h3>
+        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %><span> <%= link_to "| in collaboration with #{@project.collab}", user_path(User.find(User.where(nickname: @project.collab).last.id)) unless @project.collab.nil? %></span></h3>
       </div>
 
-      <div class="like">
-        <!-- Display a like button if the current user hasn't liked yet... -->
-        <!-- ... else display a like counter -->
-        <% if @project_liked %>
-          <%= link_to project_like_path(@project), data: { turbo_method: :delete } do %>
-            <i class="fa-solid fa-heart"> <%= @project.likes.length%> </i>
-          <% end %>
-        <% else %>
-          <%= link_to project_likes_path(@project), data: { turbo_method: :post } do %>
-            <i class="fa-regular fa-heart"> </i>
-          <% end %>
-        <% end %>
-      </div>
+
+      <%= render "shared/counter_like",  project_liked: @project_liked, project: @project%>
     </div>
 
     <div class="content_description">

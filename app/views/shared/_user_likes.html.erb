@@ -1,5 +1,5 @@
 <div class="user-likes d-none" data-profil-target="myLikes">
-  <% if params[:id].to_i == current_user.id %>
+  <%# if params[:id].to_i == current_user.id %>
     <div class="cards">
       <% user.likes.reverse.each do |p| %>
         <% if p.project.photo.attached? %>
@@ -15,5 +15,5 @@
         <% end %>
       <% end %>
     </div>
-  <% end %>
+  <%# end %>
 </div>
