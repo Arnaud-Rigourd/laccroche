@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   position: relative;
+  margin-bottom: 250px;
 
 
   a {
@@ -34,6 +35,7 @@
     text-shadow: 1px 1px 3px $rose;
     width: 250px;
     cursor: pointer;
+
   }
 }
 
