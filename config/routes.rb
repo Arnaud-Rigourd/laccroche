@@ -10,8 +10,9 @@ Rails.application.routes.draw do
       get :top
       post :sort
     end
-    resources :likes, only: [:create, :destroy]
+    resources :likes, only: [:create]
   end
+  resources :likes, only: [:destroy]
 
   resources :users, only: [:show] do
     resources :chatrooms, only: [:create]

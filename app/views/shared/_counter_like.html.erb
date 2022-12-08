@@ -1,0 +1,23 @@
+<div class="like" data-controller="like-counter" data-like-counter-target="div">
+        <!-- Display a like button if the current user hasn't liked yet... -->
+        <!-- ... else display a like counter -->
+
+  <% if project_liked %>
+    <div data-action="click->like-counter#delete_like" id="<%= project.id %>">
+      <%= link_to like_path(project.likes.where(user: current_user).last), data: { turbo_method: :delete, like_counter_target: "deleteLike" } do %>
+
+
+
+
+        <i class="fa-solid fa-heart">  <%= project.likes.length%> </i>
+    </div>
+    <% end %>
+
+  <% else %>
+    <div data-action="click->like-counter#like">
+      <%= link_to project_likes_path(project), data: { turbo_method: :post, like_counter_target: "postLike" } do %>
+        <i class="fa-regular fa-heart" id="<%= project.id %>">  </i>
+    </div>
+    <% end %>
+  <% end %>
+</div>

@@ -80,7 +80,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_08_092747) do
     t.string "video_url"
     t.string "music_url"
     t.bigint "user_id", null: false
-    t.string "picture"
     t.integer "position"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end

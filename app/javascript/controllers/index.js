@@ -7,7 +7,6 @@ import { application } from "./application"
 import ButtonController from "./button_controller"
 application.register("button", ButtonController)
 
-
 import CategoryButtonsScrollDownController from "./category_buttons_scroll_down_controller"
 application.register("category-buttons-scroll-down", CategoryButtonsScrollDownController)
 
@@ -19,6 +18,9 @@ application.register("chatrooms", ChatroomsController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import LikeCounterController from "./like_counter_controller"
+application.register("like-counter", LikeCounterController)
 
 import ProfilController from "./profil_controller"
 application.register("profil", ProfilController)
