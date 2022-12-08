@@ -14,11 +14,12 @@
         <strong>Collaborations</strong><br/>
         <%= @collabs_s %>
       </p>
-      <p class="overflow"><strong>Who am I</strong> : <%= @user.description.first(130) %>...</p>
-      <%= render "shared/bouton", text: "Show more" %>
+      <p class="overflow"><strong>Who am I</strong> : <%= @user.description.first(130) %>... <button class="show-more" data-action="click->profil-to-email#transform">Show more</button> </p>
 
       <% if @user != current_user %>
-        <%= link_to "Chat", user_chatrooms_path(@user), data: { turbo_method: :post } %>
+        <%= link_to user_chatrooms_path(@user), data: { turbo_method: :post } do %>
+          <%= render "shared/bouton", text: "chat" %>
+        <% end %>
       <% end %>
 
 
@@ -33,7 +34,8 @@
 
       <%= render partial: "shared/form_contact", locals: { user: @user } %>
 
-      <%= render "shared/bouton", text: "back" %>
+      <button class="back" data-action="click->profil-to-email#transform">back</button>
+
     </div>
   </div>
 </div>

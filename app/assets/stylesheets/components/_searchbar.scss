@@ -58,9 +58,14 @@
     border: none;
     // color: white;
 
+
+
     input {
       color: black;
     }
-
   }
+}
+
+.ts-control, .ts-wrapper.single.input-active .ts-control {
+  background-color: #f1f1f1;
 }
