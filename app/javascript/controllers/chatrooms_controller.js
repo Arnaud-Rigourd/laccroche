@@ -13,8 +13,13 @@ export default class extends Controller {
     event.preventDefault()
     console.log("Method toggleChatbox is connected!")
     this.chatboxTarget.classList.toggle("d-none")
-
+    // Reset chatbox content
+    // TODO: afficher la chatrooms list
+    this.chatroomsListTarget.classList.remove("d-none")
     // TODO: cacher toutes les chatroom targets
+    this.chatroomTargets.forEach(chatroom => {
+      chatroom.classList.add("d-none")
+    });
   }
 
   openChatroom(event) {
