@@ -1,6 +1,8 @@
 .scroller {
   width: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -12,7 +14,7 @@
 
 // To style the message itself
 .sender-style, .receiver-style {
-  width: 70%;
+  width: 83%;
   max-width: 400px;
   padding: 8px;
   min-height: 80px;
@@ -21,6 +23,16 @@
   .nickname_msg {
     font-weight: bolder;
     font-size: 18px;
+    color: white;
+  }
+
+  .date {
+    color: white;
+    font-size: 12px;
+  }
+
+  .message_content {
+    color: white;
   }
 }
 

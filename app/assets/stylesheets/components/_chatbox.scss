@@ -3,13 +3,14 @@
   position: absolute;
   top: 76px;
   right: 5px;
-  width: 450px;
-  height: 580px;
+  width: 550px;
+  height: 645px;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
   z-index: 1;
-  border-radius: 10px 0 10px 0;
+  border-radius: 0 10px 0 10px;
+  border: 1px solid #454545be;
 
   .chatroom-list {
     display: flex;
@@ -66,7 +67,9 @@
 
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 645px;
+  width: 100%;
+  position: relative;
 
   h1 {
     margin-top: 20px;
