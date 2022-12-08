@@ -1,12 +1,12 @@
+<%= link_to project_path(project), data: { sortable_cards_target:"card", project_id: project.id } do %>
   <% if project.photo.attached? %>
-    <%= link_to project_path(project) do %>
     <div class="card-category" style="background-image: url('<%= cl_image_path project.photo.key, height: 200, width: 200 %>')">
       <%= project.title %>
     </div>
-    <% end %>
 
   <% else %>
     <div class="card-category" style="background-image: url(https://dr.savee-cdn.com/things/thumbnails/6/1/77b68ffe82f0d0ad49ce5c.webp)">
       <%= link_to project.title, project_path(project) %>
     </div>
   <% end %>
+<% end %>
