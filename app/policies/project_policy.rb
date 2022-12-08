@@ -15,7 +15,8 @@ class ProjectPolicy < ApplicationPolicy
   end
 
   def create?
-    record.user == user
+    # record.user == user
+    true
   end
 
   def top?
@@ -24,5 +25,9 @@ class ProjectPolicy < ApplicationPolicy
 
   def destroy?
     record.user == user
+  end
+
+  def sort?
+    true
   end
 end

@@ -21,7 +21,7 @@
     <div class="header_description">
       <div class="title_desciption">
         <h2 id="project_title"><%= @project.title %></h2>
-        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %><span> | in collaboration with <%=link_to @project.collab, user_path(User.find(User.where(nickname: @project.collab).last.id)) %></span></h3>
+        <h3><%= link_to "#{@project.user.nickname}" , user_path(@project.user) %><span> <%= link_to "| in collaboration with #{@project.collab}", user_path(User.find(User.where(nickname: @project.collab).last.id)) unless @project.collab.nil? %></span></h3>
       </div>
 
       <div class="like">
