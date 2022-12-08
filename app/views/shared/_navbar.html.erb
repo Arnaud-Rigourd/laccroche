@@ -15,15 +15,9 @@
       <% end %>
     </div>
 
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
       <!-- Display navbar except on home -->
       <ul class="navbar-nav me-auto">
-
         <% if user_signed_in? %>
           <% if params[:action] != "home" %>
             <li class="nav-item active">
@@ -33,19 +27,20 @@
               <%= link_to "See All Projects", projects_path, class: "nav-link" %>
             </li>
             <li class="nav-item" data-controller="chatrooms">
-              <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#openChatbox" } %>
+              <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#toggleChatbox" } %>
               <div class="chatbox d-none" data-chatrooms-target="chatbox">
-                <!-- TODO: caler un data target pour le listing des chatrooms -->
-                <div>
+                <!-- DONE: Insérer un data target pour le listing des chatrooms -->
+                <div data-chatrooms-target="chatroomsList">
                   <%= render "shared/chatrooms" %>
                 </div>
 
                 <% current_user.chatrooms.each do |chatroom| %>
-                  <!-- TODO: caler un data target pour la chatroom -->
-                  <!-- TODO: caler un data-chatroom-id=XXX -->
-                  <div>
-                    <!-- TODO: quand tout marchera, faire un vrai partial -->
-                    ici le partial de la chatroom <%= chatroom.id %>
+                  <!-- DONE: Insérer un data target pour la chatroom -->
+                  <!-- DONE: Insérer un data attribute data-chatroom-id=XXX -->
+                  <div class="d-none" data-chatrooms-target="chatroom" data-chatroom-id="<%= chatroom.id %>">
+                    <!-- TODO: Quand tout marchera, faire un vrai partial -->
+                    <!-- Ici le partial de la chatroom <%= chatroom.id %> -->
+                    <%= render "shared/chatroom", chatroom: chatroom %>
                   </div>
                 <% end %>
               </div>

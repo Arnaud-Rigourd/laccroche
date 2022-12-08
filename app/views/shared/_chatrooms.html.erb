@@ -4,8 +4,10 @@
   <% current_user.chatrooms.each do |chatroom| %>
     <% other_user_nickname = chatroom.user1 ? chatroom.user2.nickname : chatroom.user1.nickname %>
 
-    <!-- TODO: caler un data action qui ouver la chatroom -->
-    <!-- TODO: ajouter un data attibute ex : data-chatroom-id=XX -->
-    <p class="chatroom_name"><%= link_to other_user_nickname, chatroom_path(chatroom) %></p>
+    <!-- DONE: Insérer un data action qui ouver la chatroom -->
+    <!-- DONE: Insérer un data attibute data-chatroom-id=XX -->
+    <p class="chatroom_name">
+      <%= link_to other_user_nickname, chatroom_path(chatroom), data: { action: "click->chatrooms#openChatroom", chatroom_id: chatroom.id } %>
+    </p>
   <% end %>
 </div>
