@@ -10,7 +10,7 @@ export default class extends Controller {
 
   open(event) {
     event.preventDefault()
-    console.log("Method open is connected!")
+    // console.log("Method open is connected!")
     this.chatboxTarget.classList.toggle("d-none")
   }
 }

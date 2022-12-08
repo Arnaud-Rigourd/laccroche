@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     collection do
       get :top
     end
+
     resources :likes, only: [:create]
   end
   resources :likes, only: [:destroy]
@@ -22,4 +23,5 @@ Rails.application.routes.draw do
   end
 
   get "profil", to: "pages#profil"
+  post "sort", to: "projects#sort", as: "sort"
 end
