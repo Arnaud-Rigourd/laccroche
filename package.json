@@ -6,6 +6,7 @@
     "@hotwired/turbo-rails": "^7.2.4",
     "@popperjs/core": "^2.11.6",
     "@rails/actioncable": "^7.0.4",
+    "@rails/ujs": "^7.0.4",
     "bootstrap": "^5.2.3",
     "chroma-js": "^2.4.2",
     "dat.gui": "^0.7.7",
