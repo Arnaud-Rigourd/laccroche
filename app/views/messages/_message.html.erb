@@ -1,12 +1,10 @@
-
-
-  <div id="message-<%= message.id %>">
-    <small>
-      <div class="head_msg">
-        <span><%= image_tag message.user.avatar, class:"avatar_msg"%></span>
-        <strong class="nickname_msg"><%= message.user.nickname %></strong>
-        <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
-      </div>
-    </small>
-    <p><%= message.content %></p>
-  </div>
+<div id="message-<%= message.id %>">
+  <small>
+    <div class="head_msg">
+      <span><%= image_tag message.user.avatar, class:"avatar_msg"%></span>
+      <strong class="nickname_msg"><%= message.user.nickname %></strong>
+      <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
+    </div>
+  </small>
+  <p><%= message.content %></p>
+</div>
