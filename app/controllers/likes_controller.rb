@@ -9,20 +9,10 @@ class LikesController < ApplicationController
     respond_to do |format|
       if @like.save
         format.html { redirect_to project_path(@project) }
-
-
-      # avant modif AJAX -------->
-        # redirect_to project_path(@project)
-      # fin modif -------------
       else
         format.html { render :new, status: :unprocessable_entity }
-
-
-
-        # avant modif AJAX -------->
-        #  render :new, status: :unprocessable_entity
-        # fin modif -------------
       end
+
       format.text { render partial: 'shared/counter_like', locals: { project_liked: current_user.likes.where(project: @project).exists?, project: @project }, formats: [:html]}
     end
   end
