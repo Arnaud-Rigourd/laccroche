@@ -1,5 +1,5 @@
 <% if current_user == @user %>
-  <div class="cards hidden" data-profil-target="projectCards" data-controller="sortable-cards" data-sortable-cards-target="cards">
+  <div class="cards hidden" data-profil-target="projectCards" data-controller="sortable-cards" data-sortable-cards-target="cards" data-sortable-cards-sort-url-value="<%= sort_projects_path %>">
 <% else %>
   <div class="cards hidden" data-profil-target="projectCards">
 <% end %>

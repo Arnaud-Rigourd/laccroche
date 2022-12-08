@@ -8,7 +8,6 @@ class ProjectsController < ApplicationController
     # Search
     if params[:query].present?
       @projects = Project.global_search(params[:query])
-      @projects = @projects.sort { |a, b| a.position <=> b.position }
     end
   end
 
@@ -60,7 +59,7 @@ class ProjectsController < ApplicationController
   private
 
   def project_params
-    params.require(:project).permit(:title, :description, :category, :photo, :music_url, :video_url, :order)
+    params.require(:project).permit(:title, :description, :category, :photo, :music_url, :video_url)
   end
 
   def set_user
