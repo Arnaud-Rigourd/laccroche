@@ -1,5 +1,8 @@
-
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% if params[:action] == "show" %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-nav">
+<% else %>
+    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<% end %>
   <div class="container-fluid">
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "A.svg" %>
@@ -33,7 +36,7 @@
               <%= link_to "Messages", "", class: "nav-link", data: { action: "click->chatrooms#open" } %>
               <%# <button class="nav-link btn btn-info" data-action="click->chatrooms#open">Messages</button> %>
               <div class="chatbox d-none" data-chatrooms-target="chatbox">
-                <%= render "shared/chatrooms" %>
+                <%= render "shared/chatrooms", class: "nav-link" %>
               </div>
             </li>
           <% end %>

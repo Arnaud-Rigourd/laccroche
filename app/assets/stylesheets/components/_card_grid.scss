@@ -3,6 +3,21 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   position: relative;
+  margin-bottom: 250px;
+
+
+  a {
+    text-decoration: none;
+    color: white;
+    opacity: 0.7;
+    transition: opacity 400ms;
+
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
 
   .card-category{
     position: relative;
@@ -19,17 +34,8 @@
     text-align: center;
     text-shadow: 1px 1px 3px $rose;
     width: 250px;
+    cursor: pointer;
 
-    a {
-      text-decoration: none;
-      color: white;
-      opacity: 0.7;
-      transition: opacity 400ms;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
   }
 }
 

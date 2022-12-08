@@ -93,8 +93,11 @@
 
 
   .header_description {
-    display: flex;
+    position: sticky;
+    background: #f1f1f1;
     justify-content: space-between;
+    display: flex;
+    top: 76px;
   }
 
   h2 {
@@ -105,9 +108,13 @@
 
   h3 {
     font-family: $body-font;
-    font-size: 30px;
+    font-size: 35px;
     text-decoration: none;
     color: black;
+
+    span {
+      font-size: 20px;
+    }
 
     a {
       text-decoration: none;
@@ -128,15 +135,18 @@
     font-family: $body-font;
     font-size: 25px;
     margin-top: 20px;
-    padding: 30px 50px;
+    padding: 30px 200px;
   }
 
   .description {
     border-top: 2px solid black;
+    margin-bottom: 150px;
   }
 }
 
 .like {
+  margin: 10px 0;
+
   .fa-regular {
     color: rgba(0, 0, 0, 0.7);
     font-size: 30px;

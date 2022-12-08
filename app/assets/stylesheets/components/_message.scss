@@ -1,0 +1,58 @@
+.scroller {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+.message-row {
+  margin-bottom: 10px;
+  padding: 8px;
+
+}
+
+// To style the message itself
+.sender-style, .receiver-style {
+  width: 70%;
+  max-width: 400px;
+  padding: 8px;
+  min-height: 80px;
+  word-wrap: break-word;
+
+  .nickname_msg {
+    font-weight: bolder;
+    font-size: 18px;
+  }
+}
+
+.sender-style {
+  background-color: $dark-violet;
+  border-radius: 30px 30px 0 30px;
+  box-shadow:  4px 4px 0px -1px rgba(70, 70, 70, 0.8);
+
+
+  .avatar_msg {
+    border: none;
+    height: 38px;
+    width: 38px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+  }
+}
+
+.receiver-style {
+  background-color: $medium-violet;
+  border-radius: 30px 30px 30px 0;
+  box-shadow:  4px 4px 0px -1px rgba(70, 70, 70, 0.8);
+
+  .avatar_msg {
+    border: none;
+    height: 38px;
+    width: 38px;
+    border-radius: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+  }
+}
