@@ -23,9 +23,21 @@
       font-family: $body-font;
       padding: 10px;
       transition: all 500ms linear;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.299);
+      border-top: 1px solid rgba(255, 255, 255, 0.299);
+      font-size: 20px;
 
       &:hover {
-        background-color: $dark-violet;
+        background-color: $medium-violet;
+
+      }
+
+      .avatar_msg {
+        width: 45px;
+        height: 45px;
+        border-radius: 50px;
+        border: 2px solid white;
+        margin-right: 15px;
       }
     }
   }
