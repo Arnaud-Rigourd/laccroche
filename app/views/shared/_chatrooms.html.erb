@@ -3,10 +3,11 @@
 <div class="chatroom-list">
   <% current_user.chatrooms.each do |chatroom| %>
     <% other_user_nickname = chatroom.user1 ? chatroom.user2.nickname : chatroom.user1.nickname %>
-
+    <% avatar_nickname = chatroom.user1 ? chatroom.user2.avatar : chatroom.user1.avatar %>
     <!-- DONE: Insérer un data action qui ouver la chatroom -->
     <!-- DONE: Insérer un data attibute data-chatroom-id=XX -->
     <p class="chatroom_name">
+      <%= image_tag avatar_nickname, class: "avatar_msg"%>
       <%= link_to other_user_nickname, chatroom_path(chatroom), data: { action: "click->chatrooms#openChatroom", chatroom_id: chatroom.id } %>
     </p>
   <% end %>
