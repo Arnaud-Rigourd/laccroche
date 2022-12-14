@@ -1,0 +1,15 @@
+.about {
+  width: 900px;
+  margin: 50px auto;
+
+  a {
+    color: $clear-pink;
+    opacity: 1;
+    text-decoration: none;
+    transition: opacity 300ms linear;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

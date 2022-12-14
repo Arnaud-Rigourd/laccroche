@@ -24,4 +24,5 @@ Rails.application.routes.draw do
 
   get "profil", to: "pages#profil"
   # post "sort", to: "projects#sort", as: "sort"
+  get "about", to: "pages#about", as: "about"
 end
