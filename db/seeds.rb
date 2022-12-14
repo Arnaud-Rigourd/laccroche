@@ -31,7 +31,7 @@ He is driven by a passion for collaboration, as he strives to bring together cut
 
 
 
-artwork_artist_sam = User.create!(nickname: "Arnauddoesart", first_name: "Arnaud", last_name: "Adams", email: "arnaud@gmail.com", password: "123456", description: "Hello! My name is Arnaud! I'm a 24yo digital artist based in Toronto. I love to paint! Art has actually been a passion of mine for most of my life!
+artwork_artist_sam = User.create!(nickname: "Samdoesart", first_name: "Sam", last_name: "Adams", email: "sam@gmail.com", password: "123456", description: "Hello! My name is Arnaud! I'm a 24yo digital artist based in Toronto. I love to paint! Art has actually been a passion of mine for most of my life!
 
 I stopped learning art after high school, kept it as a side hobby but I didn't make any real attempts to improve and get better. But early 2020 I decided to pick this passion back up because I realized that this is truly the one thing that I love doing. I discovered so many amazing artists, and realized just how much more there is for me to learn. I've made it a habit to create regularly, to study and improve and be able to tell my own stories through my work and hopefully inspire others to pursue their artistic passions along the way.
 

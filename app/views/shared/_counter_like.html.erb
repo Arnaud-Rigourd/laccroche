@@ -6,10 +6,7 @@
     <div data-action="click->like-counter#delete_like" id="<%= project.id %>">
       <%= link_to like_path(project.likes.where(user: current_user).last), data: { turbo_method: :delete, like_counter_target: "deleteLike" } do %>
 
-
-
-
-        <i class="fa-solid fa-heart">  <%= project.likes.length%> </i>
+        <span class="fa-solid"><%= "#{project.likes.length} " %><i class="fa-solid fa-heart"></i></span>
     </div>
     <% end %>
 

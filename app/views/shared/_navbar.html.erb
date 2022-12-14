@@ -8,9 +8,9 @@
       <%= image_tag "A.svg" %>
     <% end %>
 
-    <!-- Display searchbar except on homepage and Top 10 -->
+    <!-- Display searchbar except on homepage, Top 10 and sign in -->
     <div class="nav_search">
-      <% if params[:action] != "home" && params[:action] != "top"%>
+      <% if params[:action] != "home" && params[:action] != "top" && params[:action] != "new"%>
         <%= render "shared/searchbar" %>
       <% end %>
     </div>

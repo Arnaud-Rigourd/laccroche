@@ -4,6 +4,10 @@ html.projects-top body {
   height: 100%;
 }
 
+main::-webkit-scrollbar {
+  display: none;
+}
+
 .loop {
   position: relative;
   width: 100%;
