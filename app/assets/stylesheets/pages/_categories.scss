@@ -8,9 +8,13 @@
   .horizontal-scroll-box {
     width: 93vw;
     height: 65vh;
-    overflow: scroll;
+    overflow: auto;
     align-items: flex-end;
     margin-bottom: 150px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   .project-box {
