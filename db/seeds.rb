@@ -302,7 +302,6 @@ Like.create!(user_id: artwork_artist.id, project_id: sunset.id)
 
 Like.create!(user_id: musician.id, project_id: sunset.id)
 Like.create!(user_id: video_artist.id, project_id: study.id)
-Like.create!(user_id: artwork_artist.id, project_id: sunset.id)
 
 Like.create!(user_id: video_artist.id, project_id: hyperspace.id)
 
