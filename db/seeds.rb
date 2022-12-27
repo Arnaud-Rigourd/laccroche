@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or create!d alongside the database with db:setup).
 
-require 'open-uri'
+require "open-uri"
 
 puts "Launching the seed"
 puts "Destroying..."
@@ -148,11 +148,11 @@ puts "videos are done!"
 
 # 3. ARTWORK
 puts "Processing Cloudinary images..."
-tesseract_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-tesseract_twl56v.webp")
-hyperspace_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-hyperspace_lboe8r.webp")
-planetarium_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-planetariumwebp_jrjfqd.webp")
-moon_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-moon_r1j4tj.webp")
-troglodyte_file = URI.open("https://res.cloudinary.com/ducykclj8/image/upload/v1669753289/l-accroche/artwork-troglodyte_tpqcdo.webp")
+tesseract_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1671101605/development/h2xtl6k1z9v68v59fkccda464a5c.webp")
+hyperspace_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1671101607/development/a76pamtyodwof6cz5768pxn45i67.webp")
+planetarium_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1671101610/development/f3hkbii0vl8rfy1a0770kwqc3qk8.webp")
+moon_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670574023/development/5uup0mp5v5f0t2i9s3bipt54g3cv.webp")
+troglodyte_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670574025/development/2n7qo8790s5kbzffea9xcytlwdvg.webp")
 
 study_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670256685/study_iesnfe.jpg")
 more_studies_file = URI.open("https://res.cloudinary.com/dal73z4cj/image/upload/v1670256685/more_studies_yy0s5s.jpg")
